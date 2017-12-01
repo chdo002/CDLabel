@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "CDLabel.h"
+#import "CTData.h"
 
 FOUNDATION_EXPORT double CDLabelVersionNumber;
 FOUNDATION_EXPORT const unsigned char CDLabelVersionString[];
