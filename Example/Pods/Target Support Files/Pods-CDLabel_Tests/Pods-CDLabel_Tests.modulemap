@@ -1,0 +1,6 @@
+framework module Pods_CDLabel_Tests {
+  umbrella header "Pods-CDLabel_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

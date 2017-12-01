@@ -1,0 +1,16 @@
+PODS:
+  - CDLabel (0.1.0)
+
+DEPENDENCIES:
+  - CDLabel (from `../`)
+
+EXTERNAL SOURCES:
+  CDLabel:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CDLabel: 8ccd0acd6194553db12cc5b7ae72e14d4bb71137
+
+PODFILE CHECKSUM: b64108e0d7befe2c6d6b70afce2db7d7736ffbbb
+
+COCOAPODS: 1.4.0.beta.2
