@@ -7,6 +7,7 @@
 
 #import "CDLabel.h"
 #import "MagnifiterView.h"
+#import "ChatHelpr.h"
 
 typedef enum CTDisplayViewState : NSInteger {
     CTDisplayViewStateNormal,       // 普通状态
@@ -102,8 +103,9 @@ typedef enum CTDisplayViewState : NSInteger {
     CTFrameDraw(self.data.ctFrame, context);
     
     for (CTImageData * imageData in self.data.imageArray) {
-        UIImage *image = [UIImage imageNamed:imageData.name];
+        UIImage *image = [ChatHelpr emoticonDic][imageData.name];
         if (image) {
+            NSLog(@"%@",NSStringFromCGRect(imageData.imagePosition));
             CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
         }
     }

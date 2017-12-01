@@ -8,6 +8,7 @@
 
 #import "CDViewController.h"
 #import <CDLabel/CDLabel.h>
+#import <CDLabel/ChatHelpr.h>
 
 @interface CDViewController ()
 
@@ -35,7 +36,7 @@
 
     [ChatHelpr loadImageDic:dic];
 
-    NSString *msgContent = @"开始奥斯丁金佛琼斯[微笑][微笑][微笑][微笑][微笑][微笑][微笑]就哦爱时间佛寺结束";
+    NSString *msgContent = @"[微笑][微笑][微笑][微笑][微笑][微笑][微笑]";
     
     CTData *data = [CTData dataWithStr:msgContent containerWithSize:CGSizeMake(200, CGFLOAT_MAX)];
     

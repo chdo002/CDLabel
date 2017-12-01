@@ -59,15 +59,12 @@
         NSMutableAttributedString *newStr = [CDTextParser imagePlaceHolderStrFromFontSize:config.textSize];
         [attString replaceCharactersInRange:range withAttributedString:newStr];
         shift += newStr.length - oldStr.length;
-        
         CTImageData *imageData = [[CTImageData alloc] init];
         imageData.position = range.location;
         imageData.name = oldStr;
         [imageDataArrr addObject:imageData];
     }
-    data.imageArray = imageDataArrr;
-    
-    
+
     // 创建framesetter
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
     
@@ -83,7 +80,7 @@
     data.width = caSize.width;
     data.height = caSize.height;
     data.ctFrame = frame;
-    
+    data.imageArray = imageDataArrr;
     return data;
 }
 
