@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CDLabel_Example' do
+  pod 'CDLabel', :path => '../'
+
+  target 'CDLabel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
