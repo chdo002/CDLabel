@@ -25,7 +25,7 @@ typedef struct {
  */
 @interface CTImageData : NSObject
 @property (strong, nonatomic) NSString * name; // 图片名称
-@property (nonatomic) int position;            // 图片在字符中的位置
+@property (nonatomic) NSUInteger position;            // 图片在字符中的位置
 
 // 此坐标是 CoreText 的坐标系，而不是UIKit的坐标系
 @property (nonatomic) CGRect imagePosition;

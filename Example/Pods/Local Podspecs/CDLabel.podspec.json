@@ -19,7 +19,7 @@
     "ios": "8.0"
   },
   "source_files": "CDLabel/Classes/**/*",
-  "public_header_files": "Pod/Classes/**/*.h",
+  "public_header_files": "CDLabel/Classes/**/*.h",
   "frameworks": [
     "UIKit",
     "CoreText"

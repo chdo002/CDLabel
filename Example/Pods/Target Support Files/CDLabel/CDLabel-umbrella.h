@@ -12,6 +12,9 @@
 
 #import "CDLabel.h"
 #import "CTData.h"
+#import "CDTextParser.h"
+#import "ChatHelpr.h"
+#import "MagnifiterView.h"
 
 FOUNDATION_EXPORT double CDLabelVersionNumber;
 FOUNDATION_EXPORT const unsigned char CDLabelVersionString[];
