@@ -36,11 +36,17 @@
 
     [ChatHelpr loadImageDic:dic];
 
-    NSString *msgContent = @"[微笑][微笑][微笑][微笑][微笑][微笑][微笑]";
+    NSString *msgContent = @"12www.baidu.com/asf/ff/s/d/[微笑][睡][微笑][睡][微笑][微笑][微笑]5678";
     
-    CTData *data = [CTData dataWithStr:msgContent containerWithSize:CGSizeMake(200, CGFLOAT_MAX)];
     
-    CDLabel *label = [[CDLabel alloc] initWithFrame:CGRectMake(50, 50, data.width, data.height)];
+    CTDataConfig config;
+    config.textColor = [UIColor cyanColor].CGColor;
+    config.clickStrColor = [UIColor blueColor].CGColor;
+    config.hilightColor = [UIColor blackColor].CGColor;
+    config.lineSpace = 0;
+    config.textSize = 20;
+    CTData *data = [CTData dataWithStr:msgContent containerWithSize:CGSizeMake(200, CGFLOAT_MAX) configuration:config];
+    CDLabel *label = [[CDLabel alloc] initWithFrame:CGRectMake(50, 150, data.width, data.height)];
     label.backgroundColor = [UIColor lightGrayColor];
     label.data = data;
     [self.view addSubview:label];

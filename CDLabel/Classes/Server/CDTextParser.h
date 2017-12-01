@@ -6,9 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTData.h"
 
 @interface CDTextParser : NSObject
+// 表情
++(NSMutableArray *)matchImage:(NSMutableAttributedString *)str configuration:(CTDataConfig)config;
 
-+(NSMutableAttributedString *)imagePlaceHolderStrFromFontSize: (CGFloat )fontSize;
-
+// 链接
++(NSMutableArray *)matchLink:(NSMutableAttributedString *)str configuration:(CTDataConfig)config;
 @end

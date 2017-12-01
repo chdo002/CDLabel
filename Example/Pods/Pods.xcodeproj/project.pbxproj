@@ -26,6 +26,8 @@
 		8D8AD8624225C94A07273CFD6D28B9D4 /* Pods-CDLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BD6D993EA8DFB35818176363C732E4 /* Pods-CDLabel_Example-dummy.m */; };
 		D21527615DA28727D533CA6FE657D1B9 /* Pods-CDLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6430E9B789DF2AAF184384F8C8E84E05 /* Pods-CDLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */; };
+		E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */; };
 		EAB3D72D02F5CE48EF8EC967DA8F6655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
 		F527BB2F49D157A3B714D9BE710195E2 /* CTData.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */; };
 /* End PBXBuildFile section */
@@ -42,13 +44,13 @@
 
 /* Begin PBXFileReference section */
 		01C486FE511D8A07A47ED43D6C77FF63 /* Pods-CDLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		02172E33CA915E43EA171161AFB9B9E8 /* CDLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDLabel.framework; path = CDLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02172E33CA915E43EA171161AFB9B9E8 /* CDLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CDLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE40687392A25298D44D20B8C6CFBD5 /* CDLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-prefix.pch"; sourceTree = "<group>"; };
-		1077B249E915C1BD347B7D8034FAC152 /* Pods-CDLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDLabel_Tests.modulemap"; sourceTree = "<group>"; };
+		1077B249E915C1BD347B7D8034FAC152 /* Pods-CDLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		169799CE5224F6585DAF5FD32E906DFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3E1D9DB559324E29B650E7A55513A737 /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4183E2FC539D39138A8C2C46C50EAC91 /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDLabel_Example.framework; path = "Pods-CDLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4183E2FC539D39138A8C2C46C50EAC91 /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		435EB409F7748CC1AB301EC8D5324578 /* Pods-CDLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4422360803BA68AC74DE7CB0EFAA9405 /* CDLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDLabel-dummy.m"; sourceTree = "<group>"; };
 		4E1D66037F4D3CDB77D4B1ED3FFEF2AD /* Pods-CDLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Example-resources.sh"; sourceTree = "<group>"; };
@@ -63,10 +65,10 @@
 		811DC78AF4228202D10321F745DAA77D /* MagnifiterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MagnifiterView.m; sourceTree = "<group>"; };
 		832A75EC762BBA8FAF002BFEBA1159ED /* Pods-CDLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		85721C4EE877DD7C7635EFD908A014F6 /* Pods-CDLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B0B08368A2EE0CECB27B37FFB2C4B66 /* CDLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CDLabel.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B0B08368A2EE0CECB27B37FFB2C4B66 /* CDLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CDLabel.modulemap; sourceTree = "<group>"; };
 		A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B2B4C85A0628ABB3EE4D33F21783766F /* Pods-CDLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CDLabel_Example.modulemap"; sourceTree = "<group>"; };
+		B2B4C85A0628ABB3EE4D33F21783766F /* Pods-CDLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDLabel_Example.modulemap"; sourceTree = "<group>"; };
 		B81558FB71CBD964D5E1AF4BA7982DFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabel.h; path = CDLabel/Classes/CDLabel.h; sourceTree = "<group>"; };
 		C31E3001208957077BB2AC073C9F70A0 /* CDTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDTextParser.m; sourceTree = "<group>"; };
@@ -80,8 +82,11 @@
 		E2B5D240916EF02B5E44CEFE0CDC4516 /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
 		E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
 		E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
+		E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDLabelMacro.h; sourceTree = "<group>"; };
+		E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
 		EA7659293F1605746392CD82625F2766 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEE705667FAF992249638FFB768D774E /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDLabel_Tests.framework; path = "Pods-CDLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE705667FAF992249638FFB768D774E /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
 		FBA15F496457AE69CCEF263783A8B145 /* CDTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDTextParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +232,7 @@
 			children = (
 				C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */,
 				FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */,
+				E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */,
 				303DFA3540B1CAFB2A7BBE232331D91E /* Models */,
 				F96EC1D87EECB8E985CD7D196965FA49 /* Server */,
 				8CC0CEEC76B09E6A8BD8D4A6B1D5C5E9 /* Support Files */,
@@ -253,6 +259,8 @@
 				C31E3001208957077BB2AC073C9F70A0 /* CDTextParser.m */,
 				77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */,
 				D761B87D2BE41D53386D3CE5EA73B857 /* ChatHelpr.m */,
+				E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */,
+				E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */,
 			);
 			name = Server;
 			path = CDLabel/Classes/Server;
@@ -296,6 +304,7 @@
 				08F9599291D4EC51AED013D1B288F637 /* CDTextParser.h in Headers */,
 				DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */,
 				2C7993C58A0A9C3541DC5B63422BFC81 /* CTData.h in Headers */,
+				E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */,
 				4111E17DA8A504A99D1767026AC49F1F /* MagnifiterView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469049F0C71DD1C581C0F9AC76E961C0 /* CDLabel-dummy.m in Sources */,
+				E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */,
 				5F30AD86FC4232CF4D679FF8F6C16C3D /* CDLabel.m in Sources */,
 				88B757AD52DC696AD6037CFA4D73AC09 /* CDTextParser.m in Sources */,
 				5C6080C3F4B15489148914992E6DAAA0 /* ChatHelpr.m in Sources */,

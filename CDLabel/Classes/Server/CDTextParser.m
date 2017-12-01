@@ -7,8 +7,42 @@
 
 #import "CDTextParser.h"
 #import <CoreText/CoreText.h>
+#import "CDLabelMacro.h"
+
 
 @implementation CDTextParser
+
+#pragma mark  和表情相关
++(NSMutableArray *)matchImage:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
+    // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
+    NSMutableArray *imageDataArrr = [NSMutableArray array];
+    NSRegularExpression *regEmoji = [NSRegularExpression regularExpressionWithPattern:@"\\[[^\\[\\]]+?\\]"
+                                                                              options:kNilOptions error:NULL];
+    //
+    
+    
+    NSArray<NSTextCheckingResult *> *emoticonResults = [regEmoji matchesInString:str.string
+                                                                         options:kNilOptions
+                                                                           range:NSMakeRange(0, str.string.length)];
+    NSInteger shift = 0;
+    for (NSTextCheckingResult *emo in emoticonResults) {
+        
+        if (emo.range.location == NSNotFound && emo.range.length <= 1) continue;
+        NSRange range = emo.range;
+        range.location += shift;
+        NSString *oldStr = [str attributedSubstringFromRange:range].string;
+        NSMutableAttributedString *newStr = [self imagePlaceHolderStrFromConfiguration:config];
+        [str replaceCharactersInRange:range withAttributedString:newStr];
+        shift += newStr.length - oldStr.length;
+        
+        // 创建对应的图片
+        CTImageData *imageData = [[CTImageData alloc] init];
+        imageData.position = range.location;
+        imageData.name = oldStr;
+        [imageDataArrr addObject:imageData];
+    }
+    return imageDataArrr;
+}
 
 static CGFloat ascentfunc(void *ref){
     return [(NSNumber*)[(__bridge NSDictionary*)ref objectForKey:@"ascent"] floatValue];
@@ -19,7 +53,9 @@ static CGFloat dscentfunc(void *ref){
 }
 
 static CGFloat widthfunc(void *ref){
-    return [(NSNumber*)[(__bridge NSDictionary*)ref objectForKey:@"width"] floatValue];
+    CGFloat ascent = [(NSNumber*)[(__bridge NSDictionary*)ref objectForKey:@"ascent"] floatValue];
+    CGFloat descnt = [(NSNumber*)[(__bridge NSDictionary*)ref objectForKey:@"descent"] floatValue];
+    return ascent - descnt;
 }
 
 static void deallocfunc(void *ref){
@@ -28,10 +64,10 @@ static void deallocfunc(void *ref){
 }
 
 
-+(NSMutableAttributedString *)imagePlaceHolderStrFromFontSize: (CGFloat )fontSize{
++(NSMutableAttributedString *)imagePlaceHolderStrFromConfiguration:(CTDataConfig)config{
     
     
-    UIFont *font = [UIFont systemFontOfSize:15];
+    UIFont *font = [UIFont systemFontOfSize:config.textSize];
     
     NSDictionary *imgInfoDic = @{@"ascent":@(font.ascender),
                                  @"descent":@(font.descender),
@@ -53,10 +89,10 @@ static void deallocfunc(void *ref){
     NSString * content = [NSString stringWithCharacters:&objectReplacementChar length:1];
     
     NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
-    para.lineSpacing = 0;
+    para.lineSpacing = config.lineSpace;
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                      NSFontAttributeName : [UIFont systemFontOfSize:fontSize],
-                                                                                      NSBackgroundColorAttributeName: [UIColor blackColor],
+                                                                                      NSFontAttributeName : font,
+                                                                                      NSBackgroundColorAttributeName: CRMRadomColor,
                                                                                       NSParagraphStyleAttributeName:para
                                                                                       }];
     NSMutableAttributedString * space = [[NSMutableAttributedString alloc] initWithString:content
@@ -68,4 +104,42 @@ static void deallocfunc(void *ref){
     return space;
 }
 
+#pragma mark 可点击文字
++(NSMutableArray *)matchLink:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
+    NSRegularExpression *regUrl = [NSRegularExpression regularExpressionWithPattern:@"((((((H|h){1}(T|t){2}(P|p){1})(S|s)?|ftp)://)(([a-zA-Z0-9_-]+\\.?)+|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|((([a-zA-Z_-]+\\.)|[\\d]+\\.)+[a-zA-Z0-9#_-]+))|((((H|h){1}(T|t){2}(P|p){1})(S|s)?|ftp)://)?(((([a-zA-Z_-]+\\.)|[\\d]+\\.)+[a-zA-Z0-9#_-]+)|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))(:[0-9]+)?)(:[0-9]+)?(/[a-zA-Z0-9\\&%_\\./-~-#]*)?)" options:kNilOptions error:NULL];
+    
+    NSArray<NSTextCheckingResult *> *regResults = [regUrl matchesInString: str.string
+                                                                  options: kNilOptions
+                                                                    range: NSMakeRange(0, str.string.length)];
+    NSMutableArray *linkArr = [NSMutableArray array];
+    for (int i = 0; i < regResults.count; i++) {
+        NSTextCheckingResult *rest = regResults[i];
+        if (rest.range.location == NSNotFound && rest.range.length <= 1) continue;
+        NSRange range = rest.range;
+        NSString *targetStr = [str.string substringWithRange:range];
+        
+        
+        UIFont *font = [UIFont systemFontOfSize:config.textSize];
+        NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
+        para.lineSpacing = config.lineSpace;
+        
+        UIColor *linkColor = [UIColor colorWithCGColor:config.clickStrColor];
+        NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                          NSForegroundColorAttributeName: linkColor,
+                                                                                          NSFontAttributeName : font,
+                                                                                          NSBackgroundColorAttributeName: CRMRadomColor,
+                                                                                          NSParagraphStyleAttributeName:para
+                                                                                          }];
+        NSMutableAttributedString *targetString = [[NSMutableAttributedString alloc] initWithString:targetStr
+                                                                                         attributes:attributes];
+        [str replaceCharactersInRange:range withAttributedString:targetString];
+        
+        CTLinkData *linkData = [[CTLinkData alloc] init];
+        linkData.title = targetStr;
+        linkData.url = targetStr;
+        linkData.range = range;
+        [linkArr addObject:linkData];
+    }
+    return linkArr;
+}
 @end

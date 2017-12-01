@@ -5,7 +5,7 @@
 //  Created by chdo on 2017/11/17.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ChatHelpr : NSObject
 

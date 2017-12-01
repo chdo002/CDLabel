@@ -11,10 +11,9 @@
 
 typedef struct {
     
-    CGColorRef     textColor;  // 文本颜色
-    CGColorRef     clickStrColor;// 可点击文本颜色
-    CGColorRef     hilightColor;// 高亮文本颜色
-    
+    CGColorRef textColor;  // 文本颜色
+    CGColorRef clickStrColor;// 可点击文本颜色
+    CGColorRef hilightColor;// 高亮文本颜色
     CGFloat textSize;   // 字号
     CGFloat lineSpace;  // 行间距
     
@@ -30,6 +29,15 @@ typedef struct {
 // 此坐标是 CoreText 的坐标系，而不是UIKit的坐标系
 @property (nonatomic) CGRect imagePosition;
 @end
+
+
+@interface CTLinkData : NSObject
+@property (strong, nonatomic) NSString * title;
+@property (strong, nonatomic) NSString * url;
+@property (assign, nonatomic) NSRange range;
+@end
+
+
 
 
 /**

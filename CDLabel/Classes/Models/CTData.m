@@ -10,9 +10,10 @@
 
 
 @implementation CTImageData
-
 @end
 
+@implementation CTLinkData
+@end
 
 @implementation CTData
 
@@ -43,35 +44,32 @@
     
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:msgString attributes:dic];
     
-    // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
-    NSMutableArray *imageDataArrr = [NSMutableArray array];
-    NSRegularExpression *regEmoji = [NSRegularExpression regularExpressionWithPattern:@"\\[[^\\[\\]]+?\\]"
-                                                                              options:kNilOptions error:NULL];
+    /*
+     ===========================================================================
+     各种匹配
+     ===========================================================================
+     */
     
-    NSArray<NSTextCheckingResult *> *emoticonResults = [regEmoji matchesInString:msgString
-                                                                         options:kNilOptions range:NSMakeRange(0, msgString.length)];
-    NSInteger shift = 0;
-    for (NSTextCheckingResult *emo in emoticonResults) {
-        if (emo.range.location == NSNotFound && emo.range.length <= 1) continue;
-        NSRange range = emo.range;
-        range.location += shift;
-        NSString *oldStr = [msgString substringWithRange:range];
-        NSMutableAttributedString *newStr = [CDTextParser imagePlaceHolderStrFromFontSize:config.textSize];
-        [attString replaceCharactersInRange:range withAttributedString:newStr];
-        shift += newStr.length - oldStr.length;
-        CTImageData *imageData = [[CTImageData alloc] init];
-        imageData.position = range.location;
-        imageData.name = oldStr;
-        [imageDataArrr addObject:imageData];
-    }
-
+    // 匹配图片(主要是表情) 并返回图片
+    NSMutableArray <CTImageData *>*imageDataArr = [CDTextParser matchImage:attString configuration:config];
+    
+    NSMutableArray <CTLinkData *> *linkDataArr = [CDTextParser matchLink:attString configuration:config];
+    
+    
+    
+    
+    /*
+     ===========================================================================
+     构建CTFrame
+     ===========================================================================
+     */
+    
     // 创建framesetter
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
     
     // 设置绘制范围
     // -- 计算内容范围
-    CGSize caedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,attString.length), nil, size, nil);
-    CGSize caSize = CGSizeMake(ceilf(caedSize.width), ceilf(caedSize.height));
+    CGSize caSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,attString.length), nil, size, nil);
     // -- 创建显示范围
     CGPathRef path = CGPathCreateWithRect(CGRectMake(0, 0, caSize.width, caSize.height), NULL);
     // 创建显示frame
@@ -80,11 +78,10 @@
     data.width = caSize.width;
     data.height = caSize.height;
     data.ctFrame = frame;
-    data.imageArray = imageDataArrr;
+    data.imageArray = imageDataArr;
+    data.linkArray = linkDataArr;
     return data;
 }
-
-
 
 - (void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
@@ -94,6 +91,7 @@
 
 // 计算图片位置
 - (void)fillImagePosition {
+    
     if (self.imageArray.count == 0) {
         return;
     }
@@ -135,16 +133,19 @@
             CGRect runBounds;
             CGFloat ascent;
             CGFloat descent;
-            
-            runBounds.size.width = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, NULL);
-            runBounds.size.height = ascent + descent;
-            
+            CGFloat leading;
+            // 字形
+            runBounds.size.width = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, &leading);
+            runBounds.size.height = ascent - descent;
             CGFloat xOffset = CTLineGetOffsetForStringIndex(line, CTRunGetStringRange(run).location, NULL);
             runBounds.origin.x = lineOrigins[i].x + xOffset;
             runBounds.origin.y = lineOrigins[i].y;
-            runBounds.origin.y -= descent;
+            runBounds.origin.y += descent;
             
+            //
             CGPathRef pathRef = CTFrameGetPath(self.ctFrame);
+            
+            //
             CGRect colRect = CGPathGetBoundingBox(pathRef);
             
             // 最终图片位置
