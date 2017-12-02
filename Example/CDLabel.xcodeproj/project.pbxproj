@@ -254,7 +254,7 @@
 				ORGANIZATIONNAME = chdo002;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 56W7P8272X;
+						DevelopmentTeam = 62N6ZZKK9A;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -562,7 +562,7 @@
 			baseConfigurationReference = F46F4983760A030229330FFC /* Pods-CDLabel_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56W7P8272X;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDLabel/CDLabel-Prefix.pch";
 				INFOPLIST_FILE = "CDLabel/CDLabel-Info.plist";
@@ -579,7 +579,7 @@
 			baseConfigurationReference = 75B4B752B410A7588AF9EDA9 /* Pods-CDLabel_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56W7P8272X;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDLabel/CDLabel-Prefix.pch";
 				INFOPLIST_FILE = "CDLabel/CDLabel-Info.plist";
