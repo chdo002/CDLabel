@@ -39,6 +39,7 @@
         CTImageData *imageData = [[CTImageData alloc] init];
         imageData.position = range.location;
         imageData.name = oldStr;
+        imageData.range = range;
         [imageDataArrr addObject:imageData];
     }
     return imageDataArrr;
@@ -90,6 +91,7 @@ static void deallocfunc(void *ref){
     
     NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
     para.lineSpacing = config.lineSpace;
+    para.lineBreakMode = config.lineBreakMode;
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                       NSFontAttributeName : font,
                                                                                       NSBackgroundColorAttributeName: CRMRadomColor,
@@ -121,9 +123,11 @@ static void deallocfunc(void *ref){
         
         UIFont *font = [UIFont systemFontOfSize:config.textSize];
         NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
+        para.lineBreakMode = config.lineBreakMode;
         para.lineSpacing = config.lineSpace;
         
         UIColor *linkColor = [UIColor colorWithCGColor:config.clickStrColor];
+        
         NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                           NSForegroundColorAttributeName: linkColor,
                                                                                           NSFontAttributeName : font,
@@ -133,7 +137,7 @@ static void deallocfunc(void *ref){
         NSMutableAttributedString *targetString = [[NSMutableAttributedString alloc] initWithString:targetStr
                                                                                          attributes:attributes];
         [str replaceCharactersInRange:range withAttributedString:targetString];
-        
+//        构建链接对象
         CTLinkData *linkData = [[CTLinkData alloc] init];
         linkData.title = targetStr;
         linkData.url = targetStr;

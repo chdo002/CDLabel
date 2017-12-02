@@ -9,9 +9,6 @@
 #import "CTData.h"
 #import <CoreText/CoreText.h>
 
-NSString *const CTDisplayViewImagePressedNotification = @"CTDisplayViewImagePressedNotification";
-NSString *const CTDisplayViewLinkPressedNotification = @"CTDisplayViewLinkPressedNotification";
-
 @interface CDLabel : UIView
 
 @property (strong, nonatomic) CTData * data;
