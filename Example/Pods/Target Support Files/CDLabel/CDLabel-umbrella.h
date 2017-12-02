@@ -14,6 +14,7 @@
 #import "CTData.h"
 #import "CDTextParser.h"
 #import "ChatHelpr.h"
+#import "CoreTextUtils.h"
 #import "MagnifiterView.h"
 
 FOUNDATION_EXPORT double CDLabelVersionNumber;
