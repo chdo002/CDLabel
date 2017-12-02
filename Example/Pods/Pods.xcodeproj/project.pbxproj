@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C013B77B990E91EC4F2BAC49D427BDA /* (null) in Sources */ = {isa = PBXBuildFile; };
-		238C06D8D96796562B9DCB1B6E08E899 /* CDTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 222454CCF51BA5AA24BA44735D0089AB /* CDTextParser.m */; };
-		35CDFB8C5D22BDC65F28241DB48B2A4F /* ChatHelpr.m in Sources */ = {isa = PBXBuildFile; fileRef = 804BFB1F84308DB3E1B560A55F624D81 /* ChatHelpr.m */; };
+		08F9599291D4EC51AED013D1B288F637 /* CDTextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA15F496457AE69CCEF263783A8B145 /* CDTextParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AA8DE69CC96C6C731B1059F3BF00220 /* MagnifiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 811DC78AF4228202D10321F745DAA77D /* MagnifiterView.m */; };
+		2C7993C58A0A9C3541DC5B63422BFC81 /* CTData.h in Headers */ = {isa = PBXBuildFile; fileRef = 696FE485AE983DA603F941D7AA8597A1 /* CTData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4111E17DA8A504A99D1767026AC49F1F /* MagnifiterView.h in Headers */ = {isa = PBXBuildFile; fileRef = D4671AAA1D41A935967773E13B67E2C0 /* MagnifiterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		415292C62CFDCDF46B6461B55795302E /* CDLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		469049F0C71DD1C581C0F9AC76E961C0 /* CDLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4422360803BA68AC74DE7CB0EFAA9405 /* CDLabel-dummy.m */; };
 		555D147CDB933328C6233866E3F350D9 /* Pods-CDLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC91FC4A785B062F308164F50FBD16D /* Pods-CDLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C6080C3F4B15489148914992E6DAAA0 /* ChatHelpr.m in Sources */ = {isa = PBXBuildFile; fileRef = D761B87D2BE41D53386D3CE5EA73B857 /* ChatHelpr.m */; };
+		5F30AD86FC4232CF4D679FF8F6C16C3D /* CDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */; };
 		6398E8E31373C61B110B583A0CE94609 /* Pods-CDLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F56FBBA0FAA5AAC910D95836546869 /* Pods-CDLabel_Tests-dummy.m */; };
-		7368761E031EC19991BD7E693D6E5B09 /* CDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC49E3585888606EA74D6CF3157310B /* CDLabel.m */; };
-		74F77590F3C09BB8C8A819137A10655B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */; };
+		69238B5AA9A92820714B68A895EA9132 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */; };
+		715A05E7BBAD92E6A9781964C4DE98EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */; };
+		753909DDC5ED157B41159340960B3669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
 		786C0B152C584969E82BDD66DC263C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
-		875B592BC0F537077D82DB652D1A65D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */; };
-		A1D617063012BFCAD3C7F3BD905E38D4 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 929389BAC8457F216557B7EBD6F36211 /* CoreTextUtils.m */; };
-		A2247FD4DDA87BF9F5DEE403817F0694 /* CDLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0933166D624D27AC892BA37745F7439F /* CDLabel-dummy.m */; };
-		D1CA0D7670D63950DE61C3400DFB91BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
+		88B757AD52DC696AD6037CFA4D73AC09 /* CDTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E3001208957077BB2AC073C9F70A0 /* CDTextParser.m */; };
+		8A631934C3857D5466EF209475B904D4 /* CDLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B5D240916EF02B5E44CEFE0CDC4516 /* CDLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D8AD8624225C94A07273CFD6D28B9D4 /* Pods-CDLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BD6D993EA8DFB35818176363C732E4 /* Pods-CDLabel_Example-dummy.m */; };
 		D21527615DA28727D533CA6FE657D1B9 /* Pods-CDLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6430E9B789DF2AAF184384F8C8E84E05 /* Pods-CDLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC02D2C2BFE51787C9C8774B846896C5 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E90E48C41FD253EA00F41217 /* ChatListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E48C21FD253EA00F41217 /* ChatListInfo.m */; };
 		E90E48C51FD253EA00F41217 /* ChatListInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E90E48C31FD253EA00F41217 /* ChatListInfo.h */; };
-		E92DFB871FD2CB9300C61A08 /* CTData.h in Headers */ = {isa = PBXBuildFile; fileRef = E92DFB861FD2CB9300C61A08 /* CTData.h */; };
 		E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */; };
 		E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */; };
 		EAB3D72D02F5CE48EF8EC967DA8F6655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
-		F15347AE601A272BBACBAA946D3245EB /* MagnifiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C914B231D256F9CEA38573B97F92606 /* MagnifiterView.m */; };
+		F527BB2F49D157A3B714D9BE710195E2 /* CTData.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0A3F22428FD225FE3F70C1321018F89E;
+			remoteGlobalIDString = 07E9F998B4C5209045745401BC566C4E;
 			remoteInfo = CDLabel;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,51 +47,52 @@
 /* Begin PBXFileReference section */
 		01C486FE511D8A07A47ED43D6C77FF63 /* Pods-CDLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		02172E33CA915E43EA171161AFB9B9E8 /* CDLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CDLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06D40C0E3E0E40A8D3076D5918D381FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0933166D624D27AC892BA37745F7439F /* CDLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDLabel-dummy.m"; sourceTree = "<group>"; };
+		0CE40687392A25298D44D20B8C6CFBD5 /* CDLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-prefix.pch"; sourceTree = "<group>"; };
 		1077B249E915C1BD347B7D8034FAC152 /* Pods-CDLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		169799CE5224F6585DAF5FD32E906DFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CE9E9ECC7B6D328C96C8B8B8FE42E13 /* CDLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabel.h; path = CDLabel/Classes/CDLabel.h; sourceTree = "<group>"; };
-		222454CCF51BA5AA24BA44735D0089AB /* CDTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDTextParser.m; sourceTree = "<group>"; };
 		27BE1AF8CEE8818CBCFD0010AE8BEE51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3E1D9DB559324E29B650E7A55513A737 /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4183E2FC539D39138A8C2C46C50EAC91 /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		435EB409F7748CC1AB301EC8D5324578 /* Pods-CDLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4C224605A4EAA7EDB186909AB95DE0CD /* MagnifiterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MagnifiterView.h; sourceTree = "<group>"; };
+		4422360803BA68AC74DE7CB0EFAA9405 /* CDLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDLabel-dummy.m"; sourceTree = "<group>"; };
 		4E1D66037F4D3CDB77D4B1ED3FFEF2AD /* Pods-CDLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Example-resources.sh"; sourceTree = "<group>"; };
 		53ED179A9FFCDF62D56C05D0E583A657 /* Pods-CDLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		54E16AAED43B0EC5C22F611730144C64 /* CDLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-prefix.pch"; sourceTree = "<group>"; };
-		5AFCEB0B0885A4050F0310BB99D8C49D /* CDTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDTextParser.h; sourceTree = "<group>"; };
 		5E52C27D798FD122D622272FE703959A /* Pods-CDLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6430E9B789DF2AAF184384F8C8E84E05 /* Pods-CDLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
 		64BD6D993EA8DFB35818176363C732E4 /* Pods-CDLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDLabel_Example-dummy.m"; sourceTree = "<group>"; };
+		696FE485AE983DA603F941D7AA8597A1 /* CTData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTData.h; sourceTree = "<group>"; };
 		69B5A93E8940F7A46EC515B79168962B /* Pods-CDLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Tests-resources.sh"; sourceTree = "<group>"; };
-		6BC49E3585888606EA74D6CF3157310B /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
 		6D90738474DD26604C54D9DDD7505C22 /* Pods-CDLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7C914B231D256F9CEA38573B97F92606 /* MagnifiterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MagnifiterView.m; sourceTree = "<group>"; };
-		7D20C650B3BB62B8BDD3E187F6209BC5 /* ChatHelpr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatHelpr.h; sourceTree = "<group>"; };
-		804BFB1F84308DB3E1B560A55F624D81 /* ChatHelpr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatHelpr.m; sourceTree = "<group>"; };
-		82989FBCAC737FAAE6C6983E5847324E /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
+		77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ChatHelpr.h; sourceTree = "<group>"; };
+		811DC78AF4228202D10321F745DAA77D /* MagnifiterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MagnifiterView.m; sourceTree = "<group>"; };
 		832A75EC762BBA8FAF002BFEBA1159ED /* Pods-CDLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		85721C4EE877DD7C7635EFD908A014F6 /* Pods-CDLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		929389BAC8457F216557B7EBD6F36211 /* CoreTextUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97DDB46B60105D2986A41B475CF06D70 /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
+		9B0B08368A2EE0CECB27B37FFB2C4B66 /* CDLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CDLabel.modulemap; sourceTree = "<group>"; };
 		A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B2B4C85A0628ABB3EE4D33F21783766F /* Pods-CDLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CDLabel_Example.modulemap"; sourceTree = "<group>"; };
 		B81558FB71CBD964D5E1AF4BA7982DFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabel.h; path = CDLabel/Classes/CDLabel.h; sourceTree = "<group>"; };
+		C31E3001208957077BB2AC073C9F70A0 /* CDTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDTextParser.m; sourceTree = "<group>"; };
 		C53B0AEB8F9D611D225024D7D5C599D5 /* Pods-CDLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CDCC3AFA7157E008079AD5EB823995F4 /* Pods-CDLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CFC91FC4A785B062F308164F50FBD16D /* Pods-CDLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDLabel_Example-umbrella.h"; sourceTree = "<group>"; };
 		D2F56FBBA0FAA5AAC910D95836546869 /* Pods-CDLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDLabel_Tests-dummy.m"; sourceTree = "<group>"; };
+		D4671AAA1D41A935967773E13B67E2C0 /* MagnifiterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MagnifiterView.h; sourceTree = "<group>"; };
+		D761B87D2BE41D53386D3CE5EA73B857 /* ChatHelpr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ChatHelpr.m; sourceTree = "<group>"; };
+		E2B5D240916EF02B5E44CEFE0CDC4516 /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
+		E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
 		E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
 		E90E48C21FD253EA00F41217 /* ChatListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListInfo.m; sourceTree = "<group>"; };
 		E90E48C31FD253EA00F41217 /* ChatListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListInfo.h; sourceTree = "<group>"; };
-		E92DFB861FD2CB9300C61A08 /* CTData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTData.h; sourceTree = "<group>"; };
+		E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDLabelMacro.h; sourceTree = "<group>"; };
 		E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
 		E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		EA7659293F1605746392CD82625F2766 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE705667FAF992249638FFB768D774E /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
+		FBA15F496457AE69CCEF263783A8B145 /* CDTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDTextParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,21 +104,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D58AED919E1EC5A48A00FE63B46F96C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				875B592BC0F537077D82DB652D1A65D4 /* CoreText.framework in Frameworks */,
-				D1CA0D7670D63950DE61C3400DFB91BC /* Foundation.framework in Frameworks */,
-				74F77590F3C09BB8C8A819137A10655B /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84A89E08513D98A789BD9C628266E918 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				786C0B152C584969E82BDD66DC263C59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBEF6C7CAD8D17AFA1F95BE35E5FF5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69238B5AA9A92820714B68A895EA9132 /* CoreText.framework in Frameworks */,
+				753909DDC5ED157B41159340960B3669 /* Foundation.framework in Frameworks */,
+				715A05E7BBAD92E6A9781964C4DE98EE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,10 +169,10 @@
 			path = "Target Support Files/Pods-CDLabel_Tests";
 			sourceTree = "<group>";
 		};
-		490F84C1C99D61534CEAF35BF8C3F706 /* Models */ = {
+		303DFA3540B1CAFB2A7BBE232331D91E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E92DFB861FD2CB9300C61A08 /* CTData.h */,
+				696FE485AE983DA603F941D7AA8597A1 /* CTData.h */,
 				E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */,
 				E90E48C31FD253EA00F41217 /* ChatListInfo.h */,
 				E90E48C21FD253EA00F41217 /* ChatListInfo.m */,
@@ -184,14 +189,13 @@
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				84DE333ADDE8B37A01FE0949FA16B872 /* Products */,
 				A4E44D4EAE0B549023C27317F3DF7729 /* Targets Support Files */,
-				E92DFB851FD2CB7C00C61A08 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
 		7E1945B3D5B126DC506788535065E334 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D32CB2F180A0FED9EC283280B8E4B24C /* CDLabel */,
+				B04C74CF9948764C9057EEB856E3BC11 /* CDLabel */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -206,6 +210,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8CC0CEEC76B09E6A8BD8D4A6B1D5C5E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B0B08368A2EE0CECB27B37FFB2C4B66 /* CDLabel.modulemap */,
+				E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */,
+				4422360803BA68AC74DE7CB0EFAA9405 /* CDLabel-dummy.m */,
+				0CE40687392A25298D44D20B8C6CFBD5 /* CDLabel-prefix.pch */,
+				E2B5D240916EF02B5E44CEFE0CDC4516 /* CDLabel-umbrella.h */,
+				EA7659293F1605746392CD82625F2766 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CDLabel";
+			sourceTree = "<group>";
+		};
 		A4E44D4EAE0B549023C27317F3DF7729 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,60 +233,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A5AA903FAA6ADEF5E98F55157403DC6B /* Support Files */ = {
+		B04C74CF9948764C9057EEB856E3BC11 /* CDLabel */ = {
 			isa = PBXGroup;
 			children = (
-				97DDB46B60105D2986A41B475CF06D70 /* CDLabel.xcconfig */,
-				0933166D624D27AC892BA37745F7439F /* CDLabel-dummy.m */,
-				54E16AAED43B0EC5C22F611730144C64 /* CDLabel-prefix.pch */,
-				82989FBCAC737FAAE6C6983E5847324E /* CDLabel-umbrella.h */,
-				06D40C0E3E0E40A8D3076D5918D381FF /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CDLabel";
-			sourceTree = "<group>";
-		};
-		ADB47621ED10FEFD33239C51A8DA5836 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4C224605A4EAA7EDB186909AB95DE0CD /* MagnifiterView.h */,
-				7C914B231D256F9CEA38573B97F92606 /* MagnifiterView.m */,
-			);
-			name = View;
-			path = CDLabel/Classes/View;
-			sourceTree = "<group>";
-		};
-		D32CB2F180A0FED9EC283280B8E4B24C /* CDLabel */ = {
-			isa = PBXGroup;
-			children = (
-				1CE9E9ECC7B6D328C96C8B8B8FE42E13 /* CDLabel.h */,
-				6BC49E3585888606EA74D6CF3157310B /* CDLabel.m */,
-				490F84C1C99D61534CEAF35BF8C3F706 /* Models */,
-				FE324A451B8319B53B1B5B9894AC4EC4 /* Server */,
-				A5AA903FAA6ADEF5E98F55157403DC6B /* Support Files */,
-				ADB47621ED10FEFD33239C51A8DA5836 /* View */,
+				C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */,
+				FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */,
+				E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */,
+				303DFA3540B1CAFB2A7BBE232331D91E /* Models */,
+				F96EC1D87EECB8E985CD7D196965FA49 /* Server */,
+				8CC0CEEC76B09E6A8BD8D4A6B1D5C5E9 /* Support Files */,
+				C222BCBE9942CE5B07D2FB2E6ADB00CC /* View */,
 			);
 			name = CDLabel;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		E92DFB851FD2CB7C00C61A08 /* Recovered References */ = {
+		C222BCBE9942CE5B07D2FB2E6ADB00CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */,
-				E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */,
+				D4671AAA1D41A935967773E13B67E2C0 /* MagnifiterView.h */,
+				811DC78AF4228202D10321F745DAA77D /* MagnifiterView.m */,
 			);
-			name = "Recovered References";
+			name = View;
+			path = CDLabel/Classes/View;
 			sourceTree = "<group>";
 		};
-		FE324A451B8319B53B1B5B9894AC4EC4 /* Server */ = {
+		F96EC1D87EECB8E985CD7D196965FA49 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				5AFCEB0B0885A4050F0310BB99D8C49D /* CDTextParser.h */,
-				222454CCF51BA5AA24BA44735D0089AB /* CDTextParser.m */,
-				7D20C650B3BB62B8BDD3E187F6209BC5 /* ChatHelpr.h */,
-				804BFB1F84308DB3E1B560A55F624D81 /* ChatHelpr.m */,
-				929389BAC8457F216557B7EBD6F36211 /* CoreTextUtils.m */,
+				FBA15F496457AE69CCEF263783A8B145 /* CDTextParser.h */,
+				C31E3001208957077BB2AC073C9F70A0 /* CDTextParser.m */,
+				77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */,
+				D761B87D2BE41D53386D3CE5EA73B857 /* ChatHelpr.m */,
+				E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */,
+				E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */,
 			);
 			name = Server;
 			path = CDLabel/Classes/Server;
@@ -303,27 +301,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54EB664E946F883200E6F990298C2477 /* Headers */ = {
+		5D6FA2ECC81A907C072D8FDDE5A0539A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC02D2C2BFE51787C9C8774B846896C5 /* (null) in Headers */,
+				8A631934C3857D5466EF209475B904D4 /* CDLabel-umbrella.h in Headers */,
+				415292C62CFDCDF46B6461B55795302E /* CDLabel.h in Headers */,
+				08F9599291D4EC51AED013D1B288F637 /* CDTextParser.h in Headers */,
+				DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */,
 				E90E48C51FD253EA00F41217 /* ChatListInfo.h in Headers */,
+				2C7993C58A0A9C3541DC5B63422BFC81 /* CTData.h in Headers */,
 				E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */,
-				E92DFB871FD2CB9300C61A08 /* CTData.h in Headers */,
+				4111E17DA8A504A99D1767026AC49F1F /* MagnifiterView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0A3F22428FD225FE3F70C1321018F89E /* CDLabel */ = {
+		07E9F998B4C5209045745401BC566C4E /* CDLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 976F27886A99D145347D5DB797EED75A /* Build configuration list for PBXNativeTarget "CDLabel" */;
+			buildConfigurationList = 953A906AF35C1B3013D0C762F132006F /* Build configuration list for PBXNativeTarget "CDLabel" */;
 			buildPhases = (
-				21EFECBFAB072ED302F6AC90E5B1CA72 /* Sources */,
-				4D58AED919E1EC5A48A00FE63B46F96C /* Frameworks */,
-				54EB664E946F883200E6F990298C2477 /* Headers */,
+				EE47E59531F20598C4C57B21227A9463 /* Sources */,
+				FDBEF6C7CAD8D17AFA1F95BE35E5FF5D /* Frameworks */,
+				5D6FA2ECC81A907C072D8FDDE5A0539A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -390,7 +392,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A3F22428FD225FE3F70C1321018F89E /* CDLabel */,
+				07E9F998B4C5209045745401BC566C4E /* CDLabel */,
 				7ED2E7A082AB5706EBD25C0F76FB7991 /* Pods-CDLabel_Example */,
 				5C353DB45DC8C99D9328FC43DFD3E7B5 /* Pods-CDLabel_Tests */,
 			);
@@ -398,26 +400,26 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21EFECBFAB072ED302F6AC90E5B1CA72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A2247FD4DDA87BF9F5DEE403817F0694 /* CDLabel-dummy.m in Sources */,
-				7368761E031EC19991BD7E693D6E5B09 /* CDLabel.m in Sources */,
-				238C06D8D96796562B9DCB1B6E08E899 /* CDTextParser.m in Sources */,
-				35CDFB8C5D22BDC65F28241DB48B2A4F /* ChatHelpr.m in Sources */,
-				A1D617063012BFCAD3C7F3BD905E38D4 /* CoreTextUtils.m in Sources */,
-				0C013B77B990E91EC4F2BAC49D427BDA /* (null) in Sources */,
-				F15347AE601A272BBACBAA946D3245EB /* MagnifiterView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBC26FF13464F54BDEC8C2A928CB0AC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8AD8624225C94A07273CFD6D28B9D4 /* Pods-CDLabel_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE47E59531F20598C4C57B21227A9463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469049F0C71DD1C581C0F9AC76E961C0 /* CDLabel-dummy.m in Sources */,
 				E90E48C41FD253EA00F41217 /* ChatListInfo.m in Sources */,
 				E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */,
+				5F30AD86FC4232CF4D679FF8F6C16C3D /* CDLabel.m in Sources */,
+				88B757AD52DC696AD6037CFA4D73AC09 /* CDTextParser.m in Sources */,
+				5C6080C3F4B15489148914992E6DAAA0 /* ChatHelpr.m in Sources */,
+				F527BB2F49D157A3B714D9BE710195E2 /* CTData.m in Sources */,
+				2AA8DE69CC96C6C731B1059F3BF00220 /* MagnifiterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +437,7 @@
 		16CAD812D43EA102AD5C6A3897F81CD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CDLabel;
-			target = 0A3F22428FD225FE3F70C1321018F89E /* CDLabel */;
+			target = 07E9F998B4C5209045745401BC566C4E /* CDLabel */;
 			targetProxy = 60B04020E7F46A9868B8E9EB806301B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -507,6 +509,36 @@
 			};
 			name = Release;
 		};
+		524E81E10CD001F3F0A29F745062D741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
+				PRODUCT_NAME = CDLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5BF11275F1D26B67397F9A4E392CD9EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85721C4EE877DD7C7635EFD908A014F6 /* Pods-CDLabel_Tests.debug.xcconfig */;
@@ -533,6 +565,35 @@
 				PRODUCT_NAME = Pods_CDLabel_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		82FF4A989DE0893424642043E8F3F3C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
+				PRODUCT_NAME = CDLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -591,36 +652,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		B7356A44FEFFA92E55BD9464201FBAFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97DDB46B60105D2986A41B475CF06D70 /* CDLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
-				PRODUCT_NAME = CDLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -684,35 +715,6 @@
 			};
 			name = Debug;
 		};
-		EE9D16759FCF472078DC484D1CD39C2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97DDB46B60105D2986A41B475CF06D70 /* CDLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
-				PRODUCT_NAME = CDLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		F03D1A4852EAD82F4667B98799195974 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E1D9DB559324E29B650E7A55513A737 /* Pods-CDLabel_Example.debug.xcconfig */;
@@ -766,11 +768,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		976F27886A99D145347D5DB797EED75A /* Build configuration list for PBXNativeTarget "CDLabel" */ = {
+		953A906AF35C1B3013D0C762F132006F /* Build configuration list for PBXNativeTarget "CDLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE9D16759FCF472078DC484D1CD39C2B /* Debug */,
-				B7356A44FEFFA92E55BD9464201FBAFA /* Release */,
+				82FF4A989DE0893424642043E8F3F3C6 /* Debug */,
+				524E81E10CD001F3F0A29F745062D741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
