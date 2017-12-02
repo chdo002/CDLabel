@@ -36,7 +36,7 @@
 
     [ChatHelpr loadImageDic:dic];
 
-    NSString *msgContent = @"12www.baidu.com/asf/ff/s/d/[微笑][睡][微笑][睡][微笑][微笑][微笑]5678";
+    NSString *msgContent = @"[微笑][睡][微笑][睡]12www.baidu.com/asf/ff/s/d/[微笑][微笑][微笑]5678";
     
     
     CTDataConfig config;
@@ -45,6 +45,7 @@
     config.hilightColor = [UIColor blackColor].CGColor;
     config.lineSpace = 0;
     config.textSize = 20;
+    config.lineBreakMode = NSLineBreakByCharWrapping;
     CTData *data = [CTData dataWithStr:msgContent containerWithSize:CGSizeMake(200, CGFLOAT_MAX) configuration:config];
     CDLabel *label = [[CDLabel alloc] initWithFrame:CGRectMake(50, 150, data.width, data.height)];
     label.backgroundColor = [UIColor lightGrayColor];

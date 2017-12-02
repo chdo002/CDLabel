@@ -16,7 +16,7 @@ typedef struct {
     CGColorRef hilightColor;// 高亮文本颜色
     CGFloat textSize;   // 字号
     CGFloat lineSpace;  // 行间距
-    
+    NSLineBreakMode lineBreakMode;
 } CTDataConfig;
 
 /**
@@ -25,7 +25,7 @@ typedef struct {
 @interface CTImageData : NSObject
 @property (strong, nonatomic) NSString * name; // 图片名称
 @property (nonatomic) NSUInteger position;            // 图片在字符中的位置
-
+@property (assign, nonatomic) NSRange range;
 // 此坐标是 CoreText 的坐标系，而不是UIKit的坐标系
 @property (nonatomic) CGRect imagePosition;
 @end
@@ -45,6 +45,8 @@ typedef struct {
  */
 @interface CTData : NSObject
 
+
+@property (strong, nonatomic) NSString *msgString;
 /**
  绘制在label上的
  */

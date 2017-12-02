@@ -7,7 +7,7 @@
 
 #import "CTData.h"
 #import "CDTextParser.h"
-
+#import "CDLabelMacro.h"
 
 @implementation CTImageData
 @end
@@ -31,14 +31,16 @@
 +(CTData *)dataWithStr:(NSString *)msgString containerWithSize:(CGSize)size configuration:(CTDataConfig)config{
     
     CTData *data = [[CTData alloc] init];
-    
+    data.msgString = msgString;
     // 构建富文本
     UIFont *font = [UIFont systemFontOfSize:config.textSize];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = config.lineSpace;
+    paragraphStyle.lineBreakMode = config.lineBreakMode;
     NSDictionary *dic = @{
                           NSFontAttributeName: font,
                           NSForegroundColorAttributeName: [UIColor colorWithCGColor:config.textColor],
+                          NSBackgroundColorAttributeName: [UIColor clearColor],
                           NSParagraphStyleAttributeName: paragraphStyle
                           };
     
@@ -53,9 +55,8 @@
     // 匹配图片(主要是表情) 并返回图片
     NSMutableArray <CTImageData *>*imageDataArr = [CDTextParser matchImage:attString configuration:config];
     
+    // 匹配链接
     NSMutableArray <CTLinkData *> *linkDataArr = [CDTextParser matchLink:attString configuration:config];
-    
-    
     
     
     /*
