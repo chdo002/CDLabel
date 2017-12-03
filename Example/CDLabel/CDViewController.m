@@ -36,7 +36,7 @@
 
     [ChatHelpr loadImageDic:dic];
 
-    NSString *msgContent = @"[微笑][睡][微笑][睡]12www.baidu.com/asf/ff/s/d/[微笑][微笑][微笑]5678";
+    NSString *msgContent = @"[微笑][睡][微笑][睡]回我回我回我回我回我回我回我回我回我文化和我回我回我回我回我回我回我回我回我回我文化[微笑][微笑][微笑]5678";
     
     
     CTDataConfig config;
@@ -51,6 +51,12 @@
     label.backgroundColor = [UIColor lightGrayColor];
     label.data = data;
     [self.view addSubview:label];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(obsenoti:) name:CHATLISTCLICKMSGEVENT object:nil];
+}
+
+-(void)obsenoti:(NSNotification *)noti{
+    
 }
 
 @end

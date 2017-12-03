@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "CTData.h"
 
+typedef struct {
+    CFIndex index;
+    CGRect rect;
+} CTLinkConfig;
+
 @interface CoreTextUtils : NSObject
 
 + (CTLinkData *)touchLinkInView:(UIView *)view atPoint:(CGPoint)point data:(CTData *)data;
 
-+ (CFIndex)touchContentOffsetInView:(UIView *)view atPoint:(CGPoint)point data:(CTData *)data;
++ (CTLinkConfig)touchContentOffsetInView:(UIView *)view atPoint:(CGPoint)point data:(CTData *)data;
 
 @end

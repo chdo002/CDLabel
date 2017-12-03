@@ -26,8 +26,8 @@
 		8D8AD8624225C94A07273CFD6D28B9D4 /* Pods-CDLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BD6D993EA8DFB35818176363C732E4 /* Pods-CDLabel_Example-dummy.m */; };
 		D21527615DA28727D533CA6FE657D1B9 /* Pods-CDLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6430E9B789DF2AAF184384F8C8E84E05 /* Pods-CDLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 77680BCB87F7614ECCFFC55AFD6CF92A /* ChatHelpr.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E90E48C41FD253EA00F41217 /* ChatListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E48C21FD253EA00F41217 /* ChatListInfo.m */; };
-		E90E48C51FD253EA00F41217 /* ChatListInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E90E48C31FD253EA00F41217 /* ChatListInfo.h */; };
+		E90E48C41FD253EA00F41217 /* CTClickInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E48C21FD253EA00F41217 /* CTClickInfo.m */; };
+		E90E48C51FD253EA00F41217 /* CTClickInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E90E48C31FD253EA00F41217 /* CTClickInfo.h */; };
 		E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */; };
 		E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */; };
 		EAB3D72D02F5CE48EF8EC967DA8F6655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
@@ -84,8 +84,8 @@
 		E2B5D240916EF02B5E44CEFE0CDC4516 /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
 		E5EA8CD1623F749E141B511F4095F5DF /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
 		E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
-		E90E48C21FD253EA00F41217 /* ChatListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListInfo.m; sourceTree = "<group>"; };
-		E90E48C31FD253EA00F41217 /* ChatListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListInfo.h; sourceTree = "<group>"; };
+		E90E48C21FD253EA00F41217 /* CTClickInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTClickInfo.m; sourceTree = "<group>"; };
+		E90E48C31FD253EA00F41217 /* CTClickInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTClickInfo.h; sourceTree = "<group>"; };
 		E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDLabelMacro.h; sourceTree = "<group>"; };
 		E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
 		E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 			children = (
 				696FE485AE983DA603F941D7AA8597A1 /* CTData.h */,
 				E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */,
-				E90E48C31FD253EA00F41217 /* ChatListInfo.h */,
-				E90E48C21FD253EA00F41217 /* ChatListInfo.m */,
+				E90E48C31FD253EA00F41217 /* CTClickInfo.h */,
+				E90E48C21FD253EA00F41217 /* CTClickInfo.m */,
 			);
 			name = Models;
 			path = CDLabel/Classes/Models;
@@ -309,7 +309,7 @@
 				415292C62CFDCDF46B6461B55795302E /* CDLabel.h in Headers */,
 				08F9599291D4EC51AED013D1B288F637 /* CDTextParser.h in Headers */,
 				DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */,
-				E90E48C51FD253EA00F41217 /* ChatListInfo.h in Headers */,
+				E90E48C51FD253EA00F41217 /* CTClickInfo.h in Headers */,
 				2C7993C58A0A9C3541DC5B63422BFC81 /* CTData.h in Headers */,
 				E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */,
 				4111E17DA8A504A99D1767026AC49F1F /* MagnifiterView.h in Headers */,
@@ -413,7 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469049F0C71DD1C581C0F9AC76E961C0 /* CDLabel-dummy.m in Sources */,
-				E90E48C41FD253EA00F41217 /* ChatListInfo.m in Sources */,
+				E90E48C41FD253EA00F41217 /* CTClickInfo.m in Sources */,
 				E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */,
 				5F30AD86FC4232CF4D679FF8F6C16C3D /* CDLabel.m in Sources */,
 				88B757AD52DC696AD6037CFA4D73AC09 /* CDTextParser.m in Sources */,

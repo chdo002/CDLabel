@@ -9,6 +9,9 @@
 #import "CTData.h"
 #import <CoreText/CoreText.h>
 
+
+extern NSString *const  CHATLISTCLICKMSGEVENT;
+
 @interface CDLabel : UIView
 
 @property (strong, nonatomic) CTData * data;

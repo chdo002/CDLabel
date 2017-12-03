@@ -10,7 +10,9 @@
 #import "ChatHelpr.h"
 #import "CDLabelMacro.h"
 #import "CoreTextUtils.h"
-#import "ChatListInfo.h"
+#import "CTClickInfo.h"
+
+NSString *const  CHATLISTCLICKMSGEVENT = @"CHATLISTCLICKMSGEVENT";
 
 typedef enum CTDisplayViewState : NSInteger {
     CTDisplayViewStateNormal,       // 普通状态
@@ -184,19 +186,15 @@ typedef enum CTDisplayViewState : NSInteger {
             CGRect rect = CGRectMake(imagePosition.x, imagePosition.y, imageRect.size.width, imageRect.size.height);
             // 检测点击位置 Point 是否在rect之内
             if (CGRectContainsPoint(rect, point)) {
-                NSLog(@"hint image");
                 // 在这里处理点击后的逻辑
-                [[ChatListInfo info:ChatClickEventTypeEMOJ containerView:self msgText:self.data.msgString clickedText:imageData.name rnag:imageData.range clickRect:rect] sendMessage];
+                [[CTClickInfo info:ChatClickEventTypeIMAGE containerView:self msgText:self.data.msgString clickedText:imageData.name rnag:imageData.range clickRect:rect] sendMessage];
                 return;
             }
         }
         
         CTLinkData *linkData = [CoreTextUtils touchLinkInView:self atPoint:point data:self.data];
         if (linkData) {
-            NSLog(@"hint link!");
-//            NSDictionary *userInfo = @{ @"linkData": linkData };
-//            [[NSNotificationCenter defaultCenter] postNotificationName:CTDisplayViewLinkPressedNotification
-//                                                                object:self userInfo:userInfo];
+            [[CTClickInfo info:ChatClickEventTypeTEXT containerView:self msgText:self.data.msgString clickedText:linkData.url rnag:linkData.range clickRect:linkData.rect] sendMessage];
             return;
         }
     } else {
@@ -209,10 +207,10 @@ typedef enum CTDisplayViewState : NSInteger {
     CGPoint point = [recognizer locationInView:self];
     if (recognizer.state == UIGestureRecognizerStateBegan ||
         recognizer.state == UIGestureRecognizerStateChanged) {
-        CFIndex index = [CoreTextUtils touchContentOffsetInView:self atPoint:point data:self.data];
-        if (index != -1 && index < self.data.content.length) {
-            _selectionStartPosition = index;
-            _selectionEndPosition = index + 2;
+        CTLinkConfig config = [CoreTextUtils touchContentOffsetInView:self atPoint:point data:self.data];
+        if (config.index != -1 && config.index < self.data.content.length) {
+            _selectionStartPosition = config.index;
+            _selectionEndPosition = config.index + 2;
         }
         self.magnifierView.touchPoint = point;
         self.state = CTDisplayViewStateTouching;
@@ -250,18 +248,18 @@ typedef enum CTDisplayViewState : NSInteger {
             [self hideMenuController];
         }
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
-        CFIndex index = [CoreTextUtils touchContentOffsetInView:self atPoint:point data:self.data];
-        if (index == -1) {
+        CTLinkConfig config = [CoreTextUtils touchContentOffsetInView:self atPoint:point data:self.data];
+        if (config.index == -1) {
             return;
         }
-        if (_leftSelectionAnchor.tag == ANCHOR_TARGET_TAG && index < _selectionEndPosition) {
+        if (_leftSelectionAnchor.tag == ANCHOR_TARGET_TAG && config.index < _selectionEndPosition) {
             
-            _selectionStartPosition = index;
+            _selectionStartPosition = config.index;
             self.magnifierView.touchPoint = point;
             [self hideMenuController];
-        } else if (_rightSelectionAnchor.tag == ANCHOR_TARGET_TAG && index > _selectionStartPosition) {
+        } else if (_rightSelectionAnchor.tag == ANCHOR_TARGET_TAG && config.index > _selectionStartPosition) {
             
-            _selectionEndPosition = index;
+            _selectionEndPosition = config.index;
             self.magnifierView.touchPoint = point;
             [self hideMenuController];
         }

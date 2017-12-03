@@ -35,6 +35,7 @@ typedef struct {
 @property (strong, nonatomic) NSString * title;
 @property (strong, nonatomic) NSString * url;
 @property (assign, nonatomic) NSRange range;
+@property (assign, nonatomic) CGRect rect;
 @end
 
 

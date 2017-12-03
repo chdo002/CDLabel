@@ -5,13 +5,13 @@
 //  Created by chdo on 2017/11/23.
 //
 
-#import "ChatListInfo.h"
+#import "CTClickInfo.h"
 
 
-@implementation ChatListInfo
-+(ChatListInfo *)info:(ChatClickEventType)type containerView:(UIView *)view msgText:(NSString *)msgText clickedText:(NSString *)clickedText rnag:(NSRange )rang clickRect:(CGRect)rect
+@implementation CTClickInfo
++(CTClickInfo *)info:(CTClickEventType)type containerView:(UIView *)view msgText:(NSString *)msgText clickedText:(NSString *)clickedText rnag:(NSRange )rang clickRect:(CGRect)rect
 {
-    ChatListInfo *info = [[ChatListInfo alloc] init];
+    CTClickInfo *info = [[CTClickInfo alloc] init];
     info.eventType = type;
     info.containerView = view;
     info.msgText = msgText;
