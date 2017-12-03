@@ -24,17 +24,10 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) CTClickEventType eventType;
 
-
 /**
  全部消息字符
  */
 @property (nonatomic, copy, nonnull) NSString *msgText;
-
-/**
- 点击文字range
- */
-@property (nonatomic, assign) NSRange range;
-
 
 /**
  文字视图容器
@@ -42,16 +35,21 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong, nullable) UIView *containerView;
 
 
+/*-------文本类型-------*/
 /**
- 点击区域在containerView中的位置
- */
-@property (nonatomic, assign) CGRect clicedkRect;
-
-/*-------链接类型-------*/
-/**
- 链接文本
+ 被点击文本
  */
 @property (nonatomic, copy, nullable) NSString *clickedText;
+
+/**
+ 被点击文本的隐藏信息
+ */
+@property (nonatomic, copy, nullable) NSString *clickedTextContent;
+
+/**
+ 点击文字range
+ */
+@property (nonatomic, assign) NSRange range;
 
 /*-------图片-------*/
 /**
@@ -62,14 +60,14 @@ typedef enum : NSUInteger {
 /**
  图片在容器中的位置
  */
-@property (nonatomic, assign) CGRect msgImageRectInContainView;
+@property (nonatomic, assign) CGRect clicedkRect;
 
 +(CTClickInfo *_Nullable)info:(CTClickEventType)type
                 containerView:(UIView *_Nullable)view
                       msgText:(NSString *_Nullable)msgText
                   clickedText:(NSString *_Nullable)clickedText
-                         rnag:(NSRange)rang
-                    clickRect:(CGRect) rect;
+                         rang:(NSRange)rang
+                         rect:(CGRect) rect;
 
 
 -(void)sendMessage;
