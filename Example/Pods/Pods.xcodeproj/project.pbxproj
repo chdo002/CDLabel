@@ -30,6 +30,7 @@
 		E90E48C51FD253EA00F41217 /* CTClickInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E90E48C31FD253EA00F41217 /* CTClickInfo.h */; };
 		E9C2475F1FD1B20D00E2DA74 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */; };
 		E9C247601FD1B20D00E2DA74 /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */; };
+		E9F6575C1FD4F52C00DBB3C6 /* CDLabelMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = E9F6575B1FD4F52C00DBB3C6 /* CDLabelMacro.h */; };
 		EAB3D72D02F5CE48EF8EC967DA8F6655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */; };
 		F527BB2F49D157A3B714D9BE710195E2 /* CTData.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */; };
 /* End PBXBuildFile section */
@@ -86,9 +87,9 @@
 		E6B06604553436B992CE24BF8A72A2E6 /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
 		E90E48C21FD253EA00F41217 /* CTClickInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTClickInfo.m; sourceTree = "<group>"; };
 		E90E48C31FD253EA00F41217 /* CTClickInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTClickInfo.h; sourceTree = "<group>"; };
-		E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDLabelMacro.h; sourceTree = "<group>"; };
 		E9C2475D1FD1B20D00E2DA74 /* CoreTextUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
 		E9C2475E1FD1B20D00E2DA74 /* CoreTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		E9F6575B1FD4F52C00DBB3C6 /* CDLabelMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDLabelMacro.h; path = CDLabel/Classes/CDLabelMacro.h; sourceTree = "<group>"; };
 		EA7659293F1605746392CD82625F2766 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE705667FAF992249638FFB768D774E /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
@@ -238,7 +239,7 @@
 			children = (
 				C06C323D27348AB47F6AB630BC389C47 /* CDLabel.h */,
 				FA6867F9FFCB73C6E9EBF8A62EC641E3 /* CDLabel.m */,
-				E9C2475C1FD190B100E2DA74 /* CDLabelMacro.h */,
+				E9F6575B1FD4F52C00DBB3C6 /* CDLabelMacro.h */,
 				303DFA3540B1CAFB2A7BBE232331D91E /* Models */,
 				F96EC1D87EECB8E985CD7D196965FA49 /* Server */,
 				8CC0CEEC76B09E6A8BD8D4A6B1D5C5E9 /* Support Files */,
@@ -308,6 +309,7 @@
 				8A631934C3857D5466EF209475B904D4 /* CDLabel-umbrella.h in Headers */,
 				415292C62CFDCDF46B6461B55795302E /* CDLabel.h in Headers */,
 				08F9599291D4EC51AED013D1B288F637 /* CDTextParser.h in Headers */,
+				E9F6575C1FD4F52C00DBB3C6 /* CDLabelMacro.h in Headers */,
 				DC02D2C2BFE51787C9C8774B846896C5 /* ChatHelpr.h in Headers */,
 				E90E48C51FD253EA00F41217 /* CTClickInfo.h in Headers */,
 				2C7993C58A0A9C3541DC5B63422BFC81 /* CTData.h in Headers */,
