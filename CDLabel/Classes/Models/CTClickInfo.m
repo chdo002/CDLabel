@@ -9,20 +9,24 @@
 
 
 @implementation CTClickInfo
-+(CTClickInfo *)info:(CTClickEventType)type containerView:(UIView *)view msgText:(NSString *)msgText clickedText:(NSString *)clickedText rnag:(NSRange )rang clickRect:(CGRect)rect
-{
+
++(CTClickInfo *)info:(CTClickEventType)type msgText:(NSString *)msgText containerView:(UIView *)view clickedText:(NSString *)clickedTitle textRang:(NSRange)rang clickedTextContent:(NSString *)clickedTextContent image:(UIImage *)image imageRect:(CGRect)rect{
     CTClickInfo *info = [[CTClickInfo alloc] init];
     info.eventType = type;
-    info.containerView = view;
     info.msgText = msgText;
-    info.clickedText = clickedText;
+    info.containerView = view;
+    info.clickedText = clickedTitle;
     info.range = rang;
-    info.clicedkRect = rect;
+    info.clickedTextContent = clickedTextContent;
+    info.image = image;
+    info.imageRect = rect;
     return info;
 }
+
 
 -(void)sendMessage{
     [[NSNotificationCenter defaultCenter] postNotificationName:CHATLISTCLICKMSGEVENT object:self];
 }
 
 @end
+

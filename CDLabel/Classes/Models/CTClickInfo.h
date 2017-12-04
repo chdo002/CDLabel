@@ -10,8 +10,8 @@
 #import "CDLabelMacro.h"
 
 typedef enum : NSUInteger {
-    ChatClickEventTypeTEXT,
-    ChatClickEventTypeIMAGE,
+    CTClickEventTypeTEXT, // 文本点击
+    CTClickEventTypeIMAGE, // 图片点击
 } CTClickEventType;
 
 /**
@@ -42,14 +42,15 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy, nullable) NSString *clickedText;
 
 /**
+ 点击文字range
+ */
+@property (nonatomic, assign) NSRange range;
+
+/**
  被点击文本的隐藏信息
  */
 @property (nonatomic, copy, nullable) NSString *clickedTextContent;
 
-/**
- 点击文字range
- */
-@property (nonatomic, assign) NSRange range;
 
 /*-------图片-------*/
 /**
@@ -60,15 +61,22 @@ typedef enum : NSUInteger {
 /**
  图片在容器中的位置
  */
-@property (nonatomic, assign) CGRect clicedkRect;
+@property (nonatomic, assign) CGRect imageRect;
+
+
 
 +(CTClickInfo *_Nullable)info:(CTClickEventType)type
-                containerView:(UIView *_Nullable)view
                       msgText:(NSString *_Nullable)msgText
-                  clickedText:(NSString *_Nullable)clickedText
-                         rang:(NSRange)rang
-                         rect:(CGRect) rect;
+                containerView:(UIView *_Nullable)view
+
+                  clickedText:(NSString *_Nullable)clickedTitle
+                     textRang:(NSRange)rang
+           clickedTextContent:(NSString *_Nullable)clickedTextContent
+
+                        image:(UIImage *_Nullable)image
+                    imageRect:(CGRect) rect;
 
 
 -(void)sendMessage;
 @end
+

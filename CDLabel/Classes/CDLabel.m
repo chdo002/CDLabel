@@ -187,14 +187,16 @@ typedef enum CTDisplayViewState : NSInteger {
             // 检测点击位置 Point 是否在rect之内
             if (CGRectContainsPoint(rect, point)) {
                 // 在这里处理点击后的逻辑
-                [[CTClickInfo info:ChatClickEventTypeIMAGE containerView:self msgText:self.data.msgString clickedText:imageData.name rnag:imageData.range clickRect:rect] sendMessage];
+                [[CTClickInfo info:CTClickEventTypeIMAGE msgText:self.data.msgString containerView:self
+                       clickedText:imageData.name textRang: imageData.range
+                clickedTextContent:nil image:[ChatHelpr emoticonDic][imageData.name] imageRect:rect] sendMessage];
                 return;
             }
         }
         
         CTLinkData *linkData = [CoreTextUtils touchLinkInView:self atPoint:point data:self.data];
         if (linkData) {
-            [[CTClickInfo info:ChatClickEventTypeTEXT containerView:self msgText:self.data.msgString clickedText:linkData.url rnag:linkData.range clickRect:linkData.rect] sendMessage];
+            [[CTClickInfo info:CTClickEventTypeTEXT msgText:self.data.msgString containerView:self clickedText:linkData.title textRang:linkData.range clickedTextContent:linkData.url image:nil imageRect:CGRectNull] sendMessage];
             return;
         }
     } else {
