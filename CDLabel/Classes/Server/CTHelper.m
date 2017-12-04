@@ -1,35 +1,33 @@
 //
-//  ChatHelpr.m
-//  CDChatList
+//  CTHelper.m
+//  CDLabel
 //
-//  Created by chdo on 2017/11/17.
+//  Created by chdo on 2017/12/4.
 //
 
-#import "ChatHelpr.h"
+#import "CTHelper.h"
 
-@interface ChatHelpr()
+@interface CTHelper()
 @property(nonatomic, strong) NSMutableDictionary<NSString*, UIImage *> *emojDic;
 @end
 
-@implementation ChatHelpr
+@implementation CTHelper
 
 +(instancetype)share{
     static dispatch_once_t onceToken;
-    static ChatHelpr *helper;
+    static CTHelper *helper;
     dispatch_once(&onceToken, ^{
-        helper = [[ChatHelpr alloc] init];
+        helper = [[CTHelper alloc] init];
     });
     return helper;
 }
 
 +(void)loadImageDic: (NSMutableDictionary<NSString*, UIImage *> *)emjDic{
-    [ChatHelpr share].emojDic = emjDic;
+    [CTHelper share].emojDic = emjDic;
 }
 
 #pragma mark  表情替换
 +(NSDictionary *)emoticonDic {
-    return [ChatHelpr share].emojDic;
+    return [CTHelper share].emojDic;
 }
-
 @end
-

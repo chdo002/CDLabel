@@ -7,7 +7,7 @@
 
 #import "CDLabel.h"
 #import "MagnifiterView.h"
-#import "ChatHelpr.h"
+#import "CTHelper.h"
 #import "CDLabelMacro.h"
 #import "CoreTextUtils.h"
 #import "CTClickInfo.h"
@@ -110,7 +110,7 @@ typedef enum CTDisplayViewState : NSInteger {
     CTFrameDraw(self.data.ctFrame, context);
     
     for (CTImageData * imageData in self.data.imageArray) {
-        UIImage *image = [ChatHelpr emoticonDic][imageData.name];
+        UIImage *image = [CTHelper emoticonDic][imageData.name];
         if (image) {
             CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
         }
@@ -189,7 +189,7 @@ typedef enum CTDisplayViewState : NSInteger {
                 // 在这里处理点击后的逻辑
                 [[CTClickInfo info:CTClickEventTypeIMAGE msgText:self.data.msgString containerView:self
                        clickedText:imageData.name textRang: imageData.range
-                clickedTextContent:nil image:[ChatHelpr emoticonDic][imageData.name] imageRect:rect] sendMessage];
+                clickedTextContent:nil image:[CTHelper emoticonDic][imageData.name] imageRect:rect] sendMessage];
                 return;
             }
         }

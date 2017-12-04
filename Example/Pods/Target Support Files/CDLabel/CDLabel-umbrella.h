@@ -11,9 +11,12 @@
 #endif
 
 #import "CDLabel.h"
+#import "CDLabelMacro.h"
+#import "CTClickInfo.h"
 #import "CTData.h"
 #import "CDTextParser.h"
-#import "ChatHelpr.h"
+#import "CoreTextUtils.h"
+#import "CTHelper.h"
 #import "MagnifiterView.h"
 
 FOUNDATION_EXPORT double CDLabelVersionNumber;

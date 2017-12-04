@@ -1,14 +1,13 @@
 //
-//  ChatHelpr.h
-//  CDChatList
+//  CTHelper.h
+//  CDLabel
 //
-//  Created by chdo on 2017/11/17.
+//  Created by chdo on 2017/12/4.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ChatHelpr : NSObject
-
+@interface CTHelper : NSObject
 /**
  配置表情字典
  
@@ -19,4 +18,3 @@
 +(NSDictionary *)emoticonDic;
 
 @end
-
