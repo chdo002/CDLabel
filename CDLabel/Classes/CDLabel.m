@@ -51,6 +51,7 @@ typedef enum CTDisplayViewState : NSInteger {
 - (void)setData:(CTData *)data {
     _data = data;
     self.state = CTDisplayViewStateNormal;
+    [self setNeedsDisplay];
 }
 
 - (void)setState:(CTDisplayViewState)state {
@@ -127,9 +128,9 @@ typedef enum CTDisplayViewState : NSInteger {
                                                                                              action:@selector(userLongPressedGuestureDetected:)];
     [self addGestureRecognizer:longPressRecognizer];
     
-    UIGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                                 action:@selector(userPanGuestureDetected:)];
-    [self addGestureRecognizer:panRecognizer];
+    // UIGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
+    //                                                                              action:@selector(userPanGuestureDetected:)];
+    // [self addGestureRecognizer:panRecognizer];
     
     self.userInteractionEnabled = YES;
 }
