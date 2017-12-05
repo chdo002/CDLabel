@@ -45,7 +45,7 @@
     label.data = data;
     [self.view addSubview:label];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(obsenoti:) name:CHATLISTCLICKMSGEVENT object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(obsenoti:) name:CTCLICKMSGEVENTNOTIFICATION object:nil];
 }
 
 -(void)obsenoti:(NSNotification *)noti{

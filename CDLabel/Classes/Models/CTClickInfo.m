@@ -25,7 +25,7 @@
 
 
 -(void)sendMessage{
-    [[NSNotificationCenter defaultCenter] postNotificationName:CHATLISTCLICKMSGEVENT object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:CTCLICKMSGEVENTNOTIFICATION object:self];
 }
 
 @end

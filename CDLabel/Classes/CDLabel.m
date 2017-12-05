@@ -12,7 +12,7 @@
 #import "CoreTextUtils.h"
 #import "CTClickInfo.h"
 
-NSString *const  CHATLISTCLICKMSGEVENT = @"CHATLISTCLICKMSGEVENT";
+NSString *const  CTCLICKMSGEVENTNOTIFICATION = @"CTCLICKMSGEVENTNOTIFICATION";
 
 typedef enum CTDisplayViewState : NSInteger {
     CTDisplayViewStateNormal,       // 普通状态

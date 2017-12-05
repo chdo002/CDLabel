@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CDLabel'
-  s.version          = '0.0.13'
+  s.version          = '0.0.14'
   s.summary          = '适用于聊天气泡中的label.'
   s.description      = '一种简单的富文本label，包括图片 链接 文字'
   s.homepage         = 'https://github.com/chdo002/CDLabel'

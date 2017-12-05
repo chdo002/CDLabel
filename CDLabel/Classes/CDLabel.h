@@ -10,7 +10,7 @@
 #import <CoreText/CoreText.h>
 
 
-extern NSString *const  CHATLISTCLICKMSGEVENT;
+extern NSString *const  CTCLICKMSGEVENTNOTIFICATION;
 
 @interface CDLabel : UIView
 
