@@ -130,7 +130,6 @@ static void deallocfunc(void *ref){
         NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                           NSForegroundColorAttributeName: linkColor,
                                                                                           NSFontAttributeName : font,
-                                                                                          NSBackgroundColorAttributeName: CRMRadomColor,
                                                                                           NSParagraphStyleAttributeName:para
                                                                                           }];
         NSMutableAttributedString *targetString = [[NSMutableAttributedString alloc] initWithString:targetStr

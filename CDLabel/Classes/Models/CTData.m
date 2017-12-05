@@ -23,8 +23,8 @@
     config.textColor = [UIColor blackColor].CGColor;
     config.hilightColor = [UIColor lightGrayColor].CGColor;
     config.clickStrColor = [UIColor blueColor].CGColor;
-    config.lineSpace = 0;
-    config.textSize = 18;
+    config.lineSpace = 2;
+    config.textSize = 16;
     config.lineBreakMode = NSLineBreakByCharWrapping;
     return [self dataWithStr:msgString containerWithSize:size configuration:config];
 }
