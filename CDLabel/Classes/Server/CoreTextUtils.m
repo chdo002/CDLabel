@@ -27,9 +27,11 @@
 + (CTLinkConfig)touchContentOffsetInView:(UIView *)view atPoint:(CGPoint)point data:(CTData *)data {
     CTFrameRef textFrame = data.ctFrame;
     CFArrayRef lines = CTFrameGetLines(textFrame);
-//    if (!lines) {
-//        return NULL;
-//    }
+    if (!lines) {
+        CTLinkConfig config;
+        config.index = -1;
+        return config;
+    }
     CFIndex count = CFArrayGetCount(lines);
 
     // 获得每一行的origin坐标
@@ -42,13 +44,18 @@
 
     CFIndex idx = -1;
     CGRect rect = CGRectNull;
+    CGRect maxRect = CGRectZero;
     for (int i = 0; i < count; i++) {
         CGPoint linePoint = origins[i];
         CTLineRef line = CFArrayGetValueAtIndex(lines, i);
         // 获得每一行的CGRect信息
         CGRect flippedRect = [self getLineBounds:line point:linePoint];
         CGRect lineRect = CGRectApplyAffineTransform(flippedRect, transform);
-
+        
+        maxRect.origin = lineRect.origin;
+        if (lineRect.size.width > maxRect.size.width) {
+            maxRect = lineRect;
+        }
         if (CGRectContainsPoint(lineRect, point)) {
             // 将点击的坐标转换成相对于当前行的坐标
             CGPoint relativePoint = CGPointMake(point.x-CGRectGetMinX(lineRect),
@@ -56,6 +63,14 @@
             // 获得当前点击坐标对应的字符串偏移
             idx = CTLineGetStringIndexForPosition(line, relativePoint);
             rect = lineRect;
+            break;
+        } else {
+            if (i == count - 1) {
+                if (CGRectContainsPoint(maxRect, point)) {
+                    idx = data.ctFrameLength;
+                    rect = lineRect;
+                }
+            }
         }
     }
     CTLinkConfig config;
@@ -69,7 +84,7 @@
     CGFloat descent = 0.0f;
     CGFloat leading = 0.0f;
     CGFloat width = (CGFloat)CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
-    CGFloat height = ascent - descent;
+    CGFloat height = fabs(ascent) + fabs(descent);
     return CGRectMake(point.x, point.y - descent, width, height);
 }
 

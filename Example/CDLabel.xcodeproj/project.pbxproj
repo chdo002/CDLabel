@@ -24,6 +24,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A518575A129077BDC21B9D25 /* Pods_CDLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D2EF3A2DAAFA09E5C6DB2E /* Pods_CDLabel_Example.framework */; };
 		E3C03B98CD7E174D72916C10 /* Pods_CDLabel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7624A79EC9618D18952482F /* Pods_CDLabel_Tests.framework */; };
+		E96DD18520E49431009F88C4 /* CDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DD18420E49431009F88C4 /* CDTableViewController.m */; };
 		E97694131FD15E60005ADBD2 /* Expression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E97694121FD15E60005ADBD2 /* Expression.bundle */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		994E2AB545B764C6383AF97E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A0D2EF3A2DAAFA09E5C6DB2E /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7624A79EC9618D18952482F /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96DD18320E49431009F88C4 /* CDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDTableViewController.h; sourceTree = "<group>"; };
+		E96DD18420E49431009F88C4 /* CDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDTableViewController.m; sourceTree = "<group>"; };
 		E97694121FD15E60005ADBD2 /* Expression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Expression.bundle; sourceTree = "<group>"; };
 		F46F4983760A030229330FFC /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +151,8 @@
 				6003F59C195388D20070C39A /* CDAppDelegate.h */,
 				6003F59D195388D20070C39A /* CDAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				E96DD18320E49431009F88C4 /* CDTableViewController.h */,
+				E96DD18420E49431009F88C4 /* CDTableViewController.m */,
 				6003F5A5195388D20070C39A /* CDViewController.h */,
 				6003F5A6195388D20070C39A /* CDViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -211,7 +216,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				725119AAFD61DE647C463E73 /* [CP] Embed Pods Frameworks */,
-				46BA372091DC3933AD1B6EF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,8 +234,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				812CC27D2F6EA9C1ECDCCC3D /* [CP] Embed Pods Frameworks */,
-				49CF8512222A4638D390B583 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,7 +252,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CD;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = chdo002;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
@@ -304,36 +306,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46BA372091DC3933AD1B6EF6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49CF8512222A4638D390B583 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Tests/Pods-CDLabel_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		55B6656889F30C0F75F18351 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,29 +332,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CDLabel/CDLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		812CC27D2F6EA9C1ECDCCC3D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Tests/Pods-CDLabel_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		927B83F06DE0930B7B0D2D5B /* [CP] Check Pods Manifest.lock */ = {
@@ -410,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96DD18520E49431009F88C4 /* CDTableViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -474,12 +434,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -525,12 +487,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

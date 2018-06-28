@@ -5,16 +5,14 @@
 //  Created by chdo on 2017/12/4.
 //
 
-#import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
 @interface CTHelper : NSObject
-/**
- 配置表情字典
- 
- @param emjDic 表情名->image
- */
-+(void)loadImageDic: (NSMutableDictionary<NSString*, UIImage *> *)emjDic;
+@property(nonatomic, class, readonly, strong) CTHelper *share;
 
-+(NSDictionary *)emoticonDic;
+/**
+ 配置表情字典  emjDic 表情名->image
+ */
+@property(nonatomic, strong) NSDictionary<NSString*, UIImage *> *emojDic;
 
 @end

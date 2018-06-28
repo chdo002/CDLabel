@@ -10,7 +10,14 @@
 
 @implementation CTClickInfo
 
-+(CTClickInfo *)info:(CTClickEventType)type msgText:(NSString *)msgText containerView:(UIView *)view clickedText:(NSString *)clickedTitle textRang:(NSRange)rang clickedTextContent:(NSString *)clickedTextContent image:(UIImage *)image imageRect:(CGRect)rect{
++(CTClickInfo *)info:(CTClickEventType)type
+             msgText:(NSString *)msgText
+       containerView:(UIView *)view
+         clickedText:(NSString *)clickedTitle
+            textRang:(NSRange)rang
+  clickedTextContent:(NSString *)clickedTextContent
+               image:(UIImage *)image
+           imageRect:(CGRect)rect{
     CTClickInfo *info = [[CTClickInfo alloc] init];
     info.eventType = type;
     info.msgText = msgText;

@@ -1,16 +1,23 @@
 PODS:
-  - CDLabel (0.1.0)
+  - CDLabel (0.0.14)
+  - GDPerformanceView (1.3.1)
 
 DEPENDENCIES:
   - CDLabel (from `../`)
+  - GDPerformanceView (~> 1.3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GDPerformanceView
 
 EXTERNAL SOURCES:
   CDLabel:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  CDLabel: 0af7c4c5ed975a491d3a3c91f3acbac3df33f4e3
+  CDLabel: b7b00b6a3209855b73e84f9b12888216d0d94802
+  GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
 
-PODFILE CHECKSUM: b64108e0d7befe2c6d6b70afce2db7d7736ffbbb
+PODFILE CHECKSUM: 9bed94319e3b4254b174950f321758e9eb0f444d
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.5.3

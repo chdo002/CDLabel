@@ -7,17 +7,24 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
-
+#import <UIKit/UIKit.h>
 
 typedef struct {
-    
-    CGColorRef textColor;  // 文本颜色
-    CGColorRef clickStrColor;// 可点击文本颜色
-    CGColorRef hilightColor;// 高亮文本颜色
     CGFloat textSize;   // 字号
     CGFloat lineSpace;  // 行间距
+    CGColorRef textColor;  // 文本颜色
+    CGColorRef clickStrColor;  // 可点击文本颜色
+    CGColorRef backGroundColor;
+    CGColorRef hilightColor;// 高亮文本颜色
     NSLineBreakMode lineBreakMode;
+    BOOL matchEmoji;
+    BOOL matchLink;
+    BOOL matchPhone;
+    BOOL matchEmail;
 } CTDataConfig;
+
+
+NSString *CTDataConfigIdentity(CTDataConfig config);
 
 /**
  图片文本对象
@@ -48,21 +55,25 @@ typedef struct {
 
 
 @property (strong, nonatomic) NSString *msgString;
+@property (strong, nonatomic) NSString *msgAttributeString;
 /**
  绘制在label上的
  */
 @property (assign, nonatomic) CTFrameRef ctFrame;
+@property (assign, nonatomic) NSUInteger ctFrameLength;
+@property(nonatomic, strong) UIImage *contents;
 
 @property (assign, nonatomic) CGFloat width;   // 文本宽度
 @property (assign, nonatomic) CGFloat height;  // 文本高度
-
+@property (assign, nonatomic) CTDataConfig config;
 @property (strong, nonatomic) NSArray<CTImageData *> *imageArray;
 @property (strong, nonatomic) NSArray *linkArray;
-@property (strong, nonatomic) NSAttributedString *content;
+@property (strong, nonatomic) NSMutableAttributedString *content;
 
++(CTData *)dataWithStr:(NSString *)msgString
+     containerWithSize:(CGSize)size;
 
-+(CTData *)dataWithStr:(NSString *)msgString containerWithSize: (CGSize)size;
-
++(CTDataConfig)defaultConfig;
 /**
  构建富文本对象
 
@@ -71,5 +82,7 @@ typedef struct {
  @param config 文本自定义配置
  @return 富文本对象
  */
-+(CTData *)dataWithStr:(NSString *)msgString containerWithSize: (CGSize)size configuration:(CTDataConfig)config;
++(CTData *)dataWithStr:(NSString *)msgString
+     containerWithSize: (CGSize)size
+         configuration:(CTDataConfig)config;
 @end

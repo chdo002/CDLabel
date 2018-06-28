@@ -9,6 +9,7 @@
 #import "CDLabel.h"
 #import "CDLabelMacro.h"
 
+
 typedef enum : NSUInteger {
     CTClickEventTypeTEXT, // 文本点击
     CTClickEventTypeIMAGE, // 图片点击
@@ -19,6 +20,7 @@ typedef enum : NSUInteger {
  */
 @interface CTClickInfo: NSObject
 
+@property (nonatomic, strong) id msgModel;
 /**
  事件类型
  */
@@ -63,19 +65,14 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) CGRect imageRect;
 
-
-
 +(CTClickInfo *_Nullable)info:(CTClickEventType)type
                       msgText:(NSString *_Nullable)msgText
                 containerView:(UIView *_Nullable)view
-
                   clickedText:(NSString *_Nullable)clickedTitle
                      textRang:(NSRange)rang
            clickedTextContent:(NSString *_Nullable)clickedTextContent
-
                         image:(UIImage *_Nullable)image
                     imageRect:(CGRect) rect;
-
 
 -(void)sendMessage;
 @end

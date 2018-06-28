@@ -8,6 +8,21 @@
 #import "CTData.h"
 #import "CDTextParser.h"
 #import "CDLabelMacro.h"
+#import "CTHelper.h"
+
+//
+NSString *CTDataConfigIdentity(CTDataConfig config){
+    
+    NSUInteger num = CGColorGetNumberOfComponents(config.textColor);
+    const CGFloat *colorComponents = CGColorGetComponents(config.textColor);
+    
+    NSMutableString *str = [NSMutableString string];
+    for (int i = 0; i < num; ++i) {
+        [str appendFormat:@"%.3f",colorComponents[i]];
+    }
+    return [str copy];
+}
+
 
 @implementation CTImageData
 @end
@@ -17,35 +32,58 @@
 
 @implementation CTData
 
-+(CTData *)dataWithStr:(NSString *)msgString containerWithSize: (CGSize)size{
-    
+
++(CTDataConfig)defaultConfig{
     CTDataConfig config;
     config.textColor = [UIColor blackColor].CGColor;
     config.hilightColor = [UIColor lightGrayColor].CGColor;
+    config.backGroundColor = [UIColor clearColor].CGColor;
     config.clickStrColor = [UIColor blueColor].CGColor;
     config.lineSpace = 2;
     config.textSize = 16;
     config.lineBreakMode = NSLineBreakByCharWrapping;
-    return [self dataWithStr:msgString containerWithSize:size configuration:config];
+    config.matchLink = YES;
+    config.matchEmail = YES;
+    config.matchEmoji = YES;
+    config.matchPhone = YES;
+    return config;
+}
+
++(CTData *)dataWithStr:(NSString *)msgString
+     containerWithSize: (CGSize)size{
+    return [self dataWithStr:msgString containerWithSize:size configuration:[self defaultConfig]];
 }
 
 +(CTData *)dataWithStr:(NSString *)msgString containerWithSize:(CGSize)size configuration:(CTDataConfig)config{
     
     CTData *data = [[CTData alloc] init];
-    data.msgString = msgString;
+    data.config = config;
+    NSString *originStr = msgString ? [msgString copy] : @"";
+
+    originStr = [originStr stringByReplacingOccurrencesOfString:@"</span>" withString:@""];
+    originStr = [originStr stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"];
+    originStr = [originStr stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
+    originStr = [originStr stringByReplacingOccurrencesOfString:@"&gt;" withString:@">"];
+    
+    NSRegularExpression *replaceReg = [NSRegularExpression regularExpressionWithPattern:@"<(?!a)(?!/a).*?>" options:0 error:nil];
+    NSString *cleanStr = [replaceReg stringByReplacingMatchesInString:originStr options:0 range: NSMakeRange(0, originStr.length) withTemplate:@""];
+    data.msgString = cleanStr;
+    
     // 构建富文本
     UIFont *font = [UIFont systemFontOfSize:config.textSize];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = config.lineSpace;
     paragraphStyle.lineBreakMode = config.lineBreakMode;
+    
     NSDictionary *dic = @{
                           NSFontAttributeName: font,
                           NSForegroundColorAttributeName: [UIColor colorWithCGColor:config.textColor],
-                          NSBackgroundColorAttributeName: [UIColor clearColor],
+                          NSBackgroundColorAttributeName:[UIColor colorWithCGColor:config.backGroundColor],
                           NSParagraphStyleAttributeName: paragraphStyle
                           };
     
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:msgString attributes:dic];
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:data.msgString attributes:dic];
+    
     
     /*
      ===========================================================================
@@ -53,12 +91,28 @@
      ===========================================================================
      */
     
-    // 匹配图片(主要是表情) 并返回图片
-    NSMutableArray <CTImageData *>*imageDataArr = [CDTextParser matchImage:attString configuration:config];
+    NSMutableArray <CTImageData *>*imageDataArr = [NSMutableArray array];
+    if (config.matchEmoji) {
+        // 匹配图片(主要是表情) 并返回图片
+        imageDataArr = [CDTextParser matchImage:attString configuration:config];
+        
+    }
     
-    // 匹配链接
-    NSMutableArray <CTLinkData *> *linkDataArr = [CDTextParser matchLink:attString configuration:config];
+    // 
+    NSMutableArray <CTLinkData *> *linkDataArr = [NSMutableArray array];
+    if (config.matchEmail) {
+        // 匹配邮箱
+        [linkDataArr addObjectsFromArray:[CDTextParser matchEmail:attString configuration:config currentMatch:linkDataArr]];
+    }
+    if (config.matchLink) {
+        // 匹配链接
+        [linkDataArr addObjectsFromArray:[CDTextParser matchLink:attString configuration:config currentMatch:linkDataArr]];
+    }
     
+    if (config.matchPhone) {
+        // 匹配号码
+        [linkDataArr addObjectsFromArray:[CDTextParser matchPhone:attString configuration:config currentMatch:linkDataArr]];
+    }
     
     /*
      ===========================================================================
@@ -77,12 +131,61 @@
     // 创建显示frame
     CTFrameRef frame = CTFramesetterCreateFrame(framesetter,
                                                 CFRangeMake(0, [attString length]), path, NULL);
+    
+    CFRelease(framesetter);
+    CFRelease(path);
+    
+    data.ctFrameLength = [attString length];
     data.width = caSize.width;
     data.height = caSize.height;
     data.ctFrame = frame;
     data.imageArray = imageDataArr;
     data.linkArray = linkDataArr;
+    
+    // 提前渲染展示内容
+    UIGraphicsBeginImageContextWithOptions(caSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    CGContextTranslateCTM(context, 0, caSize.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CTFrameDraw(frame, context);
+    
+    for (CTImageData * imageData in data.imageArray) {
+        UIImage *image = CTHelper.share.emojDic[imageData.name];
+        if (image) {
+            CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
+        }
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    data.contents = image;
+    
     return data;
+}
+
+-(NSAttributedString *)content{
+    if (_content) {
+        return _content;
+    }
+    
+    // 构建富文本
+    UIFont *font = [UIFont systemFontOfSize:_config.textSize];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 0;
+    paragraphStyle.lineBreakMode = _config.lineBreakMode;
+    
+    NSDictionary *dic = @{
+                          NSFontAttributeName: font,
+                          NSForegroundColorAttributeName: [UIColor colorWithCGColor:_config.textColor],
+                          NSBackgroundColorAttributeName:[UIColor colorWithCGColor:_config.backGroundColor],
+                          NSParagraphStyleAttributeName: paragraphStyle
+                          };
+    
+    _content = [[NSMutableAttributedString alloc] initWithString:_msgString attributes:dic];
+    [CDTextParser matchEmoj:_content configuration:_config];
+    
+    return _content;
 }
 
 - (void)setImageArray:(NSArray *)imageArray {
@@ -149,7 +252,6 @@
             
             //
             CGRect colRect = CGPathGetBoundingBox(pathRef);
-            
             // 最终图片位置
             CGRect delegateBounds = CGRectOffset(runBounds, colRect.origin.x, colRect.origin.y);
             

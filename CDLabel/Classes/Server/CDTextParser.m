@@ -8,12 +8,48 @@
 #import "CDTextParser.h"
 #import <CoreText/CoreText.h>
 #import "CDLabelMacro.h"
-
+#import "CTHelper.h"
 
 @implementation CDTextParser
 
 #pragma mark  和表情相关
+
++(void)matchEmoj:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
+    
+    // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
+    NSRegularExpression *regEmoji = [NSRegularExpression regularExpressionWithPattern:@"\\[[^\\[\\]]+?\\]"
+                                                                              options:kNilOptions error:NULL];
+    //
+    NSArray<NSTextCheckingResult *> *emoticonResults = [regEmoji matchesInString:str.string
+                                                                         options:kNilOptions
+                                                                           range:NSMakeRange(0, str.string.length)];
+    NSInteger shift = 0;
+    
+    UIFont *font = [UIFont systemFontOfSize:config.textSize];
+    for (NSTextCheckingResult *emo in emoticonResults) {
+        if (emo.range.location == NSNotFound && emo.range.length <= 1) continue;
+        NSRange range = emo.range;
+        range.location += shift;
+        NSString *oldStr = [str attributedSubstringFromRange:range].string;
+        NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+        attachment.image = CTHelper.share.emojDic[oldStr];
+        attachment.bounds = CGRectMake(0, font.descender, font.lineHeight, font.lineHeight);
+        
+        NSAttributedString *imageAttr = [NSMutableAttributedString attributedStringWithAttachment:attachment];
+        [str replaceCharactersInRange:range withAttributedString:imageAttr];
+        shift += imageAttr.length - oldStr.length;
+    }
+}
+
 +(NSMutableArray *)matchImage:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
+    
+    /**
+     REGULAREXPRESSION(SlashEmojiRegularExpression, @"(/:[\\x21-\\x2E\\x30-\\x7E]{1,8})|(\\[[\\u4e00-\\u9fa5|a-z|A-Z]{1,3}\\])|[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]")
+     
+     REGULAREXPRESSION(sign_SlashEmojiRegularExpression, @"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]")
+     type
+     */
+    
     // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
     NSMutableArray *imageDataArrr = [NSMutableArray array];
     NSRegularExpression *regEmoji = [NSRegularExpression regularExpressionWithPattern:@"\\[[^\\[\\]]+?\\]"
@@ -94,10 +130,12 @@ static void deallocfunc(void *ref){
     para.lineBreakMode = config.lineBreakMode;
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                       NSFontAttributeName : font,
+                                                                                      NSBackgroundColorAttributeName:[UIColor colorWithCGColor:config.backGroundColor],
                                                                                       NSParagraphStyleAttributeName:para
                                                                                       }];
     NSMutableAttributedString * space = [[NSMutableAttributedString alloc] initWithString:content
                                                                                attributes:attributes];
+    
     CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1),
                                    kCTRunDelegateAttributeName, delegate);
     CFRelease(delegate);
@@ -105,11 +143,28 @@ static void deallocfunc(void *ref){
     return space;
 }
 
-#pragma mark 可点击文字
-+(NSMutableArray *)matchLink:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
+#pragma mark 匹配链接
+
+
++(NSMutableArray *)matchLink:(NSMutableAttributedString *)str configuration:(CTDataConfig)config currentMatch:(NSMutableArray<CTLinkData *> *)matchArr{
     NSRegularExpression *regUrl = [NSRegularExpression regularExpressionWithPattern:@"((((((H|h){1}(T|t){2}(P|p){1})(S|s)?|ftp)://)(([a-zA-Z0-9_-]+\\.?)+|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|((([a-zA-Z_-]+\\.)|[\\d]+\\.)+[a-zA-Z0-9#_-]+))|((((H|h){1}(T|t){2}(P|p){1})(S|s)?|ftp)://)?(((([a-zA-Z_-]+\\.)|[\\d]+\\.)+[a-zA-Z0-9#_-]+)|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))(:[0-9]+)?)(:[0-9]+)?(/[a-zA-Z0-9\\&%_\\./-~-#]*)?)" options:kNilOptions error:NULL];
+    return [self matchFixStr:str configuration:config reg:regUrl currentMatch:matchArr];
+}
+
+
++(NSMutableArray *)matchEmail:(NSMutableAttributedString *)str configuration:(CTDataConfig)config currentMatch:(NSMutableArray<CTLinkData *> *)matchArr{
+    NSRegularExpression *regEmail = [NSRegularExpression regularExpressionWithPattern:@"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}" options:kNilOptions error:NULL];
+    return [self matchFixStr:str configuration:config reg:regEmail currentMatch:matchArr];
+}
+
++(NSMutableArray *)matchPhone:(NSMutableAttributedString *)str configuration:(CTDataConfig)config currentMatch:(NSMutableArray<CTLinkData *> *)matchArr{
+    NSRegularExpression *regPhone = [NSRegularExpression regularExpressionWithPattern:@"\\d{3}-\\d{8}|\\d{3}-\\d{7}|\\d{4}-\\d{8}|\\d{4}-\\d{7}|1+[0-9]+\\d{5,10}|\\d{8}|\\d{7}\\d{6}" options:kNilOptions error:NULL];
+    return [self matchFixStr:str configuration:config reg:regPhone currentMatch:matchArr];
+}
+
++(NSMutableArray *)matchFixStr:(NSMutableAttributedString *)str configuration:(CTDataConfig)config reg:(NSRegularExpression *)regEx currentMatch:(NSMutableArray<CTLinkData *> *)matchArr{
     
-    NSArray<NSTextCheckingResult *> *regResults = [regUrl matchesInString: str.string
+    NSArray<NSTextCheckingResult *> *regResults = [regEx matchesInString: str.string
                                                                   options: kNilOptions
                                                                     range: NSMakeRange(0, str.string.length)];
     NSMutableArray *linkArr = [NSMutableArray array];
@@ -117,8 +172,20 @@ static void deallocfunc(void *ref){
         NSTextCheckingResult *rest = regResults[i];
         if (rest.range.location == NSNotFound && rest.range.length <= 1) continue;
         NSRange range = rest.range;
-        NSString *targetStr = [str.string substringWithRange:range];
         
+        // 这里还需要做 rang重复检查
+        BOOL willContinue = NO;
+        for (CTLinkData *data in matchArr) {
+            if (!NSEqualRanges(NSIntersectionRange(data.range, range), NSMakeRange(0, 0))){
+                willContinue = YES;
+                break;
+            }
+        }
+        if (willContinue) {
+            continue;
+        }
+        
+        NSString *targetStr = [str.string substringWithRange:range];
         
         UIFont *font = [UIFont systemFontOfSize:config.textSize];
         NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
@@ -135,7 +202,7 @@ static void deallocfunc(void *ref){
         NSMutableAttributedString *targetString = [[NSMutableAttributedString alloc] initWithString:targetStr
                                                                                          attributes:attributes];
         [str replaceCharactersInRange:range withAttributedString:targetString];
-//        构建链接对象
+        //        构建链接对象
         CTLinkData *linkData = [[CTLinkData alloc] init];
         linkData.title = targetStr;
         linkData.url = targetStr;
@@ -144,4 +211,6 @@ static void deallocfunc(void *ref){
     }
     return linkArr;
 }
+
+
 @end
