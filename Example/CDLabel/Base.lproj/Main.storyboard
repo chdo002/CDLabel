@@ -61,18 +61,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QFa-E5-zHP" id="DN8-iK-BQp" customClass="CDLabel">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jre-kc-m2Z" customClass="CDLabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="jre-kc-m2Z" firstAttribute="leading" secondItem="DN8-iK-BQp" secondAttribute="leading" id="EfV-jF-x0D"/>
-                                        <constraint firstAttribute="trailing" secondItem="jre-kc-m2Z" secondAttribute="trailing" id="bzl-uM-WnA"/>
-                                        <constraint firstAttribute="bottom" secondItem="jre-kc-m2Z" secondAttribute="bottom" id="qwv-ka-SNv"/>
-                                        <constraint firstItem="jre-kc-m2Z" firstAttribute="top" secondItem="DN8-iK-BQp" secondAttribute="top" id="tOA-Hg-0r7"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

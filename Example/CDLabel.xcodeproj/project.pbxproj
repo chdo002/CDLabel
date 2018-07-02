@@ -70,6 +70,7 @@
 		C7624A79EC9618D18952482F /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DD18320E49431009F88C4 /* CDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDTableViewController.h; sourceTree = "<group>"; };
 		E96DD18420E49431009F88C4 /* CDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDTableViewController.m; sourceTree = "<group>"; };
+		E96DD1FC20E63566009F88C4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E97694121FD15E60005ADBD2 /* Expression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Expression.bundle; sourceTree = "<group>"; };
 		F46F4983760A030229330FFC /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +151,7 @@
 			children = (
 				6003F59C195388D20070C39A /* CDAppDelegate.h */,
 				6003F59D195388D20070C39A /* CDAppDelegate.m */,
+				E96DD1FC20E63566009F88C4 /* PrefixHeader.pch */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				E96DD18320E49431009F88C4 /* CDTableViewController.h */,
 				E96DD18420E49431009F88C4 /* CDTableViewController.m */,
@@ -256,7 +258,7 @@
 				ORGANIZATIONNAME = chdo002;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 56W7P8272X;
+						DevelopmentTeam = HC7ZK6GR5M;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -331,11 +333,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CDDevUtility/CDDevUtility.framework",
 				"${BUILT_PRODUCTS_DIR}/CDLabel/CDLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDDevUtility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView.framework",
 			);
@@ -526,7 +530,7 @@
 			baseConfigurationReference = F46F4983760A030229330FFC /* Pods-CDLabel_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56W7P8272X;
+				DEVELOPMENT_TEAM = HC7ZK6GR5M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDLabel/CDLabel-Prefix.pch";
 				INFOPLIST_FILE = "CDLabel/CDLabel-Info.plist";
@@ -544,7 +548,7 @@
 			baseConfigurationReference = 75B4B752B410A7588AF9EDA9 /* Pods-CDLabel_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 56W7P8272X;
+				DEVELOPMENT_TEAM = HC7ZK6GR5M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDLabel/CDLabel-Prefix.pch";
 				INFOPLIST_FILE = "CDLabel/CDLabel-Info.plist";

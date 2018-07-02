@@ -212,36 +212,36 @@ typedef enum CTDisplayViewState : NSInteger {
 
 -(void)setText:(NSString *)text{
     _text = text;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        self.data = [CTData dataWithStr:text containerWithSize:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)];
-//        CGRect frame = self.frame;
-//        frame.size = CGSizeMake(self->_data.width, self->_data.height);
-//        self.frame = frame;
-//    });
-    
     // 取消旧任务的回调
     self.textCalcator.label = nil;
-    
+    self.textCalcator.calComplete = nil;
     // 建立新的任务
     self.textCalcator = [[CDCalculator alloc] init];
     self.textCalcator.label = self;
     __weak typeof(self) ws = self;
     
+    // 选择渲染配置
     CTDataConfig config = (self.config.textSize != 0.00f) ? self.config : [CTData defaultConfig];
-    [self.textCalcator calcuate:text and:CGSizeMake(self.frame.size.width, CGFLOAT_MAX) and:config];
+    // 渲染
     
+    [self.textCalcator calcuate:text and:CGSizeMake(self.frame.size.width, CGFLOAT_MAX) and:config];
+    // 渲染完成
     self.textCalcator.calComplete = ^(CTData *data) {
-        if (ws) {
-            __strong typeof(ws) ss = ws;
-            
-            [ss safeThread:^{
+        [ws safeThread:^{
+            if (ws) {
+                __strong typeof(ws) ss = ws;
+                NSTimeInterval t1 = [[NSDate date] timeIntervalSince1970];
                 ss.data = data;
                 CGRect frame = ss.frame;
                 frame.size = CGSizeMake(ss->_data.width, ss->_data.height);
-#warning frame 待商榷
+#warning  待商榷
                 ss.frame = frame;
-            }];
-        }
+                
+                NSTimeInterval t2 = [[NSDate date] timeIntervalSince1970];
+                
+                
+            }
+        }];
     };
 }
 
@@ -321,10 +321,10 @@ typedef enum CTDisplayViewState : NSInteger {
                                           self.rightSelectionAnchor.frame.size.height + 10);
             isRightAncherSelecting = CGRectContainsPoint(rightRect, loc);
             if (isLeftAncherSelecting || isRightAncherSelecting) {
-//                NSLog(@"......");
+                //                NSLog(@"......");
                 return YES;
             } else {
-//                NSLog(@"!!!!!!");
+                //                NSLog(@"!!!!!!");
                 return NO;
             }
         }
@@ -346,7 +346,7 @@ typedef enum CTDisplayViewState : NSInteger {
     
     // 文字重新绘制
     [self.data.contents drawInRect:self.bounds];
-
+    
     // 绘制选择区域
     [self drawSelectionArea];
 }
@@ -468,9 +468,9 @@ typedef enum CTDisplayViewState : NSInteger {
 
 #pragma mark 拖动手势
 - (void)userPanGuestureDetected:(UIGestureRecognizer *)recognizer {
-//    NSLog(@"?????2");
+    //    NSLog(@"?????2");
     if (self.state == CTDisplayViewStateNormal) {
-//        NSLog(@"不在拖动态");
+        //        NSLog(@"不在拖动态");
         return;
     }
     
@@ -479,9 +479,9 @@ typedef enum CTDisplayViewState : NSInteger {
     
     if (!CGRectContainsPoint(self.frame, loc)){
         [self.magnifierView removeFromSuperview];
-//        NSLog(@"在视图上");
+        //        NSLog(@"在视图上");
     } else {
-//        NSLog(@"不在视图上");
+        //        NSLog(@"不在视图上");
     }
     
     
@@ -499,13 +499,13 @@ typedef enum CTDisplayViewState : NSInteger {
             CTLinkConfig config = [CoreTextUtils touchContentOffsetInView:self atPoint:loc data:self.data];
             
             if (config.index == -1) {
-//                NSLog(@"不能拖了");
+                //                NSLog(@"不能拖了");
                 return;
             }
             
             if (isLeftAncherSelecting) {
                 if (config.index >= _selectionEndPosition) {
-//                    NSLog(@"不能拖了2");
+                    //                    NSLog(@"不能拖了2");
                     return;
                 }
                 _selectionStartPosition = config.index;
@@ -515,7 +515,7 @@ typedef enum CTDisplayViewState : NSInteger {
             
             if (isRightAncherSelecting) {
                 if (config.index <= _selectionStartPosition) {
-//                    NSLog(@"不能拖了3");
+                    //                    NSLog(@"不能拖了3");
                     return;
                 }
                 _selectionEndPosition = config.index;

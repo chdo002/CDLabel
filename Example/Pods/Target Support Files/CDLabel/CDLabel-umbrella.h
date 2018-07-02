@@ -14,6 +14,7 @@
 #import "CDLabelMacro.h"
 #import "CTClickInfo.h"
 #import "CTData.h"
+#import "CDCalculator.h"
 #import "CDTextParser.h"
 #import "CoreTextUtils.h"
 #import "CTHelper.h"

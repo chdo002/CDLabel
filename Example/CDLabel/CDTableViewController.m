@@ -8,40 +8,79 @@
 
 #import "CDTableViewController.h"
 #import <CDLabel/CDLabel.h>
-
+#import <CDDevUtility/CDDevuUtilty.h>
 @interface CDTableViewController ()
-
+{
+    NSMutableArray *strs;
+    
+}
 @end
 
 @implementation CDTableViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     
+    strs = [NSMutableArray array];
+   
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    for (int i = 0; i < 100; i++) {
+        [strs addObject:[self generateRamowText]];
+    }
+    [self.tableView reloadData];
+    NSLog(@"ok");
 }
 
 #pragma mark - Table view data source
-static CGFloat hei = 2;
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 50;
+    return strs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSString *msgContent = @"开始21341234定金佛山就结束佛寺定金佛山就结束佛寺定[微笑]山就结束佛寺定金佛山就结束佛寺定金佛山就结束佛寺定金佛山就结束大家否金佛寺定金佛山就结束佛寺定金佛山就结束佛寺定金佛山就结束佛寺定金佛山就结束佛芬撒低价结束";
-    CTData *data = [CTData dataWithStr:msgContent containerWithSize:CGSizeMake(self.view.bounds.size.width, CGFLOAT_MAX)];
-    CDLabel *label = (CDLabel *)cell.contentView.subviews.firstObject;
-    label.frame = cell.contentView.bounds;
-    label.data = data;
     
-    hei = data.height;
+    __block UITableViewCell *cell;
+    [CDPerformance timeCost:^{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        
+        CDLabel *label = (CDLabel *)cell.contentView.subviews.firstObject;
+        if (!label) {
+            label = [[CDLabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+            [cell.contentView addSubview:label];
+            CTDataConfig config = [CTData defaultConfig];
+            config.textSize = 12;
+            label.config = config;
+        }
+        label.text = [NSString stringWithFormat:@"%ld--:%@",(long)indexPath.row,self->strs[indexPath.row]];
+    }];
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 800;
+}
+
+-(NSString *)generateRamowText{
+    uint32_t strLength = 1000;
+    NSMutableString *str = [NSMutableString string];
+    NSArray *emojiArr = @[@"[尴尬]",@"[发怒]",@"[微笑]",@"[大笑]",@"[大哭]",@"[色]",@"[冷汗]",@"[抓狂]",@"[吐]",@"[愉快]",@"[白眼]",@"[傲慢]",@"[困]"];
+    for (int i = 0; i < strLength; i++) {
+        if (i % 2 == 1) {
+            [str appendFormat:@"%@",emojiArr[arc4random() % emojiArr.count]];
+        } else {
+            [str appendFormat:@"%d",i];
+        }
+    }
+    return [str copy];
+}
+
+-(void)didReceiveMemoryWarning{
     
-    return hei;
 }
 
 @end

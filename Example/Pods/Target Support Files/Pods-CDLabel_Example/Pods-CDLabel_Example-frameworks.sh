@@ -143,10 +143,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CDDevUtility/CDDevUtility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDLabel/CDLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CDDevUtility/CDDevUtility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CDLabel/CDLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework"
 fi

@@ -7,155 +7,184 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01B4C47F7124C8BDCABE6302196DE03D /* CDLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CE0E6B53531D872AD9E3A01ED759654 /* CDLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01F2211C69AC79DD9DE2B1EDBEA6408A /* Pods-CDLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87443E9D6F8A1F2095034FE16D230B0A /* Pods-CDLabel_Example-dummy.m */; };
-		1305FF4E4D95EEDF561E7E8886988AFE /* CTData.h in Headers */ = {isa = PBXBuildFile; fileRef = CB946CB887767F1F2C4EA851C19A7AC6 /* CTData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17AE88D43B241F57600BAE4DB631B166 /* CDLabelMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E613F7DAC3F23A887D5C2B92FC6EDF2 /* CDLabelMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A71DD25B64D606B43476A8F29B0422A /* GDPerformanceView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4225EE3530372B9DFF0D45DFB021A1 /* GDPerformanceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FFEF35D285DDF3D2C6088A9492EB2F6 /* GDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6592B8FAEA69EF93122A3CFA20F18899 /* GDWindowViewController.m */; };
-		2598069B1E0327C7FF584E766A97B711 /* GDPerformanceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 18941F75E5634798E306D65F78E864AC /* GDPerformanceMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38CB111DBA95807A7434B353C405E999 /* GDMarginLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B1842A5D9D4BE46E22F105E74D8F6942 /* GDMarginLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		423DD52C47B2FDDF92216E2992E9B5F2 /* Pods-CDLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6363CAEE4F70D2920DC32D69D5D5CE7B /* Pods-CDLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D56157A346D868A9DBF26165F039F31 /* MagnifiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D463371F4F67F360BA72AD8310FA4182 /* MagnifiterView.m */; };
+		1A71DD25B64D606B43476A8F29B0422A /* GDPerformanceView.h in Headers */ = {isa = PBXBuildFile; fileRef = ACCAD6FC70A7B8488128DE7F510320CB /* GDPerformanceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C8133B37FDAF03DF10401B871F5F88F /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A7159DD0AB9D9D9890D6E0F221A2F69 /* CoreTextUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFEF35D285DDF3D2C6088A9492EB2F6 /* GDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60CEC002957CB24716F2EF7AE58B3A8 /* GDWindowViewController.m */; };
+		2318C183C37EC3461F26550695A86C65 /* CDDevuUtilty.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA2A072107A977A651918A14AE9A113 /* CDDevuUtilty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2598069B1E0327C7FF584E766A97B711 /* GDPerformanceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = FD84DB35A7089646E67D2E7D80AD8E40 /* GDPerformanceMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C89BBC460B75691A06D49D541F0D9C6 /* CTData.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA2E165C29D31F62011997204ED9669 /* CTData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		319AA4746FFD6993CC3C54B60FD39472 /* CTHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C440A69BE331C12123CE0EE7708B4BE2 /* CTHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38CB111DBA95807A7434B353C405E999 /* GDMarginLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF8BF8271C7185607DB4CA2DE22E5DA /* GDMarginLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38FF1D8CA321C657DB2E5F9DD495B6AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296187ECE9E67040521F8CF3D55A20D /* UIKit.framework */; };
+		3C3D7A66E63F18EFD234974ABF77D1AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
+		3C616DE8EB0EC2EC4ECB1D7BFD02FE35 /* CDLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 253351F0F45227666CA4B54D10719D6A /* CDLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44E37028A05CECD697BA0D8EF10E234B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
-		55E816296AEA53EB28E6B8E72BC43B13 /* GDPerformanceMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 97130834F4B9D44EBB85AA6A197BAD0D /* GDPerformanceMonitorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5874EA8F35FCCCDEFA892F07C0C5B72D /* GDPerformanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 863A5A092FBB0A944EC37BB841F40E84 /* GDPerformanceView.m */; };
-		64F5CF8701A595F564FE135EC08F830B /* CDLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A31A6833528CD39CC18722438A3E402 /* CDLabel-dummy.m */; };
-		6E6D8821CF2C66C7D6909D9B4EF57EEB /* CDLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C5DE63753C5ED332C2873BE7F2380F /* CDLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77F95B8B4F518FCD657128B0559B2F41 /* CTHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A260B8C92978351E4493CDC32792CF6F /* CTHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78ECE520A0378F32C8277C3D4B3C4F89 /* CDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A35EAF8858B277DBBFAEF2D01C7D306 /* CDLabel.m */; };
-		8BFC4891991EC15408CC73DDF7F20BCE /* CTData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2CE318C577E782A70252E3F6D25AC /* CTData.m */; };
-		904617C1BBC33DD5534780414F25C5AD /* GDWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 292E3B072BF63825F1B94366611DA9B7 /* GDWindowViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F49A9379EEA851F08438533D75DB691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
+		5068D09997B40FC572C0E60A4469B235 /* CDPerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D972344153B00555B8FE63F527CCB4D /* CDPerformance.m */; };
+		55E816296AEA53EB28E6B8E72BC43B13 /* GDPerformanceMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8494BCCEDBEC45C3BF26652846D0B59B /* GDPerformanceMonitorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5874EA8F35FCCCDEFA892F07C0C5B72D /* GDPerformanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C5E684E39B84F16848FEA4DA4FFCF3 /* GDPerformanceView.m */; };
+		5CD854A76EFA016600208D12D1ADA5D9 /* MagnifiterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C22FE2214601719D8708133FA58021 /* MagnifiterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D488EE3319FB10D793C2A26366AB546 /* Pods-CDLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6363CAEE4F70D2920DC32D69D5D5CE7B /* Pods-CDLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		683088ADD0004B5241B33FC9495D9DF2 /* CDLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B488B55415406D6F20922EE7CF857A1 /* CDLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6961109FE0234BF0DD7721453E37FF7D /* CDDevUtility-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF95DC4DDAF75F566A305508F3D8D264 /* CDDevUtility-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D1535D400615B282446510DD421C002 /* CDCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AECEC5E165CE4F55CEF7716BE971B1F /* CDCalculator.m */; };
+		74FAD507E8B0F450C94F464A97D9114D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACEE323620A19219ED5C11F804DD630 /* CoreText.framework */; };
+		7C656B0CA20227729A909EA7F703C795 /* CDLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F056665D3A89313B90E2CF6F506BCF /* CDLabel-dummy.m */; };
+		8007E3169705443EC757DEE92844D97A /* CDPerformance.h in Headers */ = {isa = PBXBuildFile; fileRef = B161FA77618D5D55160DF5BB990AC432 /* CDPerformance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852C17500F3A4D2736470192AAE5ACAD /* CDCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5666FEB751AE8506F7273FAE784B77 /* CDCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E70D69F22C486B54D4009C7AA7B2566 /* CTClickInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 898A41E5E9CE4E39E2491E8AC55AEF03 /* CTClickInfo.m */; };
+		904617C1BBC33DD5534780414F25C5AD /* GDWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8DDA743F9146CC7F9D4098109F5189C /* GDWindowViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94F6CA818AF92FAABE33F6B0C1074D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
+		961B638622B8E9E22E0890AEC892F1CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
+		9830C6074842827E7684CC2AD614C6AA /* CDTextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 849DD9998ECC4C10B432E13D9E9C8194 /* CDTextParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0341E8F6908EC68680C9542AE5F7F1A /* CDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD494790F35118EB1BDA4BD1CFD74BE0 /* CDLabel.m */; };
 		A3E897A230263A6AE208B9FCCD74AD64 /* Pods-CDLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 535562CF7F7AA0B175B6C6B234BFC0DB /* Pods-CDLabel_Tests-dummy.m */; };
+		A484DDD13A1BA91BFDEAAB1A364A835E /* CDTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7317E3ECCA158A3EF22FFB878858DA6 /* CDTextParser.m */; };
 		A57BF3BDEEA021F01F5E161A340F8941 /* Pods-CDLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2390B3E0D3D6E63D48D7050CAB7665BA /* Pods-CDLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7E734453C3ADF0803519F34B02E692E /* GDPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E680C4A242424EACC8059A88179119EB /* GDPerformanceMonitor.m */; };
-		ABB9634F59486B2C5EBB965F1F57A822 /* MagnifiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 031AC737CDF5772EBBD18D271FC6EA4D /* MagnifiterView.m */; };
-		AE663E3AF514090C7382CCE102D25A01 /* CDTextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 41140DD78BA76762B6B4918FBA9C4133 /* CDTextParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B055CF3833FA9A18476669514908D805 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BFAE495121B859FB08FCA214D0C780 /* CoreTextUtils.m */; };
-		BDA1978F2A1E3C522D0BA286F527DD86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296187ECE9E67040521F8CF3D55A20D /* UIKit.framework */; };
-		C6C240D62BF34D1F01B7234CC7C982F9 /* CoreTextUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4DDE23C31F9D36592C3AA78DEEA4B8 /* CoreTextUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C90AE51D7803DCBBA95B543E8CBCDCF7 /* CDTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8078AFD3C92DE1E223870B29F0598B5D /* CDTextParser.m */; };
-		CA2B95AA718F5677031BD41FF3ADD20A /* GDPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AB0C2CF6169E8DE74A6991DC37949 /* GDPerformanceView-dummy.m */; };
-		CDDAFFE69987546BC86776C6D7F0DA0B /* CTClickInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5548619A677B0C46F7FC512B12A3CF02 /* CTClickInfo.m */; };
+		A7E734453C3ADF0803519F34B02E692E /* GDPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5084B847B79A05C652B6FBF2A6606829 /* GDPerformanceMonitor.m */; };
+		B070961C650880B208611DE16A856783 /* Pods-CDLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87443E9D6F8A1F2095034FE16D230B0A /* Pods-CDLabel_Example-dummy.m */; };
+		BCED5B2CC827BBAA87EADF8EBD32B055 /* CTClickInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BED84DF2FFE65817529D15C50D5DBF5 /* CTClickInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C64E365A951D0BF485C0F8F593FD30CC /* CDDevUtility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB65F4D0B7A892B021133AEC6CC7768 /* CDDevUtility-dummy.m */; };
+		C9D17FF11719FB11A1C95C7D98295965 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6CB5DF56F12EBE516C1E5905F6706D /* CoreTextUtils.m */; };
+		CA2B95AA718F5677031BD41FF3ADD20A /* GDPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AC98B79FC332103226DF6E84217C31 /* GDPerformanceView-dummy.m */; };
 		D04F5E7C7B09323573133BAC26C84874 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296187ECE9E67040521F8CF3D55A20D /* UIKit.framework */; };
 		D1D04BDB4EF0C3112D6DEBFF0BED2D42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
-		D5C4FB932B985048B8A4A7A8CC2AA690 /* MagnifiterView.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE88FFCF83BBF243445C1DAE30667BD /* MagnifiterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D83B505265ED6B0DD98CF70119239D59 /* CTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A3AEE9CA5CA4AEA5FA409C8B76AAE /* CTHelper.m */; };
-		DB81195EEC2641E1D4B8C4487980D2BC /* GDMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB07884766553E6CEB4308045D38D31C /* GDMarginLabel.m */; };
+		D96AEB396FE1F86BEA96EA7F20186ACA /* CDLabelMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C9573537C832A618755D127EA39FEE /* CDLabelMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB01321B1F75826B810519157EBFA717 /* CTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 736909E4CEC72276C45E87E853A493A0 /* CTData.m */; };
+		DB81195EEC2641E1D4B8C4487980D2BC /* GDMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C88349AEC7BB346F063F815A7A2B99A3 /* GDMarginLabel.m */; };
 		DC0FEC56CC28A6AC2C605ABF0A88C27F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C983A897B5E2F0772E7FD6931899A798 /* QuartzCore.framework */; };
-		DE414A7C48E4239C83BF66C758C75824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72B4992707566542881EB659DA910A3 /* Foundation.framework */; };
-		E2F3895FB8CADD739680246C62A050EB /* GDPerformanceView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54CCAEE2250D9A63E087CC73D168BB16 /* GDPerformanceView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E96DD18C20E4C23C009F88C4 /* CDCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = E96DD18A20E4C23C009F88C4 /* CDCalculator.h */; };
-		E96DD18D20E4C23C009F88C4 /* CDCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DD18B20E4C23C009F88C4 /* CDCalculator.m */; };
-		F890C3488C6C4D8CDA3D837F71FBA1C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACEE323620A19219ED5C11F804DD630 /* CoreText.framework */; };
-		F8C93D2C8FA4E9B92328EE3BFB611562 /* CTClickInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A337CF1931207C2837E5C956DC30F6 /* CTClickInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2F3895FB8CADD739680246C62A050EB /* GDPerformanceView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 027D3ECE19B4771D57A76A96B5B42737 /* GDPerformanceView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F23037BF0113AD399CA7A0AD2C4751FF /* CTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DED96C4C52FE00925BC898D042521 /* CTHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		47870D160F27285BFC0713854DC28129 /* PBXContainerItemProxy */ = {
+		B9E8D10C6C9F8BCF82C32DF62A1D53C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 84DD98B740886E8DB03C29F7073C0E4F;
-			remoteInfo = CDLabel;
+			remoteGlobalIDString = 64366E3286D3A588ED4DFE26F7B79F32;
+			remoteInfo = "Pods-CDLabel_Example";
 		};
-		A15F20E1BFF6EA21F10FAE2B5311307A /* PBXContainerItemProxy */ = {
+		BFF7AB3680E9764CE9F9956E40308B88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F1214858DFFDC40E8C082976E92A163C;
 			remoteInfo = GDPerformanceView;
 		};
-		B9E8D10C6C9F8BCF82C32DF62A1D53C1 /* PBXContainerItemProxy */ = {
+		D228F69338B4CC94C64BEA9D94F27070 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B62A499D59667F40A95D3269AADFB799;
-			remoteInfo = "Pods-CDLabel_Example";
+			remoteGlobalIDString = 859B950811BD3B6C69B0E13F9AADC792;
+			remoteInfo = CDLabel;
+		};
+		DDB8B4918B6A1104103DC9CDFEFD52F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB44FF2EE5CFDC9BF1DD17214760609D;
+			remoteInfo = CDDevUtility;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		031AC737CDF5772EBBD18D271FC6EA4D /* MagnifiterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MagnifiterView.m; sourceTree = "<group>"; };
-		043AB0C2CF6169E8DE74A6991DC37949 /* GDPerformanceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDPerformanceView-dummy.m"; sourceTree = "<group>"; };
-		0621413E73A98733ECAC3402CE52BEBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EEAFAF83F767713123682B53AE1EEE7 /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
-		18941F75E5634798E306D65F78E864AC /* GDPerformanceMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitor.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.h; sourceTree = "<group>"; };
+		027D3ECE19B4771D57A76A96B5B42737 /* GDPerformanceView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-umbrella.h"; sourceTree = "<group>"; };
+		07AC98B79FC332103226DF6E84217C31 /* GDPerformanceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDPerformanceView-dummy.m"; sourceTree = "<group>"; };
+		16AAD5619E227BCBC5B72EF9C4280D66 /* CDDevUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDDevUtility.framework; path = CDDevUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0A5C004985A4A0D9C30915794957F7 /* Pods-CDLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Example-resources.sh"; sourceTree = "<group>"; };
-		1CE0E6B53531D872AD9E3A01ED759654 /* CDLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabel.h; path = CDLabel/Classes/CDLabel.h; sourceTree = "<group>"; };
-		1DAE29234EB1778EBDA71BC1B981841E /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5DED96C4C52FE00925BC898D042521 /* CTHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTHelper.m; sourceTree = "<group>"; };
+		1BED84DF2FFE65817529D15C50D5DBF5 /* CTClickInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTClickInfo.h; sourceTree = "<group>"; };
 		225E5D0792A346325CC8FF859EF80EA4 /* Pods-CDLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Tests-resources.sh"; sourceTree = "<group>"; };
 		2390B3E0D3D6E63D48D7050CAB7665BA /* Pods-CDLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
-		292E3B072BF63825F1B94366611DA9B7 /* GDWindowViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDWindowViewController.h; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.h; sourceTree = "<group>"; };
+		253351F0F45227666CA4B54D10719D6A /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
 		29E09C6D03F9EBE9A7B0145D9E5C6CCF /* Pods-CDLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A35EAF8858B277DBBFAEF2D01C7D306 /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
-		2B4DDE23C31F9D36592C3AA78DEEA4B8 /* CoreTextUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
-		2E613F7DAC3F23A887D5C2B92FC6EDF2 /* CDLabelMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabelMacro.h; path = CDLabel/Classes/CDLabelMacro.h; sourceTree = "<group>"; };
+		2AECEC5E165CE4F55CEF7716BE971B1F /* CDCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDCalculator.m; sourceTree = "<group>"; };
 		3501A3FED8EA03F3C960BF8017B5430B /* Pods-CDLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		351A3AEE9CA5CA4AEA5FA409C8B76AAE /* CTHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTHelper.m; sourceTree = "<group>"; };
-		41140DD78BA76762B6B4918FBA9C4133 /* CDTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDTextParser.h; sourceTree = "<group>"; };
-		47101862D40FBD8A2F9A8890B6E5698A /* GDPerformanceView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GDPerformanceView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		511D798DADC9D149BBD54F44572CE139 /* CDLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CDLabel.podspec; sourceTree = "<group>"; };
+		43C22FE2214601719D8708133FA58021 /* MagnifiterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MagnifiterView.h; sourceTree = "<group>"; };
+		47237A62C40E27DB7CDFD68638F1DB71 /* GDPerformanceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-prefix.pch"; sourceTree = "<group>"; };
+		4B488B55415406D6F20922EE7CF857A1 /* CDLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabel.h; path = CDLabel/Classes/CDLabel.h; sourceTree = "<group>"; };
+		4D972344153B00555B8FE63F527CCB4D /* CDPerformance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDPerformance.m; path = CDDevUtility/Classes/Performance/CDPerformance.m; sourceTree = "<group>"; };
+		5084B847B79A05C652B6FBF2A6606829 /* GDPerformanceMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceMonitor.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.m; sourceTree = "<group>"; };
 		51CC9196E4B06054E75E68631D0FEBEA /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		535562CF7F7AA0B175B6C6B234BFC0DB /* Pods-CDLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDLabel_Tests-dummy.m"; sourceTree = "<group>"; };
-		54CCAEE2250D9A63E087CC73D168BB16 /* GDPerformanceView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-umbrella.h"; sourceTree = "<group>"; };
-		5548619A677B0C46F7FC512B12A3CF02 /* CTClickInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTClickInfo.m; sourceTree = "<group>"; };
+		53CACD3927299668801523C8248E8F0B /* CDDevUtility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDDevUtility.modulemap; sourceTree = "<group>"; };
 		5A9430C0FCFFF7A45502168D6E77F3EF /* Pods-CDLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5ACEE323620A19219ED5C11F804DD630 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		5F19AFAE1597DF853F10A024D4E8F3C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6296187ECE9E67040521F8CF3D55A20D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6363CAEE4F70D2920DC32D69D5D5CE7B /* Pods-CDLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CDLabel_Example-umbrella.h"; sourceTree = "<group>"; };
-		6592B8FAEA69EF93122A3CFA20F18899 /* GDWindowViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDWindowViewController.m; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.m; sourceTree = "<group>"; };
-		729A970ABFE187D5A02548255385B63A /* GDPerformanceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GDPerformanceView.modulemap; sourceTree = "<group>"; };
+		69E07669690BEFA648213B7B8E1A6F80 /* CDLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDLabel.modulemap; sourceTree = "<group>"; };
+		6C76D596762439EA74E647D85EFC9D29 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736909E4CEC72276C45E87E853A493A0 /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
 		76600C4701D727584EAF7A30541AEB67 /* Pods-CDLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CDLabel_Tests.modulemap"; sourceTree = "<group>"; };
-		8078AFD3C92DE1E223870B29F0598B5D /* CDTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDTextParser.m; sourceTree = "<group>"; };
-		863A5A092FBB0A944EC37BB841F40E84 /* GDPerformanceView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceView.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.m; sourceTree = "<group>"; };
+		77F056665D3A89313B90E2CF6F506BCF /* CDLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDLabel-dummy.m"; sourceTree = "<group>"; };
+		7A7159DD0AB9D9D9890D6E0F221A2F69 /* CoreTextUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		7C591A541D113A96F67D74E668B600EF /* CDDevUtility-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDDevUtility-prefix.pch"; sourceTree = "<group>"; };
+		7F8909C98088153DB16138C92957B576 /* CDLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CDLabel.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8494BCCEDBEC45C3BF26652846D0B59B /* GDPerformanceMonitorProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitorProtocol.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitorProtocol.h; sourceTree = "<group>"; };
+		849DD9998ECC4C10B432E13D9E9C8194 /* CDTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDTextParser.h; sourceTree = "<group>"; };
 		87443E9D6F8A1F2095034FE16D230B0A /* Pods-CDLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CDLabel_Example-dummy.m"; sourceTree = "<group>"; };
-		8A31A6833528CD39CC18722438A3E402 /* CDLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDLabel-dummy.m"; sourceTree = "<group>"; };
+		898A41E5E9CE4E39E2491E8AC55AEF03 /* CTClickInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTClickInfo.m; sourceTree = "<group>"; };
 		8ED9336ADF2C1508936E012E7FFCF391 /* Pods-CDLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		8FF00CBB54BDC0B3BF99FF707AFB9BF1 /* CDLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CDLabel.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97130834F4B9D44EBB85AA6A197BAD0D /* GDPerformanceMonitorProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitorProtocol.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitorProtocol.h; sourceTree = "<group>"; };
-		97CD622D086A889D68F7835073E3F4C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9AFFEE0075CE6544398A2D6A674774E7 /* CDLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CDLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1CD76DD72D0CCDD985D76B6EE8C992A /* GDPerformanceView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GDPerformanceView.xcconfig; sourceTree = "<group>"; };
-		A260B8C92978351E4493CDC32792CF6F /* CTHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTHelper.h; sourceTree = "<group>"; };
+		927F0050F3FCE2004F4A3A7F99A07442 /* GDPerformanceView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GDPerformanceView.xcconfig; sourceTree = "<group>"; };
+		92DFE602C5D762B21605CA503B3D3208 /* GDPerformanceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GDPerformanceView.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CB65F4D0B7A892B021133AEC6CC7768 /* CDDevUtility-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CDDevUtility-dummy.m"; sourceTree = "<group>"; };
+		9F5666FEB751AE8506F7273FAE784B77 /* CDCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CDCalculator.h; sourceTree = "<group>"; };
+		9F6CB5DF56F12EBE516C1E5905F6706D /* CoreTextUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		A80C16276E50AD0EFA96ACB3CC3A4377 /* CDLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CDLabel.framework; path = CDLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC4AD8DCD03797E31FA8C5631AC9085 /* Pods-CDLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CDLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		ADC71BD7F849BBA0B9AFE9E11459CC25 /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEE88FFCF83BBF243445C1DAE30667BD /* MagnifiterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MagnifiterView.h; sourceTree = "<group>"; };
-		B10F8D32E5BACED5367FA62DC3210A40 /* GDPerformanceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-prefix.pch"; sourceTree = "<group>"; };
-		B1842A5D9D4BE46E22F105E74D8F6942 /* GDMarginLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDMarginLabel.h; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.h; sourceTree = "<group>"; };
-		B41B2C5FBF73D0C70266603B24CBCD95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B773195B6BA04087A77DFF2638DEDC92 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ACCAD6FC70A7B8488128DE7F510320CB /* GDPerformanceView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceView.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.h; sourceTree = "<group>"; };
+		ADA2A072107A977A651918A14AE9A113 /* CDDevuUtilty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDDevuUtilty.h; path = CDDevUtility/Classes/CDDevuUtilty.h; sourceTree = "<group>"; };
+		AF95DC4DDAF75F566A305508F3D8D264 /* CDDevUtility-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDDevUtility-umbrella.h"; sourceTree = "<group>"; };
+		B161FA77618D5D55160DF5BB990AC432 /* CDPerformance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDPerformance.h; path = CDDevUtility/Classes/Performance/CDPerformance.h; sourceTree = "<group>"; };
 		BD75298FC2D352858753B39273568CB3 /* Pods-CDLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BF65FC0FA74B6F57A437C559E4A8113B /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDLabel_Example.framework; path = "Pods-CDLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C058A295964B182C0E32C761A3DC7F /* Pods-CDLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CDLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C440A69BE331C12123CE0EE7708B4BE2 /* CTHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTHelper.h; sourceTree = "<group>"; };
+		C88349AEC7BB346F063F815A7A2B99A3 /* GDMarginLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDMarginLabel.m; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.m; sourceTree = "<group>"; };
 		C983A897B5E2F0772E7FD6931899A798 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		CB946CB887767F1F2C4EA851C19A7AC6 /* CTData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTData.h; sourceTree = "<group>"; };
+		C996EE1E8F3DDB0AF66B66D6D257BF4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CCA2E165C29D31F62011997204ED9669 /* CTData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTData.h; sourceTree = "<group>"; };
+		CEF8BF8271C7185607DB4CA2DE22E5DA /* GDMarginLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDMarginLabel.h; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.h; sourceTree = "<group>"; };
 		D09A9E48C693417565ADC7E61D59BEFB /* Pods-CDLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CDLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D0C5DE63753C5ED332C2873BE7F2380F /* CDLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-umbrella.h"; sourceTree = "<group>"; };
-		D2A337CF1931207C2837E5C956DC30F6 /* CTClickInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CTClickInfo.h; sourceTree = "<group>"; };
-		DB07884766553E6CEB4308045D38D31C /* GDMarginLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDMarginLabel.m; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.m; sourceTree = "<group>"; };
+		D463371F4F67F360BA72AD8310FA4182 /* MagnifiterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MagnifiterView.m; sourceTree = "<group>"; };
+		D607BC49426C616498F8523E6FBCE7C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D656F51A132287DC30FF919159CE7127 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8DDA743F9146CC7F9D4098109F5189C /* GDWindowViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDWindowViewController.h; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.h; sourceTree = "<group>"; };
 		DC516B4B7928853C429E9BE5AD831786 /* Pods-CDLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CDLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		DF4225EE3530372B9DFF0D45DFB021A1 /* GDPerformanceView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceView.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.h; sourceTree = "<group>"; };
-		E1E2CE318C577E782A70252E3F6D25AC /* CTData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CTData.m; sourceTree = "<group>"; };
-		E680C4A242424EACC8059A88179119EB /* GDPerformanceMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceMonitor.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.m; sourceTree = "<group>"; };
+		E2C5E684E39B84F16848FEA4DA4FFCF3 /* GDPerformanceView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceView.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.m; sourceTree = "<group>"; };
+		E4836BB7FDE398465FE5051A6E589723 /* GDPerformanceView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GDPerformanceView.framework; path = GDPerformanceView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C9573537C832A618755D127EA39FEE /* CDLabelMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDLabelMacro.h; path = CDLabel/Classes/CDLabelMacro.h; sourceTree = "<group>"; };
+		E6C9F7CB115DD5B4B4178E4857BC7FB5 /* CDDevUtility.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDDevUtility.xcconfig; sourceTree = "<group>"; };
 		E72B4992707566542881EB659DA910A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E8EBE2D20D0D763BD9D2F78749176A91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E96DD18A20E4C23C009F88C4 /* CDCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDCalculator.h; sourceTree = "<group>"; };
-		E96DD18B20E4C23C009F88C4 /* CDCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDCalculator.m; sourceTree = "<group>"; };
+		EBDDF1C9DD8B85F4FA4BD20825010DEE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F02C6EAECABE06489D6D2762A410BB93 /* Pods-CDLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CDLabel_Example.modulemap"; sourceTree = "<group>"; };
-		F394FF2789409422795FB864357A959C /* CDLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-prefix.pch"; sourceTree = "<group>"; };
-		F7BFAE495121B859FB08FCA214D0C780 /* CoreTextUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		F10B6E46BAD31864CE3D2FD072F1B40D /* CDLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CDLabel-prefix.pch"; sourceTree = "<group>"; };
+		F1132966888FA354D6794AF2841D33EC /* CDLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CDLabel.xcconfig; sourceTree = "<group>"; };
+		F23C905AE68E07A35CA8BEED87E1939D /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CDLabel_Tests.framework; path = "Pods-CDLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60CEC002957CB24716F2EF7AE58B3A8 /* GDWindowViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDWindowViewController.m; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.m; sourceTree = "<group>"; };
+		F7317E3ECCA158A3EF22FFB878858DA6 /* CDTextParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CDTextParser.m; sourceTree = "<group>"; };
+		FD494790F35118EB1BDA4BD1CFD74BE0 /* CDLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDLabel.m; path = CDLabel/Classes/CDLabel.m; sourceTree = "<group>"; };
+		FD84DB35A7089646E67D2E7D80AD8E40 /* GDPerformanceMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitor.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01EC01AA78B4CC903ADEA909644BE3EE /* Frameworks */ = {
+		1A30A7355E17874EB2271EBB660EE054 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F890C3488C6C4D8CDA3D837F71FBA1C9 /* CoreText.framework in Frameworks */,
-				DE414A7C48E4239C83BF66C758C75824 /* Foundation.framework in Frameworks */,
-				BDA1978F2A1E3C522D0BA286F527DD86 /* UIKit.framework in Frameworks */,
+				94F6CA818AF92FAABE33F6B0C1074D20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A167F815E5F8078C0F55BAB89B3360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C3D7A66E63F18EFD234974ABF77D1AA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,14 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E37028A05CECD697BA0D8EF10E234B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8E34C453E3C14C9FE1E93D5B3E9A6B24 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9F49A9379EEA851F08438533D75DB691 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,17 +206,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB66255A8817FCFF9A9537FB9810647C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FAD507E8B0F450C94F464A97D9114D /* CoreText.framework in Frameworks */,
+				961B638622B8E9E22E0890AEC892F1CE /* Foundation.framework in Frameworks */,
+				38FF1D8CA321C657DB2E5F9DD495B6AC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092C48049753C2BBE5DBB7588FE54EF7 /* View */ = {
+		04CFE2825F66EC72D5C8FB0E5625E120 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AEE88FFCF83BBF243445C1DAE30667BD /* MagnifiterView.h */,
-				031AC737CDF5772EBBD18D271FC6EA4D /* MagnifiterView.m */,
+				F6E77CCADA6741AC2A3C6E68AD2D813A /* CDDevUtility */,
+				6FDDCAF434DAF2938E1B7359E849A223 /* GDPerformanceView */,
 			);
-			name = View;
-			path = CDLabel/Classes/View;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		088DAFB4CBCC34980713933327C311E0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7F8909C98088153DB16138C92957B576 /* CDLabel.podspec */,
+				D607BC49426C616498F8523E6FBCE7C2 /* LICENSE */,
+				C996EE1E8F3DDB0AF66B66D6D257BF4A /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
@@ -206,78 +246,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		283CB979662603E81800A9CE6EF3EE99 /* CDLabel */ = {
+		1579EE53AC9E01EDFF252F04BE02AE50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1CE0E6B53531D872AD9E3A01ED759654 /* CDLabel.h */,
-				2A35EAF8858B277DBBFAEF2D01C7D306 /* CDLabel.m */,
-				2E613F7DAC3F23A887D5C2B92FC6EDF2 /* CDLabelMacro.h */,
-				D8480070F18BDB2359A41136B19D775B /* Models */,
-				C022163A0BF62B98EBCEB125F12F842A /* Pod */,
-				3D6E631F1B4702DCE8469DB49BFD9CAF /* Server */,
-				32DA12804E3A62D96F42900DA4EE9240 /* Support Files */,
-				092C48049753C2BBE5DBB7588FE54EF7 /* View */,
+				1BED84DF2FFE65817529D15C50D5DBF5 /* CTClickInfo.h */,
+				898A41E5E9CE4E39E2491E8AC55AEF03 /* CTClickInfo.m */,
+				CCA2E165C29D31F62011997204ED9669 /* CTData.h */,
+				736909E4CEC72276C45E87E853A493A0 /* CTData.m */,
 			);
-			name = CDLabel;
-			path = ../..;
+			name = Models;
+			path = CDLabel/Classes/Models;
 			sourceTree = "<group>";
 		};
-		32DA12804E3A62D96F42900DA4EE9240 /* Support Files */ = {
+		606908451144A42DDB09F98518A3908B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8FF00CBB54BDC0B3BF99FF707AFB9BF1 /* CDLabel.modulemap */,
-				0EEAFAF83F767713123682B53AE1EEE7 /* CDLabel.xcconfig */,
-				8A31A6833528CD39CC18722438A3E402 /* CDLabel-dummy.m */,
-				F394FF2789409422795FB864357A959C /* CDLabel-prefix.pch */,
-				D0C5DE63753C5ED332C2873BE7F2380F /* CDLabel-umbrella.h */,
-				B41B2C5FBF73D0C70266603B24CBCD95 /* Info.plist */,
+				92DFE602C5D762B21605CA503B3D3208 /* GDPerformanceView.modulemap */,
+				927F0050F3FCE2004F4A3A7F99A07442 /* GDPerformanceView.xcconfig */,
+				07AC98B79FC332103226DF6E84217C31 /* GDPerformanceView-dummy.m */,
+				47237A62C40E27DB7CDFD68638F1DB71 /* GDPerformanceView-prefix.pch */,
+				027D3ECE19B4771D57A76A96B5B42737 /* GDPerformanceView-umbrella.h */,
+				D656F51A132287DC30FF919159CE7127 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CDLabel";
-			sourceTree = "<group>";
-		};
-		3AF0B75FEE24A6046564F7ED3026C5A3 /* GDPerformanceView */ = {
-			isa = PBXGroup;
-			children = (
-				B1842A5D9D4BE46E22F105E74D8F6942 /* GDMarginLabel.h */,
-				DB07884766553E6CEB4308045D38D31C /* GDMarginLabel.m */,
-				18941F75E5634798E306D65F78E864AC /* GDPerformanceMonitor.h */,
-				E680C4A242424EACC8059A88179119EB /* GDPerformanceMonitor.m */,
-				97130834F4B9D44EBB85AA6A197BAD0D /* GDPerformanceMonitorProtocol.h */,
-				DF4225EE3530372B9DFF0D45DFB021A1 /* GDPerformanceView.h */,
-				863A5A092FBB0A944EC37BB841F40E84 /* GDPerformanceView.m */,
-				292E3B072BF63825F1B94366611DA9B7 /* GDWindowViewController.h */,
-				6592B8FAEA69EF93122A3CFA20F18899 /* GDWindowViewController.m */,
-				95A99972EE4E1CF42A0BA20D17D5459F /* Support Files */,
-			);
-			path = GDPerformanceView;
-			sourceTree = "<group>";
-		};
-		3D6E631F1B4702DCE8469DB49BFD9CAF /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				41140DD78BA76762B6B4918FBA9C4133 /* CDTextParser.h */,
-				8078AFD3C92DE1E223870B29F0598B5D /* CDTextParser.m */,
-				2B4DDE23C31F9D36592C3AA78DEEA4B8 /* CoreTextUtils.h */,
-				F7BFAE495121B859FB08FCA214D0C780 /* CoreTextUtils.m */,
-				A260B8C92978351E4493CDC32792CF6F /* CTHelper.h */,
-				351A3AEE9CA5CA4AEA5FA409C8B76AAE /* CTHelper.m */,
-				E96DD18A20E4C23C009F88C4 /* CDCalculator.h */,
-				E96DD18B20E4C23C009F88C4 /* CDCalculator.m */,
-			);
-			name = Server;
-			path = CDLabel/Classes/Server;
-			sourceTree = "<group>";
-		};
-		62DB6A4ADD684D3B3EBF44534224A2A9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AFFEE0075CE6544398A2D6A674774E7 /* CDLabel.framework */,
-				47101862D40FBD8A2F9A8890B6E5698A /* GDPerformanceView.framework */,
-				1DAE29234EB1778EBDA71BC1B981841E /* Pods_CDLabel_Example.framework */,
-				ADC71BD7F849BBA0B9AFE9E11459CC25 /* Pods_CDLabel_Tests.framework */,
-			);
-			name = Products;
+			path = "../Target Support Files/GDPerformanceView";
 			sourceTree = "<group>";
 		};
 		6659512A4E1481AAB32EBABC7AA74843 /* iOS */ = {
@@ -291,14 +283,42 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		6FDDCAF434DAF2938E1B7359E849A223 /* GDPerformanceView */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8BF8271C7185607DB4CA2DE22E5DA /* GDMarginLabel.h */,
+				C88349AEC7BB346F063F815A7A2B99A3 /* GDMarginLabel.m */,
+				FD84DB35A7089646E67D2E7D80AD8E40 /* GDPerformanceMonitor.h */,
+				5084B847B79A05C652B6FBF2A6606829 /* GDPerformanceMonitor.m */,
+				8494BCCEDBEC45C3BF26652846D0B59B /* GDPerformanceMonitorProtocol.h */,
+				ACCAD6FC70A7B8488128DE7F510320CB /* GDPerformanceView.h */,
+				E2C5E684E39B84F16848FEA4DA4FFCF3 /* GDPerformanceView.m */,
+				D8DDA743F9146CC7F9D4098109F5189C /* GDWindowViewController.h */,
+				F60CEC002957CB24716F2EF7AE58B3A8 /* GDWindowViewController.m */,
+				606908451144A42DDB09F98518A3908B /* Support Files */,
+			);
+			name = GDPerformanceView;
+			path = GDPerformanceView;
+			sourceTree = "<group>";
+		};
+		728B97EBBF6B6F40483C84C7A39D9545 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43C22FE2214601719D8708133FA58021 /* MagnifiterView.h */,
+				D463371F4F67F360BA72AD8310FA4182 /* MagnifiterView.m */,
+			);
+			name = View;
+			path = CDLabel/Classes/View;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				EA4393D9886BED6D630DBC5DFAD066D1 /* Development Pods */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				A8D4E7EF96EF3C81950869BFFD36CA85 /* Pods */,
-				62DB6A4ADD684D3B3EBF44534224A2A9 /* Products */,
+				04CFE2825F66EC72D5C8FB0E5625E120 /* Pods */,
+				DF59760F6C6A1B10349870124F074CFA /* Products */,
 				A4E44D4EAE0B549023C27317F3DF7729 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -321,20 +341,6 @@
 			path = "Target Support Files/Pods-CDLabel_Example";
 			sourceTree = "<group>";
 		};
-		95A99972EE4E1CF42A0BA20D17D5459F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				729A970ABFE187D5A02548255385B63A /* GDPerformanceView.modulemap */,
-				A1CD76DD72D0CCDD985D76B6EE8C992A /* GDPerformanceView.xcconfig */,
-				043AB0C2CF6169E8DE74A6991DC37949 /* GDPerformanceView-dummy.m */,
-				B10F8D32E5BACED5367FA62DC3210A40 /* GDPerformanceView-prefix.pch */,
-				54CCAEE2250D9A63E087CC73D168BB16 /* GDPerformanceView-umbrella.h */,
-				0621413E73A98733ECAC3402CE52BEBC /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GDPerformanceView";
-			sourceTree = "<group>";
-		};
 		A4E44D4EAE0B549023C27317F3DF7729 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,22 +350,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A8D4E7EF96EF3C81950869BFFD36CA85 /* Pods */ = {
+		A5E37A76F273EE11A8558DF1FC6BE32F /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				3AF0B75FEE24A6046564F7ED3026C5A3 /* GDPerformanceView */,
+				9F5666FEB751AE8506F7273FAE784B77 /* CDCalculator.h */,
+				2AECEC5E165CE4F55CEF7716BE971B1F /* CDCalculator.m */,
+				849DD9998ECC4C10B432E13D9E9C8194 /* CDTextParser.h */,
+				F7317E3ECCA158A3EF22FFB878858DA6 /* CDTextParser.m */,
+				7A7159DD0AB9D9D9890D6E0F221A2F69 /* CoreTextUtils.h */,
+				9F6CB5DF56F12EBE516C1E5905F6706D /* CoreTextUtils.m */,
+				C440A69BE331C12123CE0EE7708B4BE2 /* CTHelper.h */,
+				1A5DED96C4C52FE00925BC898D042521 /* CTHelper.m */,
 			);
-			name = Pods;
+			name = Server;
+			path = CDLabel/Classes/Server;
 			sourceTree = "<group>";
 		};
-		C022163A0BF62B98EBCEB125F12F842A /* Pod */ = {
+		A94DC50E979597156D70808EB35E8E2E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				511D798DADC9D149BBD54F44572CE139 /* CDLabel.podspec */,
-				97CD622D086A889D68F7835073E3F4C0 /* LICENSE */,
-				B773195B6BA04087A77DFF2638DEDC92 /* README.md */,
+				69E07669690BEFA648213B7B8E1A6F80 /* CDLabel.modulemap */,
+				F1132966888FA354D6794AF2841D33EC /* CDLabel.xcconfig */,
+				77F056665D3A89313B90E2CF6F506BCF /* CDLabel-dummy.m */,
+				F10B6E46BAD31864CE3D2FD072F1B40D /* CDLabel-prefix.pch */,
+				253351F0F45227666CA4B54D10719D6A /* CDLabel-umbrella.h */,
+				6C76D596762439EA74E647D85EFC9D29 /* Info.plist */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CDLabel";
 			sourceTree = "<group>";
 		};
 		C89DB866979C0E4C2035DF3333EDEA08 /* Pods-CDLabel_Tests */ = {
@@ -380,29 +398,98 @@
 			path = "Target Support Files/Pods-CDLabel_Tests";
 			sourceTree = "<group>";
 		};
-		D8480070F18BDB2359A41136B19D775B /* Models */ = {
+		DD91F1ACA6E0CAA38248139526DDD583 /* CDLabel */ = {
 			isa = PBXGroup;
 			children = (
-				D2A337CF1931207C2837E5C956DC30F6 /* CTClickInfo.h */,
-				5548619A677B0C46F7FC512B12A3CF02 /* CTClickInfo.m */,
-				CB946CB887767F1F2C4EA851C19A7AC6 /* CTData.h */,
-				E1E2CE318C577E782A70252E3F6D25AC /* CTData.m */,
+				4B488B55415406D6F20922EE7CF857A1 /* CDLabel.h */,
+				FD494790F35118EB1BDA4BD1CFD74BE0 /* CDLabel.m */,
+				E4C9573537C832A618755D127EA39FEE /* CDLabelMacro.h */,
+				1579EE53AC9E01EDFF252F04BE02AE50 /* Models */,
+				088DAFB4CBCC34980713933327C311E0 /* Pod */,
+				A5E37A76F273EE11A8558DF1FC6BE32F /* Server */,
+				A94DC50E979597156D70808EB35E8E2E /* Support Files */,
+				728B97EBBF6B6F40483C84C7A39D9545 /* View */,
 			);
-			name = Models;
-			path = CDLabel/Classes/Models;
+			name = CDLabel;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DF59760F6C6A1B10349870124F074CFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16AAD5619E227BCBC5B72EF9C4280D66 /* CDDevUtility.framework */,
+				A80C16276E50AD0EFA96ACB3CC3A4377 /* CDLabel.framework */,
+				E4836BB7FDE398465FE5051A6E589723 /* GDPerformanceView.framework */,
+				BF65FC0FA74B6F57A437C559E4A8113B /* Pods_CDLabel_Example.framework */,
+				F23C905AE68E07A35CA8BEED87E1939D /* Pods_CDLabel_Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EA4393D9886BED6D630DBC5DFAD066D1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				283CB979662603E81800A9CE6EF3EE99 /* CDLabel */,
+				DD91F1ACA6E0CAA38248139526DDD583 /* CDLabel */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F6E77CCADA6741AC2A3C6E68AD2D813A /* CDDevUtility */ = {
+			isa = PBXGroup;
+			children = (
+				ADA2A072107A977A651918A14AE9A113 /* CDDevuUtilty.h */,
+				B161FA77618D5D55160DF5BB990AC432 /* CDPerformance.h */,
+				4D972344153B00555B8FE63F527CCB4D /* CDPerformance.m */,
+				FA618C3F54BFF37ED89EE5CD09A2003A /* Support Files */,
+			);
+			name = CDDevUtility;
+			path = CDDevUtility;
+			sourceTree = "<group>";
+		};
+		FA618C3F54BFF37ED89EE5CD09A2003A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				53CACD3927299668801523C8248E8F0B /* CDDevUtility.modulemap */,
+				E6C9F7CB115DD5B4B4178E4857BC7FB5 /* CDDevUtility.xcconfig */,
+				9CB65F4D0B7A892B021133AEC6CC7768 /* CDDevUtility-dummy.m */,
+				7C591A541D113A96F67D74E668B600EF /* CDDevUtility-prefix.pch */,
+				AF95DC4DDAF75F566A305508F3D8D264 /* CDDevUtility-umbrella.h */,
+				EBDDF1C9DD8B85F4FA4BD20825010DEE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CDDevUtility";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2A63172606D18D3DBE8F3E1F97DAB8EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6961109FE0234BF0DD7721453E37FF7D /* CDDevUtility-umbrella.h in Headers */,
+				2318C183C37EC3461F26550695A86C65 /* CDDevuUtilty.h in Headers */,
+				8007E3169705443EC757DEE92844D97A /* CDPerformance.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A4195740A3360989A108ED2DDC0BE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852C17500F3A4D2736470192AAE5ACAD /* CDCalculator.h in Headers */,
+				3C616DE8EB0EC2EC4ECB1D7BFD02FE35 /* CDLabel-umbrella.h in Headers */,
+				683088ADD0004B5241B33FC9495D9DF2 /* CDLabel.h in Headers */,
+				D96AEB396FE1F86BEA96EA7F20186ACA /* CDLabelMacro.h in Headers */,
+				9830C6074842827E7684CC2AD614C6AA /* CDTextParser.h in Headers */,
+				1C8133B37FDAF03DF10401B871F5F88F /* CoreTextUtils.h in Headers */,
+				BCED5B2CC827BBAA87EADF8EBD32B055 /* CTClickInfo.h in Headers */,
+				2C89BBC460B75691A06D49D541F0D9C6 /* CTData.h in Headers */,
+				319AA4746FFD6993CC3C54B60FD39472 /* CTHelper.h in Headers */,
+				5CD854A76EFA016600208D12D1ADA5D9 /* MagnifiterView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64C118435CDE74E86E73AF06EAC13BC8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,23 +503,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DBB211E352C30E9CA3CD54B0BFD94F7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E6D8821CF2C66C7D6909D9B4EF57EEB /* CDLabel-umbrella.h in Headers */,
-				01B4C47F7124C8BDCABE6302196DE03D /* CDLabel.h in Headers */,
-				17AE88D43B241F57600BAE4DB631B166 /* CDLabelMacro.h in Headers */,
-				AE663E3AF514090C7382CCE102D25A01 /* CDTextParser.h in Headers */,
-				C6C240D62BF34D1F01B7234CC7C982F9 /* CoreTextUtils.h in Headers */,
-				E96DD18C20E4C23C009F88C4 /* CDCalculator.h in Headers */,
-				F8C93D2C8FA4E9B92328EE3BFB611562 /* CTClickInfo.h in Headers */,
-				1305FF4E4D95EEDF561E7E8886988AFE /* CTData.h in Headers */,
-				77F95B8B4F518FCD657128B0559B2F41 /* CTHelper.h in Headers */,
-				D5C4FB932B985048B8A4A7A8CC2AA690 /* MagnifiterView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		89B3EF2A9D605F0085E9774C7155A60D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,11 +511,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4E83D13E163538079CED24C2BBD9B09 /* Headers */ = {
+		B74C50652D3E473D240BEEDE35F59B45 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423DD52C47B2FDDF92216E2992E9B5F2 /* Pods-CDLabel_Example-umbrella.h in Headers */,
+				5D488EE3319FB10D793C2A26366AB546 /* Pods-CDLabel_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,16 +537,36 @@
 			);
 			name = "Pods-CDLabel_Tests";
 			productName = "Pods-CDLabel_Tests";
-			productReference = ADC71BD7F849BBA0B9AFE9E11459CC25 /* Pods_CDLabel_Tests.framework */;
+			productReference = F23C905AE68E07A35CA8BEED87E1939D /* Pods_CDLabel_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		84DD98B740886E8DB03C29F7073C0E4F /* CDLabel */ = {
+		64366E3286D3A588ED4DFE26F7B79F32 /* Pods-CDLabel_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF941B1B15B091CDFD11380366C84D68 /* Build configuration list for PBXNativeTarget "CDLabel" */;
+			buildConfigurationList = 69F654853C3B2A61C3DB424350360F77 /* Build configuration list for PBXNativeTarget "Pods-CDLabel_Example" */;
 			buildPhases = (
-				CE95F5582A93A155B77A7C36CD3AED0A /* Sources */,
-				01EC01AA78B4CC903ADEA909644BE3EE /* Frameworks */,
-				7DBB211E352C30E9CA3CD54B0BFD94F7 /* Headers */,
+				408A55CC6B47246E554E241F72A75CDD /* Sources */,
+				1A30A7355E17874EB2271EBB660EE054 /* Frameworks */,
+				B74C50652D3E473D240BEEDE35F59B45 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CD4BE61EB668D26D70779D267BE1E90 /* PBXTargetDependency */,
+				4A3A25E49078BCEF92637B31FE44417A /* PBXTargetDependency */,
+				DA23428466E8B584E23E9A44E2F52507 /* PBXTargetDependency */,
+			);
+			name = "Pods-CDLabel_Example";
+			productName = "Pods-CDLabel_Example";
+			productReference = BF65FC0FA74B6F57A437C559E4A8113B /* Pods_CDLabel_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		859B950811BD3B6C69B0E13F9AADC792 /* CDLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE8BD75E9337D05F3D9C53C895AC7D0F /* Build configuration list for PBXNativeTarget "CDLabel" */;
+			buildPhases = (
+				AC55741C5C299342152B2C15516367CB /* Sources */,
+				CB66255A8817FCFF9A9537FB9810647C /* Frameworks */,
+				33A4195740A3360989A108ED2DDC0BE3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -484,26 +574,24 @@
 			);
 			name = CDLabel;
 			productName = CDLabel;
-			productReference = 9AFFEE0075CE6544398A2D6A674774E7 /* CDLabel.framework */;
+			productReference = A80C16276E50AD0EFA96ACB3CC3A4377 /* CDLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B62A499D59667F40A95D3269AADFB799 /* Pods-CDLabel_Example */ = {
+		DB44FF2EE5CFDC9BF1DD17214760609D /* CDDevUtility */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9A4EA746A77C3C65407013CA404A4B0 /* Build configuration list for PBXNativeTarget "Pods-CDLabel_Example" */;
+			buildConfigurationList = 733115E00B9B108A284BE3A67D23B7C6 /* Build configuration list for PBXNativeTarget "CDDevUtility" */;
 			buildPhases = (
-				BB150A4005D1B86235302AE1C0800278 /* Sources */,
-				8E34C453E3C14C9FE1E93D5B3E9A6B24 /* Frameworks */,
-				E4E83D13E163538079CED24C2BBD9B09 /* Headers */,
+				4D3C861BEBE7EDEE0EFE1731B5459E42 /* Sources */,
+				77A167F815E5F8078C0F55BAB89B3360 /* Frameworks */,
+				2A63172606D18D3DBE8F3E1F97DAB8EB /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				436AC18C5CFEC3591DF16D61DB9D7C3E /* PBXTargetDependency */,
-				CD2F2DD8A8BE3E958D9722E59EF21199 /* PBXTargetDependency */,
 			);
-			name = "Pods-CDLabel_Example";
-			productName = "Pods-CDLabel_Example";
-			productReference = 1DAE29234EB1778EBDA71BC1B981841E /* Pods_CDLabel_Example.framework */;
+			name = CDDevUtility;
+			productName = CDDevUtility;
+			productReference = 16AAD5619E227BCBC5B72EF9C4280D66 /* CDDevUtility.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F1214858DFFDC40E8C082976E92A163C /* GDPerformanceView */ = {
@@ -520,7 +608,7 @@
 			);
 			name = GDPerformanceView;
 			productName = GDPerformanceView;
-			productReference = 47101862D40FBD8A2F9A8890B6E5698A /* GDPerformanceView.framework */;
+			productReference = E4836BB7FDE398465FE5051A6E589723 /* GDPerformanceView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -540,19 +628,37 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 62DB6A4ADD684D3B3EBF44534224A2A9 /* Products */;
+			productRefGroup = DF59760F6C6A1B10349870124F074CFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84DD98B740886E8DB03C29F7073C0E4F /* CDLabel */,
+				DB44FF2EE5CFDC9BF1DD17214760609D /* CDDevUtility */,
+				859B950811BD3B6C69B0E13F9AADC792 /* CDLabel */,
 				F1214858DFFDC40E8C082976E92A163C /* GDPerformanceView */,
-				B62A499D59667F40A95D3269AADFB799 /* Pods-CDLabel_Example */,
+				64366E3286D3A588ED4DFE26F7B79F32 /* Pods-CDLabel_Example */,
 				2428425D9C1931719D1218349E07F293 /* Pods-CDLabel_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		408A55CC6B47246E554E241F72A75CDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B070961C650880B208611DE16A856783 /* Pods-CDLabel_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D3C861BEBE7EDEE0EFE1731B5459E42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C64E365A951D0BF485C0F8F593FD30CC /* CDDevUtility-dummy.m in Sources */,
+				5068D09997B40FC572C0E60A4469B235 /* CDPerformance.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DF13C2A9E8BE6D2894CB3C3B0FA04F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,11 +671,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB150A4005D1B86235302AE1C0800278 /* Sources */ = {
+		AC55741C5C299342152B2C15516367CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F2211C69AC79DD9DE2B1EDBEA6408A /* Pods-CDLabel_Example-dummy.m in Sources */,
+				6D1535D400615B282446510DD421C002 /* CDCalculator.m in Sources */,
+				7C656B0CA20227729A909EA7F703C795 /* CDLabel-dummy.m in Sources */,
+				A0341E8F6908EC68680C9542AE5F7F1A /* CDLabel.m in Sources */,
+				A484DDD13A1BA91BFDEAAB1A364A835E /* CDTextParser.m in Sources */,
+				C9D17FF11719FB11A1C95C7D98295965 /* CoreTextUtils.m in Sources */,
+				8E70D69F22C486B54D4009C7AA7B2566 /* CTClickInfo.m in Sources */,
+				DB01321B1F75826B810519157EBFA717 /* CTData.m in Sources */,
+				F23037BF0113AD399CA7A0AD2C4751FF /* CTHelper.m in Sources */,
+				0D56157A346D868A9DBF26165F039F31 /* MagnifiterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,79 +695,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE95F5582A93A155B77A7C36CD3AED0A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64F5CF8701A595F564FE135EC08F830B /* CDLabel-dummy.m in Sources */,
-				78ECE520A0378F32C8277C3D4B3C4F89 /* CDLabel.m in Sources */,
-				C90AE51D7803DCBBA95B543E8CBCDCF7 /* CDTextParser.m in Sources */,
-				B055CF3833FA9A18476669514908D805 /* CoreTextUtils.m in Sources */,
-				CDDAFFE69987546BC86776C6D7F0DA0B /* CTClickInfo.m in Sources */,
-				8BFC4891991EC15408CC73DDF7F20BCE /* CTData.m in Sources */,
-				D83B505265ED6B0DD98CF70119239D59 /* CTHelper.m in Sources */,
-				ABB9634F59486B2C5EBB965F1F57A822 /* MagnifiterView.m in Sources */,
-				E96DD18D20E4C23C009F88C4 /* CDCalculator.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		436AC18C5CFEC3591DF16D61DB9D7C3E /* PBXTargetDependency */ = {
+		1CD4BE61EB668D26D70779D267BE1E90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CDDevUtility;
+			target = DB44FF2EE5CFDC9BF1DD17214760609D /* CDDevUtility */;
+			targetProxy = DDB8B4918B6A1104103DC9CDFEFD52F5 /* PBXContainerItemProxy */;
+		};
+		4A3A25E49078BCEF92637B31FE44417A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CDLabel;
-			target = 84DD98B740886E8DB03C29F7073C0E4F /* CDLabel */;
-			targetProxy = 47870D160F27285BFC0713854DC28129 /* PBXContainerItemProxy */;
+			target = 859B950811BD3B6C69B0E13F9AADC792 /* CDLabel */;
+			targetProxy = D228F69338B4CC94C64BEA9D94F27070 /* PBXContainerItemProxy */;
 		};
 		AECE7F23A7A3D89DB0181758BD7EF8A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-CDLabel_Example";
-			target = B62A499D59667F40A95D3269AADFB799 /* Pods-CDLabel_Example */;
+			target = 64366E3286D3A588ED4DFE26F7B79F32 /* Pods-CDLabel_Example */;
 			targetProxy = B9E8D10C6C9F8BCF82C32DF62A1D53C1 /* PBXContainerItemProxy */;
 		};
-		CD2F2DD8A8BE3E958D9722E59EF21199 /* PBXTargetDependency */ = {
+		DA23428466E8B584E23E9A44E2F52507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GDPerformanceView;
 			target = F1214858DFFDC40E8C082976E92A163C /* GDPerformanceView */;
-			targetProxy = A15F20E1BFF6EA21F10FAE2B5311307A /* PBXContainerItemProxy */;
+			targetProxy = BFF7AB3680E9764CE9F9956E40308B88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		182DE6235A7EBD4D3362D410312D6CA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51CC9196E4B06054E75E68631D0FEBEA /* Pods-CDLabel_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CDLabel_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -719,7 +790,7 @@
 		};
 		2301F1FE9FC00904600089F08C7C2005 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1CD76DD72D0CCDD985D76B6EE8C992A /* GDPerformanceView.xcconfig */;
+			baseConfigurationReference = 927F0050F3FCE2004F4A3A7F99A07442 /* GDPerformanceView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -747,9 +818,134 @@
 			};
 			name = Debug;
 		};
-		2493ADE891CD087BF6FEF6259BD318A7 /* Release */ = {
+		3AA59A7AD5DFDA10592B07F0F4CCFFCE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EEAFAF83F767713123682B53AE1EEE7 /* CDLabel.xcconfig */;
+			baseConfigurationReference = 927F0050F3FCE2004F4A3A7F99A07442 /* GDPerformanceView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView/GDPerformanceView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GDPerformanceView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GDPerformanceView/GDPerformanceView.modulemap";
+				PRODUCT_MODULE_NAME = GDPerformanceView;
+				PRODUCT_NAME = GDPerformanceView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B8C393A50035BC7C6240A4D8BC0013E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C9F7CB115DD5B4B4178E4857BC7FB5 /* CDDevUtility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDDevUtility/CDDevUtility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDDevUtility/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDDevUtility/CDDevUtility.modulemap";
+				PRODUCT_MODULE_NAME = CDDevUtility;
+				PRODUCT_NAME = CDDevUtility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3E08E71C104F37583476F23623080150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CC9196E4B06054E75E68631D0FEBEA /* Pods-CDLabel_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CDLabel_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E4952A368993D3F4089A693E38B0CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C9F7CB115DD5B4B4178E4857BC7FB5 /* CDDevUtility.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CDDevUtility/CDDevUtility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDDevUtility/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CDDevUtility/CDDevUtility.modulemap";
+				PRODUCT_MODULE_NAME = CDDevUtility;
+				PRODUCT_NAME = CDDevUtility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89BB6D58D5A7F80900E93A8D2999E165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1132966888FA354D6794AF2841D33EC /* CDLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -772,15 +968,14 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		3AA59A7AD5DFDA10592B07F0F4CCFFCE /* Release */ = {
+		A122C3755B3D9796CD97DA6C37C4A5B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1CD76DD72D0CCDD985D76B6EE8C992A /* GDPerformanceView.xcconfig */;
+			baseConfigurationReference = F1132966888FA354D6794AF2841D33EC /* CDLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -791,14 +986,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView/GDPerformanceView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GDPerformanceView/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GDPerformanceView/GDPerformanceView.modulemap";
-				PRODUCT_MODULE_NAME = GDPerformanceView;
-				PRODUCT_NAME = GDPerformanceView;
+				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
+				PRODUCT_MODULE_NAME = CDLabel;
+				PRODUCT_NAME = CDLabel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -829,40 +1024,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CDLabel_Tests/Pods-CDLabel_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C7EBD65B38C47ED5A4371B9BA2B4DE6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3501A3FED8EA03F3C960BF8017B5430B /* Pods-CDLabel_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CDLabel_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -910,10 +1071,11 @@
 			};
 			name = Debug;
 		};
-		EF2A7D866F30876374CFFE6BE7BDEB0E /* Debug */ = {
+		EEDA7C81BAC90BBBE3B6ED1597267DBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EEAFAF83F767713123682B53AE1EEE7 /* CDLabel.xcconfig */;
+			baseConfigurationReference = 3501A3FED8EA03F3C960BF8017B5430B /* Pods-CDLabel_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -923,22 +1085,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CDLabel/CDLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CDLabel/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-CDLabel_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CDLabel/CDLabel.modulemap";
-				PRODUCT_MODULE_NAME = CDLabel;
-				PRODUCT_NAME = CDLabel;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1028,20 +1193,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9A4EA746A77C3C65407013CA404A4B0 /* Build configuration list for PBXNativeTarget "Pods-CDLabel_Example" */ = {
+		69F654853C3B2A61C3DB424350360F77 /* Build configuration list for PBXNativeTarget "Pods-CDLabel_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				182DE6235A7EBD4D3362D410312D6CA6 /* Debug */,
-				C7EBD65B38C47ED5A4371B9BA2B4DE6C /* Release */,
+				3E08E71C104F37583476F23623080150 /* Debug */,
+				EEDA7C81BAC90BBBE3B6ED1597267DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF941B1B15B091CDFD11380366C84D68 /* Build configuration list for PBXNativeTarget "CDLabel" */ = {
+		733115E00B9B108A284BE3A67D23B7C6 /* Build configuration list for PBXNativeTarget "CDDevUtility" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF2A7D866F30876374CFFE6BE7BDEB0E /* Debug */,
-				2493ADE891CD087BF6FEF6259BD318A7 /* Release */,
+				3B8C393A50035BC7C6240A4D8BC0013E /* Debug */,
+				7E4952A368993D3F4089A693E38B0CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE8BD75E9337D05F3D9C53C895AC7D0F /* Build configuration list for PBXNativeTarget "CDLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89BB6D58D5A7F80900E93A8D2999E165 /* Debug */,
+				A122C3755B3D9796CD97DA6C37C4A5B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

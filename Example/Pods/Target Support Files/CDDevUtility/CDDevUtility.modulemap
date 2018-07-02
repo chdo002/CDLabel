@@ -1,0 +1,6 @@
+framework module CDDevUtility {
+  umbrella header "CDDevUtility-umbrella.h"
+
+  export *
+  module * { export * }
+}
