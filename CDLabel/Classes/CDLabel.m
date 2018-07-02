@@ -230,16 +230,12 @@ typedef enum CTDisplayViewState : NSInteger {
         [ws safeThread:^{
             if (ws) {
                 __strong typeof(ws) ss = ws;
-                NSTimeInterval t1 = [[NSDate date] timeIntervalSince1970];
                 ss.data = data;
                 CGRect frame = ss.frame;
                 frame.size = CGSizeMake(ss->_data.width, ss->_data.height);
-#warning  待商榷
-                ss.frame = frame;
-                
-                NSTimeInterval t2 = [[NSDate date] timeIntervalSince1970];
-                
-                
+                if (config.willUpdateFrame) {
+                    ss.frame = frame;
+                }
             }
         }];
     };

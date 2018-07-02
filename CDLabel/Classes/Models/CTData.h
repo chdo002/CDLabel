@@ -17,6 +17,7 @@ typedef struct {
     CGColorRef backGroundColor;
     CGColorRef hilightColor;// 高亮文本颜色
     NSLineBreakMode lineBreakMode;
+    BOOL willUpdateFrame; // 是否在计算完成后更新frame
     BOOL matchEmoji;
     BOOL matchLink;
     BOOL matchPhone;

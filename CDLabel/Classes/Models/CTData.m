@@ -42,6 +42,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     config.lineSpace = 2;
     config.textSize = 16;
     config.lineBreakMode = NSLineBreakByCharWrapping;
+    config.willUpdateFrame = YES;
     config.matchLink = YES;
     config.matchEmail = YES;
     config.matchEmoji = YES;
