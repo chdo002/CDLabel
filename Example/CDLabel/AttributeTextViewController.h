@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface CDViewController : UIViewController
+@interface AttributeViewController : UIViewController
 
 @end

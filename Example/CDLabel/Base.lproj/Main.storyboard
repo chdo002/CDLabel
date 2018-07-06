@@ -22,17 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGG-dc-Ezf">
-                                <rect key="frame" x="164" y="181" width="46" height="30"/>
+                                <rect key="frame" x="141" y="181" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="普通文本渲染"/>
                                 <connections>
                                     <segue destination="DvE-wB-3Oc" kind="show" id="qsj-2G-boI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-ah-llX">
-                                <rect key="frame" x="164" y="334" width="46" height="30"/>
+                                <rect key="frame" x="149" y="334" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="富文本渲染"/>
                                 <connections>
                                     <segue destination="r68-Sv-Ztm" kind="show" id="nBS-mg-Ryq"/>
                                 </connections>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="460" y="431"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Plain Text Table View Controller-->
         <scene sceneID="4Mi-NN-QQn">
             <objects>
-                <tableViewController id="DvE-wB-3Oc" customClass="CDTableViewController" sceneMemberID="viewController">
+                <tableViewController id="DvE-wB-3Oc" customClass="PlainTextTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OIQ-pj-ITa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="1318" y="167"/>
         </scene>
-        <!--View Controller-->
+        <!--Attribute View Controller-->
         <scene sceneID="7T1-2e-zzn">
             <objects>
-                <viewController id="r68-Sv-Ztm" customClass="CDViewController" sceneMemberID="viewController">
+                <viewController id="r68-Sv-Ztm" customClass="AttributeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xOW-HH-YEd"/>
                         <viewControllerLayoutGuide type="bottom" id="GLE-Al-i4X"/>

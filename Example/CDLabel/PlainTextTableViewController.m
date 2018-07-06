@@ -6,10 +6,10 @@
 //  Copyright © 2018年 chdo002. All rights reserved.
 //
 
-#import "CDTableViewController.h"
+#import "PlainTextTableViewController.h"
 #import <CDLabel/CDLabel.h>
 #import <CDDevUtility/CDDevuUtilty.h>
-
+#import "SVProgressHUD.h"
 
 @interface DataSource: NSObject
 
@@ -25,18 +25,20 @@
     
     dispatch_once(&onceToken, ^{
         single = [[DataSource alloc] init];
-        single.strs = [NSMutableArray array];
-        
-        for (int i = 0; i < 1000; i++) {
-            [single.strs addObject:[single generateRamowText]];
-        }
     });
     return single;
 }
 
 
++ (void)load{
+    DataSource.share.strs = [NSMutableArray array];
+    for (int i = 0; i < 1000; i++) {
+        [DataSource.share.strs addObject:[DataSource.share generateRamowText]];
+    }
+}
+
 -(NSString *)generateRamowText{
-    uint32_t strLength = 2000;
+    uint32_t strLength = 200;
     NSMutableString *str = [NSMutableString string];
     NSArray *emojiArr = @[@"[尴尬]",@"[发怒]",@"[微笑]",@"[大笑]",@"[大哭]",@"[色]",@"[冷汗]",@"[抓狂]",@"[吐]",@"[愉快]",@"[白眼]",@"[傲慢]",@"[困]"];
     for (int i = 0; i < strLength; i++) {
@@ -53,23 +55,15 @@
 
 @end
 
-@interface CDTableViewController ()
+@interface PlainTextTableViewController ()
 
 @end
 
-@implementation CDTableViewController
-+ (void)load{
-    DataSource.share;
-}
+@implementation PlainTextTableViewController
+
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
-    
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -96,7 +90,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 800;
+    return 150;
 }
 
 -(void)didReceiveMemoryWarning{

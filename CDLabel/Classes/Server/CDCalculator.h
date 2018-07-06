@@ -19,4 +19,6 @@
 @property(nonatomic,strong)void(^calComplete)(CTData *data);
 
 -(void)calcuate:(NSString *)text and:(CGSize)containSize and:(CTDataConfig)config;
+
+-(void)calcuate:(NSAttributedString *)text and:(CGSize)containSize;
 @end

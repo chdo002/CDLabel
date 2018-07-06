@@ -1,6 +1,6 @@
 {
   "name": "CDLabel",
-  "version": "0.0.14",
+  "version": "0.1.0",
   "summary": "适用于聊天气泡中的label.",
   "description": "一种简单的富文本label，包括图片 链接 文字",
   "homepage": "https://github.com/chdo002/CDLabel",
@@ -12,8 +12,8 @@
     "chdo002": "1107661983@qq.com"
   },
   "source": {
-    "git": "http://git-ma.paic.com.cn/aat/Label_iOS.git",
-    "tag": "0.0.14"
+    "git": "https://github.com/chdo002/CDLabel.git",
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
@@ -23,5 +23,10 @@
   "frameworks": [
     "UIKit",
     "CoreText"
-  ]
+  ],
+  "dependencies": {
+    "CDDevUtility": [
+
+    ]
+  }
 }

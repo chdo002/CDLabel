@@ -75,8 +75,9 @@ NSString *CTDataConfigIdentity(CTDataConfig config);
      containerWithSize:(CGSize)size;
 
 +(CTDataConfig)defaultConfig;
+
 /**
- 构建富文本对象
+ 构建plain文本对象,文本属性通过config配置
 
  @param msgString 纯文本
  @param size 渲染范围 定宽  不定高
@@ -86,4 +87,15 @@ NSString *CTDataConfigIdentity(CTDataConfig config);
 +(CTData *)dataWithStr:(NSString *)msgString
      containerWithSize: (CGSize)size
          configuration:(CTDataConfig)config;
+
+
+/**
+ 构建富文本对象
+
+ @param attString 富文本
+ @param size size description
+ @return return value description
+ */
++(CTData *)dataWithAttriStr:(NSAttributedString *)attString
+          containerWithSize:(CGSize)size;
 @end

@@ -10,7 +10,6 @@
 #import "CDLabelMacro.h"
 #import "CTHelper.h"
 
-//
 NSString *CTDataConfigIdentity(CTDataConfig config){
     
     NSUInteger num = CGColorGetNumberOfComponents(config.textColor);
@@ -136,6 +135,17 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     CFRelease(framesetter);
     CFRelease(path);
     
+    
+    //渲染展示内容
+    UIGraphicsBeginImageContextWithOptions(caSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    CGContextTranslateCTM(context, 0, caSize.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CTFrameDraw(frame, context);
+    
+    
+    
     data.ctFrameLength = [attString length];
     data.width = caSize.width;
     data.height = caSize.height;
@@ -143,13 +153,6 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     data.imageArray = imageDataArr;
     data.linkArray = linkDataArr;
     
-    // 提前渲染展示内容
-    UIGraphicsBeginImageContextWithOptions(caSize, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-    CGContextTranslateCTM(context, 0, caSize.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    CTFrameDraw(frame, context);
     
     for (CTImageData * imageData in data.imageArray) {
         UIImage *image = CTHelper.share.emojDic[imageData.name];
@@ -164,6 +167,51 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     
     return data;
 }
+
++(CTData *)dataWithAttriStr:(NSAttributedString *)attString containerWithSize:(CGSize)size
+{
+    CTData *data = [[CTData alloc] init];
+    /*
+     ===========================================================================
+     构建CTFrame
+     ===========================================================================
+     */
+    
+    // 创建framesetter
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
+    
+    // 设置绘制范围
+    // -- 计算内容范围
+    CGSize caSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,attString.length), nil, size, nil);
+    // -- 创建显示范围
+    CGPathRef path = CGPathCreateWithRect(CGRectMake(0, 0, caSize.width, caSize.height), NULL);
+    // 创建显示frame
+    CTFrameRef frame = CTFramesetterCreateFrame(framesetter,
+                                                CFRangeMake(0, [attString length]), path, NULL);
+    
+    CFRelease(framesetter);
+    CFRelease(path);
+    
+    //渲染展示内容
+    UIGraphicsBeginImageContextWithOptions(caSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    CGContextTranslateCTM(context, 0, caSize.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CTFrameDraw(frame, context);
+    
+    data.ctFrameLength = [attString length];
+    data.width = caSize.width;
+    data.height = caSize.height;
+    data.ctFrame = frame;
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    data.contents = image;
+    
+    return data;
+}
+
 
 -(NSAttributedString *)content{
     if (_content) {

@@ -1,17 +1,21 @@
 PODS:
   - CDDevUtility (0.1.0)
-  - CDLabel (0.0.14)
+  - CDLabel (0.1.0):
+    - CDDevUtility
   - GDPerformanceView (1.3.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - CDDevUtility
   - CDLabel (from `../`)
   - GDPerformanceView (~> 1.3.1)
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CDDevUtility
     - GDPerformanceView
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   CDLabel:
@@ -19,9 +23,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CDDevUtility: c30f7416f751a0148c2f6a6697baf53f599b1f50
-  CDLabel: b7b00b6a3209855b73e84f9b12888216d0d94802
+  CDLabel: 367e7f4053364ada899a963cc1572203bcfa962f
   GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 037bebf8b92516cdf94a5d52c2ee3ab0b03c30dd
+PODFILE CHECKSUM: 8efcf94ead9c19407ebb8ce4e0a5bcfae88d6716
 
 COCOAPODS: 1.5.3

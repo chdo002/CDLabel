@@ -212,9 +212,14 @@ typedef enum CTDisplayViewState : NSInteger {
 
 -(void)setText:(NSString *)text{
     _text = text;
+    
     // 取消旧任务的回调
     self.textCalcator.label = nil;
+    self.layer.contents = nil;
+    self.contentMode = UIViewContentModeScaleAspectFit;
     self.textCalcator.calComplete = nil;
+    
+    
     // 建立新的任务
     self.textCalcator = [[CDCalculator alloc] init];
     self.textCalcator.label = self;
@@ -222,9 +227,7 @@ typedef enum CTDisplayViewState : NSInteger {
     
     // 选择渲染配置
     CTDataConfig config = (self.config.textSize != 0.00f) ? self.config : [CTData defaultConfig];
-    // 渲染
     
-    [self.textCalcator calcuate:text and:CGSizeMake(self.frame.size.width, CGFLOAT_MAX) and:config];
     // 渲染完成
     self.textCalcator.calComplete = ^(CTData *data) {
         [ws safeThread:^{
@@ -239,6 +242,44 @@ typedef enum CTDisplayViewState : NSInteger {
             }
         }];
     };
+    // 渲染
+    [self.textCalcator calcuate:text
+                            and:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)
+                            and:config];
+  
+}
+
+-(void)setAttributedText:(NSAttributedString *)attributedText{
+    _attributedText = attributedText;
+    
+    // 取消旧任务的回调
+    self.textCalcator.label = nil;
+    self.layer.contents = nil;
+    self.textCalcator.calComplete = nil;
+    
+    
+    // 建立新的任务
+    self.textCalcator = [[CDCalculator alloc] init];
+    self.textCalcator.label = self;
+    __weak typeof(self) ws = self;
+    
+    
+    // 渲染完成
+    self.textCalcator.calComplete = ^(CTData *data) {
+        [ws safeThread:^{
+            if (ws) {
+                __strong typeof(ws) ss = ws;
+                ss.data = data;
+                CGRect frame = ss.frame;
+                frame.size = CGSizeMake(ss->_data.width, ss->_data.height);
+//                ss.frame = frame;
+                ss.layer.frame = frame;
+            }
+        }];
+    };
+    
+    // 渲染
+    [self.textCalcator calcuate:attributedText and:CGSizeMake(self.frame.size.width, CGFLOAT_MAX)];
 }
 
 - (void)setState:(CTDisplayViewState)state {

@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.source_files = 'CDLabel/Classes/**/*'
   s.public_header_files = 'CDLabel/Classes/**/*.h'
   s.frameworks = 'UIKit', 'CoreText'
+  s.dependency 'CDDevUtility'
 end

@@ -13,7 +13,7 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* CDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* CDAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* CDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* CDViewController.m */; };
+		6003F5A7195388D20070C39A /* AttributeTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* AttributeTextViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,7 +24,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A518575A129077BDC21B9D25 /* Pods_CDLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D2EF3A2DAAFA09E5C6DB2E /* Pods_CDLabel_Example.framework */; };
 		E3C03B98CD7E174D72916C10 /* Pods_CDLabel_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7624A79EC9618D18952482F /* Pods_CDLabel_Tests.framework */; };
-		E96DD18520E49431009F88C4 /* CDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DD18420E49431009F88C4 /* CDTableViewController.m */; };
+		E96DD18520E49431009F88C4 /* PlainTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DD18420E49431009F88C4 /* PlainTextTableViewController.m */; };
 		E97694131FD15E60005ADBD2 /* Expression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E97694121FD15E60005ADBD2 /* Expression.bundle */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +53,7 @@
 		6003F59B195388D20070C39A /* CDLabel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDLabel-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* CDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* CDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* CDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* CDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDViewController.m; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* AttributeTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeTextViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* CDLabel_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDLabel_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,10 +67,11 @@
 		994E2AB545B764C6383AF97E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A0D2EF3A2DAAFA09E5C6DB2E /* Pods_CDLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7624A79EC9618D18952482F /* Pods_CDLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E96DD18320E49431009F88C4 /* CDTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDTableViewController.h; sourceTree = "<group>"; };
-		E96DD18420E49431009F88C4 /* CDTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDTableViewController.m; sourceTree = "<group>"; };
+		E96DD18320E49431009F88C4 /* PlainTextTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlainTextTableViewController.h; sourceTree = "<group>"; };
+		E96DD18420E49431009F88C4 /* PlainTextTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlainTextTableViewController.m; sourceTree = "<group>"; };
 		E96DD1FC20E63566009F88C4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E97694121FD15E60005ADBD2 /* Expression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Expression.bundle; sourceTree = "<group>"; };
+		E9E6153320EF531C0063DF7F /* AttributeTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeTextViewController.h; sourceTree = "<group>"; };
 		F46F4983760A030229330FFC /* Pods-CDLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDLabel_Example/Pods-CDLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,10 +153,10 @@
 				6003F59D195388D20070C39A /* CDAppDelegate.m */,
 				E96DD1FC20E63566009F88C4 /* PrefixHeader.pch */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				E96DD18320E49431009F88C4 /* CDTableViewController.h */,
-				E96DD18420E49431009F88C4 /* CDTableViewController.m */,
-				6003F5A5195388D20070C39A /* CDViewController.h */,
-				6003F5A6195388D20070C39A /* CDViewController.m */,
+				E96DD18320E49431009F88C4 /* PlainTextTableViewController.h */,
+				E96DD18420E49431009F88C4 /* PlainTextTableViewController.m */,
+				E9E6153320EF531C0063DF7F /* AttributeTextViewController.h */,
+				6003F5A6195388D20070C39A /* AttributeTextViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				E97694121FD15E60005ADBD2 /* Expression.bundle */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -336,12 +336,14 @@
 				"${BUILT_PRODUCTS_DIR}/CDDevUtility/CDDevUtility.framework",
 				"${BUILT_PRODUCTS_DIR}/CDLabel/CDLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDDevUtility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96DD18520E49431009F88C4 /* CDTableViewController.m in Sources */,
+				E96DD18520E49431009F88C4 /* PlainTextTableViewController.m in Sources */,
 				6003F59E195388D20070C39A /* CDAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* CDViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* AttributeTextViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
