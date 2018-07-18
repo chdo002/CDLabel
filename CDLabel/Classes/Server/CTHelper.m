@@ -15,6 +15,7 @@
     static CTHelper *helper;
     dispatch_once(&onceToken, ^{
         helper = [[CTHelper alloc] init];
+        helper.environment = 1;
     });
     return helper;
 }
