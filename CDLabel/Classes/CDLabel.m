@@ -121,21 +121,21 @@ typedef enum CTDisplayViewState : NSInteger {
     _selectionEndPosition = 1;
     [self setupGestures];
     
-//    __weak typeof(self) weakS = self;
-//    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-//        if (weakS) {
-//            __strong typeof(weakS) strongS = weakS;
-//            CFComparisonResult rest = CFStringCompare(strongS->currentMode, CFRunLoopCopyCurrentMode(CFRunLoopGetMain()), kCFCompareBackwards);
-//            if (rest != kCFCompareEqualTo) {
-//                strongS->currentMode = CFRunLoopCopyCurrentMode(CFRunLoopGetMain());
-//                if ((NSString *)CFBridgingRelease(strongS->currentMode) == UITrackingRunLoopMode) {
-//                    [strongS scrollDidScroll];
-//                }
-//            }
-//        }
-//    });
-//
-//    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
+    __weak typeof(self) weakS = self;
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        if (weakS) {
+            __strong typeof(weakS) strongS = weakS;
+            CFComparisonResult rest = CFStringCompare(strongS->currentMode, CFRunLoopCopyCurrentMode(CFRunLoopGetMain()), kCFCompareBackwards);
+            if (rest != kCFCompareEqualTo) {
+                strongS->currentMode = CFRunLoopCopyCurrentMode(CFRunLoopGetMain());
+                if ((NSString *)CFBridgingRelease(strongS->currentMode) == UITrackingRunLoopMode) {
+                    [strongS scrollDidScroll];
+                }
+            }
+        }
+    });
+
+    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
     
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(receivedNotification:) name:UIMenuControllerWillHideMenuNotification object:nil];
     
