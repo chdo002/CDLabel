@@ -144,7 +144,9 @@ typedef enum CTDisplayViewState : NSInteger {
 
 -(void)receivedNotification:(NSNotification *)noti{
     if ([noti.name isEqualToString:UIMenuControllerWillHideMenuNotification]) {
-        [self scrollDidScroll];
+        if (self.state != CTDisplayViewStateSelecting) {
+            [self scrollDidScroll];
+        }
     }
 }
 
