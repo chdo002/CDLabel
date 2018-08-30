@@ -84,21 +84,11 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:data.msgString attributes:dic];
     
-    
     /*
      ===========================================================================
      各种匹配
      ===========================================================================
      */
-    
-    NSMutableArray <CTImageData *>*imageDataArr = [NSMutableArray array];
-    if (config.matchEmoji) {
-        // 匹配图片(主要是表情) 并返回图片
-        imageDataArr = [CDTextParser matchImage:attString configuration:config];
-        
-    }
-    
-    // 
     NSMutableArray <CTLinkData *> *linkDataArr = [NSMutableArray array];
     if (config.matchEmail) {
         // 匹配邮箱
@@ -112,6 +102,12 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     if (config.matchPhone) {
         // 匹配号码
         [linkDataArr addObjectsFromArray:[CDTextParser matchPhone:attString configuration:config currentMatch:linkDataArr]];
+    }
+    
+    NSMutableArray <CTImageData *>*imageDataArr = [NSMutableArray array];
+    if (config.matchEmoji) {
+        // 匹配图片(主要是表情) 并返回图片
+        imageDataArr = [CDTextParser matchImage:attString configuration:config];
     }
     
     /*

@@ -67,16 +67,19 @@
         NSRange range = emo.range;
         range.location += shift;
         NSString *oldStr = [str attributedSubstringFromRange:range].string;
-        NSMutableAttributedString *newStr = [self imagePlaceHolderStrFromConfiguration:config];
-        [str replaceCharactersInRange:range withAttributedString:newStr];
-        shift += newStr.length - oldStr.length;
-        
-        // 创建对应的图片
-        CTImageData *imageData = [[CTImageData alloc] init];
-        imageData.position = range.location;
-        imageData.name = oldStr;
-        imageData.range = range;
-        [imageDataArrr addObject:imageData];
+        BOOL ifContainEmoji = [CTHelper.share.emojDic.allKeys containsObject:oldStr];
+        if (ifContainEmoji) {
+            NSMutableAttributedString *newStr = [self imagePlaceHolderStrFromConfiguration:config];
+            [str replaceCharactersInRange:range withAttributedString:newStr];
+            shift += newStr.length - oldStr.length;
+            
+            // 创建对应的图片
+            CTImageData *imageData = [[CTImageData alloc] init];
+            imageData.position = range.location;
+            imageData.name = oldStr;
+            imageData.range = range;
+            [imageDataArrr addObject:imageData];
+        }
     }
     return imageDataArrr;
 }
