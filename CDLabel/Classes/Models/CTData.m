@@ -144,8 +144,6 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     CGContextScaleCTM(context, 1.0, -1.0);
     CTFrameDraw(frame, context);
     
-    
-    
     data.ctFrameLength = [attString length];
     data.width = caSize.width;
     data.height = caSize.height;
@@ -204,6 +202,8 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     data.width = caSize.width;
     data.height = caSize.height;
     data.ctFrame = frame;
+    
+//    [NSMutableAttributedString alloc] initWithString:attString.string attributes:attString.
     data.content = attString;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
