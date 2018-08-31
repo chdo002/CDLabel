@@ -57,10 +57,6 @@
 
 @end
 
-
-
-NSString * const CTCLICKMSGEVENTNOTIFICATION = @"CTCLICKMSGEVENTNOTIFICATION";
-
 typedef enum CTDisplayViewState : NSInteger {
     CTDisplayViewStateNormal,       // 普通状态
     CTDisplayViewStateSelecting,    // 拖动中，  隐藏菜单
@@ -546,13 +542,11 @@ typedef enum CTDisplayViewState : NSInteger {
             CTLinkConfig config = [CoreTextUtils touchContentOffsetInView:self atPoint:loc data:self.data];
             
             if (config.index == -1) {
-                //                NSLog(@"不能拖了");
                 return;
             }
             
             if (isLeftAncherSelecting) {
                 if (config.index >= _selectionEndPosition) {
-                    //                    NSLog(@"不能拖了2");
                     return;
                 }
                 _selectionStartPosition = config.index;
@@ -562,7 +556,6 @@ typedef enum CTDisplayViewState : NSInteger {
             
             if (isRightAncherSelecting) {
                 if (config.index <= _selectionStartPosition) {
-                    //                    NSLog(@"不能拖了3");
                     return;
                 }
                 _selectionEndPosition = config.index;
@@ -585,7 +578,15 @@ typedef enum CTDisplayViewState : NSInteger {
 
 #pragma mark 点击手势
 - (void)userTapGestureDetected:(UIGestureRecognizer *)recognizer {
-    
+    if (self.state == CTDisplayViewStateNormal) {
+        CGPoint loc = [recognizer locationInView:self];
+        CTLinkData *link = [CoreTextUtils touchLinkInView:self atPoint:loc data:self.data];
+        if (link) {
+            if ([self.labelDelegate respondsToSelector:@selector(labelDidSelectText:)]) {
+                [self.labelDelegate labelDidSelectText:link];
+            }
+        }
+    }
 }
 
 #pragma mark  ------------------工具方法------------------

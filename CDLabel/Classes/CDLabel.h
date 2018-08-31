@@ -10,12 +10,17 @@
 #import <CoreText/CoreText.h>
 #import "CTHelper.h"
 
-extern NSString * const  CTCLICKMSGEVENTNOTIFICATION;
+@protocol CDLabelDelegate <NSObject>
+-(void)labelDidSelectText:(CTLinkData *)link;
+@end
+
 
 @interface CDLabel : UIView
 
 
 @property (assign, nonatomic) CTDataConfig config;
+
+@property (weak, nonatomic) id<CDLabelDelegate> labelDelegate;
 
 @property (strong, nonatomic) CTData * data;
 

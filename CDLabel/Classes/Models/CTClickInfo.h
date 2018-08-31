@@ -74,6 +74,6 @@ typedef enum : NSUInteger {
                         image:(UIImage *_Nullable)image
                     imageRect:(CGRect) rect;
 
--(void)sendMessage;
+
 @end
 

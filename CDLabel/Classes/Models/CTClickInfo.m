@@ -30,10 +30,5 @@
     return info;
 }
 
-
--(void)sendMessage{
-    [[NSNotificationCenter defaultCenter] postNotificationName:CTCLICKMSGEVENTNOTIFICATION object:self];
-}
-
 @end
 
