@@ -335,7 +335,7 @@ typedef enum CTDisplayViewState : NSInteger {
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     
     if ([gestureRecognizer isKindOfClass:UITapGestureRecognizer.class]) {
-        return NO;
+        return YES;
     }
     
     if ([gestureRecognizer isKindOfClass:UILongPressGestureRecognizer.class]) {
