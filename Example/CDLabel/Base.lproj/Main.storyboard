@@ -68,24 +68,6 @@
             </objects>
             <point key="canvasLocation" x="1318" y="167"/>
         </scene>
-        <!--Attribute View Controller-->
-        <scene sceneID="7T1-2e-zzn">
-            <objects>
-                <viewController id="r68-Sv-Ztm" customClass="AttributeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xOW-HH-YEd"/>
-                        <viewControllerLayoutGuide type="bottom" id="GLE-Al-i4X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z0A-lI-ngF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbm-bs-nxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1318" y="862"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Ww-Ju-j4k">
             <objects>

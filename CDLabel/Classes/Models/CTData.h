@@ -57,6 +57,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config);
 
 @property (strong, nonatomic) NSString *msgString;
 @property (strong, nonatomic) NSString *msgAttributeString;
+
 /**
  绘制在label上的
  */

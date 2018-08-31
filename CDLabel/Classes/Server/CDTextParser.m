@@ -15,7 +15,7 @@
 #pragma mark  和表情相关
 
 +(void)matchEmoj:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
-    
+
     // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
     NSRegularExpression *regEmoji = [NSRegularExpression regularExpressionWithPattern:@"\\[[^\\[\\]]+?\\]"
                                                                               options:kNilOptions error:NULL];
@@ -24,31 +24,27 @@
                                                                          options:kNilOptions
                                                                            range:NSMakeRange(0, str.string.length)];
     NSInteger shift = 0;
-    
+
     UIFont *font = [UIFont systemFontOfSize:config.textSize];
     for (NSTextCheckingResult *emo in emoticonResults) {
         if (emo.range.location == NSNotFound && emo.range.length <= 1) continue;
         NSRange range = emo.range;
         range.location += shift;
         NSString *oldStr = [str attributedSubstringFromRange:range].string;
-        NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
-        attachment.image = CTHelper.share.emojDic[oldStr];
-        attachment.bounds = CGRectMake(0, font.descender, font.lineHeight, font.lineHeight);
-        
-        NSAttributedString *imageAttr = [NSMutableAttributedString attributedStringWithAttachment:attachment];
-        [str replaceCharactersInRange:range withAttributedString:imageAttr];
-        shift += imageAttr.length - oldStr.length;
+        BOOL ifContainEmoji = [CTHelper.share.emojDic.allKeys containsObject:oldStr];
+        if (ifContainEmoji) {
+            NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+            attachment.image = CTHelper.share.emojDic[oldStr];
+            attachment.bounds = CGRectMake(0, font.descender, font.lineHeight, font.lineHeight);
+            
+            NSAttributedString *imageAttr = [NSMutableAttributedString attributedStringWithAttachment:attachment];
+            [str replaceCharactersInRange:range withAttributedString:imageAttr];
+            shift += imageAttr.length - oldStr.length;
+        }
     }
 }
 
 +(NSMutableArray *)matchImage:(NSMutableAttributedString *)str configuration:(CTDataConfig)config{
-    
-    /**
-     REGULAREXPRESSION(SlashEmojiRegularExpression, @"(/:[\\x21-\\x2E\\x30-\\x7E]{1,8})|(\\[[\\u4e00-\\u9fa5|a-z|A-Z]{1,3}\\])|[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]")
-     
-     REGULAREXPRESSION(sign_SlashEmojiRegularExpression, @"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]")
-     type
-     */
     
     // 处理表情   将所有[呵呵]换成占位字符  并计算图片位置
     NSMutableArray *imageDataArrr = [NSMutableArray array];

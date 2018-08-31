@@ -625,11 +625,13 @@ CGRect expangRectToRect(CGRect originR, CGSize target){
     
     
     // 选中的富文本
-    NSMutableAttributedString * sub = [[NSMutableAttributedString alloc] initWithAttributedString:[self.data.content attributedSubstringFromRange: NSMakeRange(self.selectionStartPosition, self.selectionEndPosition - self.selectionStartPosition)]];
+    NSRange selectedRange = NSMakeRange(self.selectionStartPosition, self.selectionEndPosition - self.selectionStartPosition);
+    
+    NSMutableAttributedString * sub = [[NSMutableAttributedString alloc] initWithAttributedString:[self.data.content attributedSubstringFromRange: selectedRange]];
     
     NSUInteger shift = 0;
     for (CTImageData *imgData in self.data.imageArray) {
-        
+
         NSRange rang = NSMakeRange(imgData.position + shift, 1);
         if (rang.location < _selectionEndPosition + shift) {
             [sub replaceCharactersInRange:rang withString:imgData.name];

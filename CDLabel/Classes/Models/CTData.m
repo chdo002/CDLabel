@@ -59,7 +59,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     CTData *data = [[CTData alloc] init];
     data.config = config;
     NSString *originStr = msgString ? [msgString copy] : @"";
-
+    
     originStr = [originStr stringByReplacingOccurrencesOfString:@"</span>" withString:@""];
     originStr = [originStr stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"];
     originStr = [originStr stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
@@ -84,11 +84,21 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:data.msgString attributes:dic];
     
+    
     /*
      ===========================================================================
      各种匹配
      ===========================================================================
      */
+    
+    NSMutableArray <CTImageData *>*imageDataArr = [NSMutableArray array];
+    if (config.matchEmoji) {
+        // 匹配图片(主要是表情) 并返回图片
+        imageDataArr = [CDTextParser matchImage:attString configuration:config];
+        
+    }
+    
+    //
     NSMutableArray <CTLinkData *> *linkDataArr = [NSMutableArray array];
     if (config.matchEmail) {
         // 匹配邮箱
@@ -102,12 +112,6 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     if (config.matchPhone) {
         // 匹配号码
         [linkDataArr addObjectsFromArray:[CDTextParser matchPhone:attString configuration:config currentMatch:linkDataArr]];
-    }
-    
-    NSMutableArray <CTImageData *>*imageDataArr = [NSMutableArray array];
-    if (config.matchEmoji) {
-        // 匹配图片(主要是表情) 并返回图片
-        imageDataArr = [CDTextParser matchImage:attString configuration:config];
     }
     
     /*
@@ -148,7 +152,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     data.ctFrame = frame;
     data.imageArray = imageDataArr;
     data.linkArray = linkDataArr;
-    
+    data.content = attString;
     
     for (CTImageData * imageData in data.imageArray) {
         UIImage *image = CTHelper.share.emojDic[imageData.name];
@@ -200,7 +204,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     data.width = caSize.width;
     data.height = caSize.height;
     data.ctFrame = frame;
-    
+    data.content = attString;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     data.contents = image;
@@ -209,29 +213,29 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
 }
 
 
--(NSAttributedString *)content{
-    if (_content) {
-        return _content;
-    }
-    
-    // 构建富文本
-    UIFont *font = [UIFont systemFontOfSize:_config.textSize];
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = 0;
-    paragraphStyle.lineBreakMode = _config.lineBreakMode;
-    
-    NSDictionary *dic = @{
-                          NSFontAttributeName: font,
-                          NSForegroundColorAttributeName: [UIColor colorWithCGColor:_config.textColor],
-                          NSBackgroundColorAttributeName:[UIColor colorWithCGColor:_config.backGroundColor],
-                          NSParagraphStyleAttributeName: paragraphStyle
-                          };
-    
-    _content = [[NSMutableAttributedString alloc] initWithString:_msgString attributes:dic];
-    [CDTextParser matchEmoj:_content configuration:_config];
-    
-    return _content;
-}
+//-(NSAttributedString *)content{
+//    if (_content) {
+//        return _content;
+//    }
+//
+//    // 构建富文本
+//    UIFont *font = [UIFont systemFontOfSize:_config.textSize];
+//    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//    paragraphStyle.lineSpacing = 0;
+//    paragraphStyle.lineBreakMode = _config.lineBreakMode;
+//
+//    NSDictionary *dic = @{
+//                          NSFontAttributeName: font,
+//                          NSForegroundColorAttributeName: [UIColor colorWithCGColor:_config.textColor],
+//                          NSBackgroundColorAttributeName:[UIColor colorWithCGColor:_config.backGroundColor],
+//                          NSParagraphStyleAttributeName: paragraphStyle
+//                          };
+//
+//    _content = [[NSMutableAttributedString alloc] initWithString:_msgString attributes:dic];
+//    [CDTextParser matchEmoj:_content configuration:_config];
+//
+//    return _content;
+//}
 
 - (void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
@@ -245,7 +249,7 @@ NSString *CTDataConfigIdentity(CTDataConfig config){
     if (self.imageArray.count == 0) {
         return;
     }
-
+    
     // CTLineRef
     NSArray *lines = (NSArray *)CTFrameGetLines(self.ctFrame);
     
